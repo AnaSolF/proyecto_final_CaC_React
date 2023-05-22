@@ -2,9 +2,8 @@ import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import MyButton from "./MyButton";
-
+import Darkmode from "./Darkmode";
 import { Nav } from "react-bootstrap";
-
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "@/styles/Header.module.css";
 import Offcanvas from "react-bootstrap/Offcanvas";
@@ -23,6 +22,7 @@ export default function MyHeader(props) {
           <Navbar.Brand>
             <img className="logo" src="/PedidosYa.png"></img>
           </Navbar.Brand>
+          <Darkmode />
           <Navbar.Brand className={styles.barra}>
             <MyButton
               className="btnNav"
@@ -55,6 +55,7 @@ export default function MyHeader(props) {
         <Navbar key={expand} bg="white"  expand={expand} className="mb-3">
           <Container fluid>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+            <Darkmode />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}

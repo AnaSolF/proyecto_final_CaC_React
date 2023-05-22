@@ -5,12 +5,13 @@ export default function Tops() {
   return (
     <>
       <div className={styles.cont}>
-        <h6>Delivery que satisface los sentidos</h6><br></br>
+        <div className={styles.nuevo}>
+        <h5>Delivery que satisface los sentidos</h5><br></br>
         <p>
           ¿Con Hambre y nada te copa? Acá tu Comida Sabrosa, Hoy Puede Tener
           otro Gusto.Pedi Ya, Te Llena el Corazón.
         </p>
-
+       
         <div className={styles.tops}>
           <div className={styles.destacado}>
             <Image src="Ubicación.svg" className={styles.imagen} />
@@ -42,7 +43,8 @@ export default function Tops() {
             </div>
           </div>
         </div>
-      </div>
+        </div>
+        </div>
     </>
   );
 }
