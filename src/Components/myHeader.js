@@ -7,8 +7,13 @@ import { Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "@/styles/Header.module.css";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import { useContext } from "react";
+import MainContextProvider, { maincontextState, } from "@/Context/maincontextprovider";
+
 
 export default function MyHeader(props) {
+  let context = useContext(maincontextState);
+  let darkMode = context.darkMode;
   return (
     <>
       <Navbar
@@ -52,7 +57,7 @@ export default function MyHeader(props) {
       </Navbar>
 
       {[false].map((expand) => (
-        <Navbar key={expand} bg="white"  expand={expand} className="mb-3">
+        <Navbar key={expand} bg="white"  expand={expand}>
           <Container fluid>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Darkmode />
@@ -63,7 +68,7 @@ export default function MyHeader(props) {
               style={{ width: "80%" }}
             >
               <Offcanvas.Header closeButton></Offcanvas.Header>
-              <Offcanvas.Body>
+              <Offcanvas.Body className={darkMode ? styles.dark : styles.light}>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
                   <Nav.Link href="#action1">
                     <img className={styles.logoP1} src="/LogoP.png"></img>
@@ -74,11 +79,11 @@ export default function MyHeader(props) {
                   >
                     Qué bonito tenerte aquí
                   </Offcanvas.Title>
-                  <Nav.Link href="#action2">
+                  <Nav.Link href="#action2" style={{ marginBottom: "40px", marginTop:"50px" }}>
                     {" "}
                     <i
                       className="bi bi-house-door-fill"
-                      style={{ marginRight: "20px" }}
+                      style={{ marginRight: "20px"}}
                     ></i>{" "}
                     Inicio
                   </Nav.Link>

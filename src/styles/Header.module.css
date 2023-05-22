@@ -27,7 +27,7 @@
     width: 80px;
     height: 80px;
     text-align: center;
-    margin-left: 35%;
+    margin-left: 40%;
     margin-bottom: 30px;
     padding: 10px;
     background-color: rgb(201, 34, 59);
@@ -71,12 +71,17 @@ padding-top: 30px;
     margin-top: 75%;
 }
 
+.dark {
+    background-color: black;
+    color: white;
+    border-left: 2px solid white  ;
+  }
+  
  @media only screen and (min-width: 770px) {
      .barra {
          display: flex;
          padding-right: 80px;
      }
-
 
     .bar{
         display: flex;

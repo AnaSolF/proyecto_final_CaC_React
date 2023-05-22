@@ -9,7 +9,7 @@ export default function Tops() {
         <h5>Delivery que satisface los sentidos</h5><br></br>
         <p>
           ¿Con Hambre y nada te copa? Acá tu Comida Sabrosa, Hoy Puede Tener
-          otro Gusto.Pedi Ya, Te Llena el Corazón.
+          otro Gusto. Pedi Ya, Te Llena el Corazón.
         </p>
        
         <div className={styles.tops}>
