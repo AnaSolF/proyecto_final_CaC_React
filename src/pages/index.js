@@ -1,19 +1,15 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
-import MyHeader from "@/Components/myHeader";
-import PruebaDiego from "@/Components/MyBanner";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import ComerciosAdheridos from "@/Components/ComerciosAdheridos";
-import MyBanner from "@/Components/MyBanner";
-import Tops from "@/Components/Tops";
-import MyFooter from "@/Components/MyFooter";
+import MainContextProvider from "@/Context/maincontextprovider";
+import MyMain from "@/Components/myMain";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function Home(main) {
+
   return (
     <>
       <Head>
@@ -22,17 +18,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/LogoP.png" />
       </Head>
-      <main className={`${styles.main} ${inter.className}`}>
-        <MyHeader />
-        <MyBanner
-          className={styles.banner}
-          title="¡Pedí lo que quieras!"
-          text="Restaurantes, mercados, farmacias, kioscos y mucho más."
-        ></MyBanner>
-        <ComerciosAdheridos />
-        <Tops />
-        <MyFooter />
-      </main>
+      <MainContextProvider>
+        <main className={`${styles.main} ${inter.className}`}>
+          <MyMain />
+        </main>
+      </MainContextProvider>
     </>
   );
 }
