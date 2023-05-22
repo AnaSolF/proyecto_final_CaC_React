@@ -1,6 +1,5 @@
-import styles from "@/styles/Banner.module.css";
+import styles from "@/styles/BannerText.module.css";
 import MyInput from "./MyInput";
-import { BiGeo } from 'react-icons/bi';
 
 
 export default function BannerText() {

@@ -1,8 +1,9 @@
 .main {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
   background-color: rgb(246, 243, 243);
+  justify-content: space-around;
+  min-height: 100vh;
 }
 
 .dark {
@@ -14,3 +15,10 @@
   float: right;
 }
 
+.contenedor{
+  justify-content: space-between;
+}
+/* 
+.comerciosAd{
+  margin-top: 10%;
+} */

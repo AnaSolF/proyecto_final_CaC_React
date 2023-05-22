@@ -13,15 +13,16 @@ export default function Darkmode() {
     <>
       <div className={styles.boton}>
         <Button
-          variant="btn-btn-success"
+          variant=""
           color="white"
-          className="btn"
+          className=""
+          widht="30px"
           onClick={() => {
             setToggle(!isToggleOn);
             setDarkmode(isToggleOn);
           }}
         >
-          {isToggleOn ? <img src="\icons8-día-y-noche-50 LIGHT.png"></img> : <img src="\icons8-día-y-noche-50 LIGHT.png" ></img> }
+          {isToggleOn ? <img src="\icons8-sol (1).gif"></img> : <img src="\icons8-sol (1).gif" ></img> }
         </Button>
       </div>
     </>

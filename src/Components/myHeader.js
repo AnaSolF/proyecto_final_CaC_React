@@ -57,15 +57,14 @@ export default function MyHeader(props) {
       </Navbar>
 
       {[false].map((expand) => (
-        <Navbar key={expand} bg="white"  expand={expand}>
+        <Navbar key={expand} bg="white" expand={expand}>
           <Container fluid>
+          <Darkmode />
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
-            <Darkmode />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
               placement="end"
-              style={{ width: "80%" }}
             >
               <Offcanvas.Header closeButton></Offcanvas.Header>
               <Offcanvas.Body className={darkMode ? styles.dark : styles.light}>
@@ -108,6 +107,7 @@ export default function MyHeader(props) {
             <Navbar.Brand href="#">
               <img className="logo" src="/PedidosYa.png"></img>
             </Navbar.Brand>
+            
           </Container>
         </Navbar>
       ))}
