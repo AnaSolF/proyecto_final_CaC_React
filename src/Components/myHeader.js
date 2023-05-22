@@ -78,7 +78,7 @@ export default function MyHeader(props) {
                   >
                     Qué bonito tenerte aquí
                   </Offcanvas.Title>
-                  <Nav.Link href="#action2" style={{ marginBottom: "40px", marginTop:"50px" }}>
+                  <Nav.Link href="#action2" style={{ marginTop:"20px" }}>
                     {" "}
                     <i
                       className="bi bi-house-door-fill"
