@@ -79,11 +79,11 @@ export default function MyHeader(props) {
                   >
                     Qué bonito tenerte aquí
                   </Offcanvas.Title>
-                  <Nav.Link href="#action2">
+                  <Nav.Link href="#action2" style={{ marginBottom: "40px", marginTop:"50px" }}>
                     {" "}
                     <i
                       className="bi bi-house-door-fill"
-                      style={{ marginRight: "20px" }}
+                      style={{ marginRight: "20px"}}
                     ></i>{" "}
                     Inicio
                   </Nav.Link>
