@@ -12,8 +12,9 @@ export default function BannerText() {
           Más de 10.000 restaurantes con delivery en Argentina
         </p>
         <label>Veamos qué tenés cerca</label>
-        <MyInput
+        <MyInput 
           type="text"
+          width="50%"
           className="form-control"
           placeholder=" Dirección o punto de referencia"
         />
