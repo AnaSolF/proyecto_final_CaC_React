@@ -34,7 +34,8 @@ export default function MyBanner(props) {
                 <MyInput
                  type="text"
                  className="form-control"
-                 placeholder=" Dirección o punto de referencia"/>
+                    placeholder=" Dirección o punto de referencia"
+                  />
               </Col>
             </Row>
           </Container>

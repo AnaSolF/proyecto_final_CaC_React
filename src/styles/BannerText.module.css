@@ -1,0 +1,25 @@
+.input {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.inputB {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    /* margin-bottom: 10%; */
+}
+
+.contenedor {
+    margin-bottom: 10%;
+    text-align: center;
+}
+
+@media only screen and (min-width: 770px) {
+
+    .contenedor {
+        display: none;
+    }
+
+}
