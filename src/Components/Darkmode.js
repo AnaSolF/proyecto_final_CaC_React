@@ -22,7 +22,7 @@ export default function Darkmode() {
             setDarkmode(isToggleOn);
           }}
         >
-          {isToggleOn ? <img src="\icons8-sol (1).gif"></img> : <img src="\icons8-sol (1).gif" ></img> }
+          {isToggleOn ? <img src="\icons8-sol.gif"></img> : <img src="\icons8-sol.gif"></img> }
         </Button>
       </div>
     </>
