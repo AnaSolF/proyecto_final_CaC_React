@@ -1,7 +1,7 @@
-import Image from 'react-bootstrap/Image';
+import Image from "react-bootstrap/Image";
 
-function Imagen(props) {
+function Image(props) {
   return (
-  <Imagen src={props.src} fluid />
+    <Image src={props.src} whidht={props.whidht} height={props.height} fluid />
   );
 }
