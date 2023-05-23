@@ -4,12 +4,12 @@
     height: 100vh;
     align-items: center;
     flex-direction: column;
-    padding-top: 5%;
+    padding-top: 6%;
 }
 
 .loginUno {
     margin: 0 auto;
-    height: 80vh;
+    height: 85vh;
     width: 90%;
     border-radius: 10px;
     background: linear-gradient(rgb(225, 14, 84) 40%, white 35%);
@@ -31,7 +31,7 @@
 }
 
 .titulo {
-    margin-top: 12%;
+    margin-top: 15%;
 }
 
 .buttons {
@@ -53,15 +53,16 @@
 .parrafo{
     font-size: small;
     text-align: center;
-    padding:15px 10%;
+    padding:30px 10%;
     }
 
 @media only screen and (min-width: 770px) {
 
     .loginUno {
-        height: 80vh;
+        height: 82vh;
         width: 33%;
         display: flex;
+       margin-bottom: 20%;
     }
 
 
@@ -72,7 +73,7 @@
     .parrafo {
         font-size: small;
         text-align: center;
-        padding: 20px 10%;
+        padding: 50px 10%;
     }
 
 }
