@@ -4,12 +4,13 @@
     height: 100vh;
     align-items: center;
     flex-direction: column;
-    padding-top: 6%;
+    padding-top: 3%;
+    min-height: 100vh;
 }
 
 .loginUno {
     margin: 0 auto;
-    height: 90vh;
+    height: 95vh;
     width: 90%;
     border-radius: 10px;
     background: linear-gradient(rgb(225, 14, 84) 40%, white 40%);
@@ -26,23 +27,32 @@
     font-weight: 500;
 }
 
-.logoP1 {
-    margin-left: 30px;
+.logos {
+    margin-bottom: 13%;
 }
 
+.loginBody {
+    margin-bottom: 10%;
+    padding-top: 27%;
 
+}
+
+.titulo {
+    padding-top: 0;
+}
 
 .buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 .btnNav {
     margin-top: 10px;
     padding-left: 30px;
     padding-right: 30px;
-    width: 80%;
+    width: 90%;
     font-size: small;
     text-align: justify;
 }
@@ -52,18 +62,18 @@
     text-align: center;
     padding-left: 5%;
     padding-right: 5%;
-    padding-top: 30px;
-    padding-bottom: 5%;
+    padding-top: 10px;
 }
 
-.titulo {
-    padding-top: 37%;
+.logoP1 {
+    margin-left: 30px;
 }
+
 
 @media only screen and (min-width: 801px) {
 
     .loginUno {
-        height: 82vh;
+        height: 80vh;
         width: 33%;
         display: flex;
         margin-bottom: 20%;
@@ -77,23 +87,21 @@
     .parrafo {
         font-size: small;
         text-align: center;
-        padding: 50px 10%;
+        padding: 30px 10%;
     }
 
-    
+
 }
 
-@media only screen and (min-width: 1019px) {
-    .titulo {
-        padding-top: 4%;
+@media only screen and (min-width: 1024px) {
+
+    .loginBody {
+        margin-bottom: 10%;
+        padding-top: 27%;
     }
 
-    .parrafo{
-padding-top: 10px;
+    .logoP {
+        display: none;
     }
-    .btnNav {
-        width: 80%;
-    }
-
 
 }
