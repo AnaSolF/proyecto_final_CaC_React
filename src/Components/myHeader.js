@@ -79,29 +79,32 @@ export default function MyHeader(props) {
                   >
                     Qué bonito tenerte aquí
                   </Offcanvas.Title>
-                  <Nav.Link href="#action2" style={{ marginTop:"20px" }}>
-                    {" "}
+
+                  <Nav.Link href="/" style={{ marginTop:"20px" }}>
                     <i
                       className="bi bi-house-door-fill"
                       style={{ marginRight: "20px"}}
-                    ></i>{" "}
-                    Inicio
+                    ></i>{"Inicio"}
+                    
                   </Nav.Link>
-                  <Nav.Link href="#action3">
+
+                  <Nav.Link href="/Test">
                     <i
                       className="bi bi-headset"
                       style={{ marginRight: "20px" }}
-                    ></i>{" "}
-                    Ayuda en línea
+                    ></i>{"Ayuda en línea "}
+                    
                   </Nav.Link>
-                  <Nav.Link href="#action4" className={styles.registro}>
-                    {" "}
-                    <i
+
+                  <Nav.Link href="/LoginBack" className={styles.registro}>
+                  <i
                       className="bi bi-box-arrow-right"
                       style={{ marginRight: "20px" }}
-                    ></i>{" "}
-                    Registrarse/ Iniciar sesión
+                    ></i>
+                    {"Registrarse  "}
+                    /{"Iniciar sesión"}
                   </Nav.Link>
+
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
