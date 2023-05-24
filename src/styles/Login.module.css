@@ -27,12 +27,12 @@
 }
 
 .logos {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  justify-content: center;
-  height: 50vh;
-  padding-bottom: 38%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    height: 50vh;
+    padding-bottom: 38%;
 }
 
 .loginBody {
@@ -40,13 +40,13 @@
     height: 50vh;
 }
 
-.logoP{
+.logoP {
     margin-left: 40px;
 }
 
 .titulo {
     padding-top: 5%;
-}  
+}
 
 .buttons {
     display: flex;
@@ -101,9 +101,14 @@
         padding: 30px 10%;
     }
 
-    .titulo{
+    .titulo {
         padding-top: 0px;
     }
+
+    .logos {
+        padding-bottom: 15%;
+    }
+
 
 }
 

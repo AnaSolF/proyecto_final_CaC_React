@@ -101,8 +101,7 @@ export default function MyHeader(props) {
                       className="bi bi-box-arrow-right"
                       style={{ marginRight: "20px" }}
                     ></i>
-                    {"Registrarse  "}
-                    /{"Iniciar sesión"}
+                    { "Registrarse "}/{ "Iniciar sesión" }
                   </Nav.Link>
 
                 </Nav>
