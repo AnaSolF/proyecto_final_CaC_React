@@ -11,14 +11,15 @@ export default function Login() {
           <Nav.Link href="#action1" className={styles.No}>
             Ahora no
           </Nav.Link>
-          <div >
+        
             <div className={styles.logos}>
               <Image src="/LogoP.png" width="100px" className={styles.logoP} />
-            </div>
+            
             <div className={styles.logoP1}>
-              <Image src="/LogoW.png" width="180px" />
+              <Image src="/LogoW.png" width="180px"/>
             </div>
-          </div>
+            </div>
+        
           <div className={styles.loginBody}>
             <h6 className={styles.titulo}>Elegí cómo querés ingresar</h6>
             <div className={styles.buttons}>
