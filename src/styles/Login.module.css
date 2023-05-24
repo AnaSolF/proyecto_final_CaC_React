@@ -44,9 +44,9 @@
     margin-left: 40px;
 }
 
-/* .titulo {
-    padding-top: 15%;
-}  */
+.titulo {
+    padding-top: 5%;
+}  
 
 .buttons {
     display: flex;
