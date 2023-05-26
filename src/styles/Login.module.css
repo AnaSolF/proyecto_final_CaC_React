@@ -120,19 +120,35 @@
     .logos {
         padding-bottom: 15%;
     }
-
-
 }
 
-/* @media only screen and (min-width: 1024px){
 
-    .loginBody {
-        margin-bottom: 10%;
-        padding-top: 27%;
-    }
+@media only screen and (orientation: landscape) {
 
-    .logoP {
+    .logos{
         display: none;
     }
 
-} */
+    .loginUno{
+        padding-top:1%;
+        width: 70%;
+    }
+    .titulo{
+        padding-top: 20px;
+    }
+   
+    .loginBody{
+        background-color: white;
+    }
+
+    .No {
+        color: white;
+    }
+}
+
+@media only screen and (max-width: 321px) {
+    .logos{
+        padding-bottom: 1%;
+    }
+
+}
