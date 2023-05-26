@@ -46,3 +46,8 @@ ul li {
 h1{
     padding-top: 80px;
 }
+
+.dark {
+    background-color: black;
+    color: white;
+  }

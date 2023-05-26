@@ -1,17 +1,19 @@
-import MyButton from "@/Components/MyButton";
 import styles from "@/styles/Login.module.css";
-import { Nav, Button } from "react-bootstrap";
+import { Nav } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
+import SocialLogin from "@/Components/Login/SocialLogin";
+import Button from "react-bootstrap/Button";
+
 
 export default function Login() {
+  
   return (
     <>
       <div className={styles.login}>
         <div className={styles.loginUno}>
           <Nav.Link href="#action1" className={styles.No}>
-            Ahora no
+          Ahora no
           </Nav.Link>
-        
             <div className={styles.logos}>
               <Image src="/LogoP.png" width="100px" className={styles.logoP} />
             
@@ -23,34 +25,14 @@ export default function Login() {
           <div className={styles.loginBody}>
             <h6 className={styles.titulo}>Elegí cómo querés ingresar</h6>
             <div className={styles.buttons}>
-              <MyButton
-                className={styles.btnNav}
-                variant="outline-dark"
-                color="light"
-                text="Iniciar sesión con Facebook"
-                icon=<Image
-                  src="\icons8-facebook-rodeado-de-círculo-48.png"
-                  width={"20px"}
-                  style={{ marginRight: "5px" }}
-                />
-              />
-              <MyButton
+            
+              <SocialLogin />
+              <Button
                 className={styles.btnNav}
                 variant="outline-dark"
                 color="black"
-                text="Continuar con Google"
-                icon=<Image
-                  src="/icons8-logo-de-google-94.png"
-                  width={"20px"}
-                  style={{ marginBottom: "5px" }}
-                />
-              />
-              <MyButton
-                className={styles.btnNav}
-                variant="outline-dark"
-                color="black"
-                text="Otro método"
-              />
+                onClick={ () => alert("Hola") }> Otro método </Button>
+
             </div>
 
             <p className={styles.parrafo}>
@@ -59,7 +41,7 @@ export default function Login() {
             </p>
           </div>
         </div>
-      </div>
+        </div>
     </>
   );
 }

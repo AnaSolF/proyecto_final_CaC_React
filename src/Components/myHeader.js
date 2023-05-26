@@ -1,9 +1,8 @@
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import MyButton from "./MyButton";
 import Darkmode from "./Darkmode";
-import { Nav } from "react-bootstrap";
+import { Button, Nav } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "@/styles/Header.module.css";
 import Offcanvas from "react-bootstrap/Offcanvas";
@@ -29,13 +28,11 @@ export default function MyHeader(props) {
           </Navbar.Brand>
           <Darkmode />
           <Navbar.Brand className={styles.barra}>
-            <MyButton
+            <Button
               className="btnNav"
-              icon=<i className="bi bi-shop-window"></i>
-              text="Registrá tu negocio"
               variant="outline-dark"
               color="black"
-            />
+            > <i className="bi bi-shop-window"></i> {"Registrá tu negocio"} </Button>
 
             <img className={styles.logoP} src="/LogoP.png"></img>
             <NavDropdown title="" id="basic-nav-dropdown">
@@ -44,12 +41,11 @@ export default function MyHeader(props) {
                 <i className="bi bi-headset" style={{ marginRight: "5px" }}></i>
                 Ayuda en línea
               </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2" style={{ fontSize: "12px" }}>
+              <NavDropdown.Item href="/LoginBack" style={{ fontSize: "12px" }}>
                 <i
                   className="bi bi-box-arrow-right"
                   style={{ marginRight: "5px" }}
-                ></i>{" "}
-                Iniciar sesión/ Registrarse
+                ></i>{"Iniciar sesión/ Registrarse"}
               </NavDropdown.Item>
             </NavDropdown>
           </Navbar.Brand>

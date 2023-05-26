@@ -1,6 +1,6 @@
 import { Nav } from "react-bootstrap";
 import styles from "@/styles/LoginBack.module.css";
-import Login from "./Login";
+import Login from "../Components/Login/Login";
 
 export default function LoginBack() {
   return (

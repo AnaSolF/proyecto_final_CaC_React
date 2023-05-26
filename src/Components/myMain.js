@@ -12,6 +12,10 @@ import { useContext } from "react";
 export default function MyMain({ section }) {
   let context = useContext(maincontextState);
   let darkMode = context.darkMode;
+  let newcontextState = darkMode;
+  //Guardo valor de newcontextState en local storage
+  saveContextState(newcontextState)
+  
 
   return (
     <>
@@ -36,4 +40,10 @@ export default function MyMain({ section }) {
       }
     </>
   );
+}
+
+export function saveContextState(newcontextState) {
+  if (typeof window !== 'undefined') {
+    localStorage.setItem("contextState", JSON.stringify(newcontextState))
+  }
 }

@@ -72,6 +72,18 @@
     padding-top: 10px;
 }
 
+.dark{
+    margin: 0 auto;
+    height: 95vh;
+    width: 90%;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
 /* .logoP1 {
     margin-left: 30px;
     margin-bottom: 30px;

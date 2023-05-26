@@ -11,7 +11,6 @@ export default function Darkmode() {
 
   return (
     <>
-      <div className={styles.boton}>
         <Button
           variant=""
           color="white"
@@ -24,7 +23,7 @@ export default function Darkmode() {
         >
           {isToggleOn ? <img src="\icons8-sol.gif"></img> : <img src="\icons8-sol.gif"></img> }
         </Button>
-      </div>
+      
     </>
   );
 }

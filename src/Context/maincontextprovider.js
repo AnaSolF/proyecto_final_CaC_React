@@ -12,13 +12,26 @@ export default function MainContextProvider ( { children }) {
         setContext({...context, ['darkMode']: darkMode })
     }
 
+ //agrego función para setear isLoggedIn
+    
+    const setIsLoggedIn = (isLoggedIn) => {
+        setContext({...context, ["isLoggedIn"]: isLoggedIn})
+    }
+    
+//agrego función para setear username
+
+    const setUsername = (username) => {
+        setContext({...context, ["username"]: username})
+    }
+    
     return (
         <>
-            <maincontextState.Provider value={{ darkMode: context.darkMode, setDarkmode: setDarkMode, isLoggedIn: context.isLoggedIn, language: context.language } }>
-                { children }
+            <maincontextState.Provider value={{ darkMode: context.darkMode, setDarkmode: setDarkMode, isLoggedIn: context.isLoggedIn, language: context.language }}>
+                {children}
             </maincontextState.Provider>
         </>
     );
+    
 }
 
 export { maincontextState };
