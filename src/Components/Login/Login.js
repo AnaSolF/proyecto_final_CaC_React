@@ -11,7 +11,7 @@ export default function Login() {
     <>
       <div className={styles.login}>
         <div className={styles.loginUno}>
-          <Nav.Link href="#action1" className={styles.No}>
+          <Nav.Link href="/" className={styles.No}>
           Ahora no
           </Nav.Link>
             <div className={styles.logos}>
