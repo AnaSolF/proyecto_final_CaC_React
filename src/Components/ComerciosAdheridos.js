@@ -2,6 +2,15 @@ import CardsComercios from "./CardsComercios";
 import styles from "@/styles/Comercios.module.css";
 
 export default function ComerciosAdheridos(props) {
+  let cardsImg = [
+    "Burger_King_logo_(1999).svg.png",
+    "logoCarrefour.png",
+    "mcdonalds-logo.webp",
+    "logos-2019-01.jpg",
+    "logoWallmart.png",
+    "barilocheLogo.jpg",
+    "GlupsLogo.png",
+  ];
   return (
     <>
       <div>
@@ -14,64 +23,13 @@ export default function ComerciosAdheridos(props) {
             justifyContent: "center",
           }}
         >
-          <div className={styles.tarjeta}>
-            <CardsComercios
-              src="Burger_King_logo_(1999).svg.png"
-            />
-          </div>
-
-          <div className={styles.tarjeta}>
-            <CardsComercios
-              src="logoCarrefour.png"
-            />
-          </div>
-
-          <div className={styles.tarjeta}>
-            <CardsComercios
-              src="mcdonalds-logo.webp"
-            />
-          </div>
-
-          <div className={styles.tarjeta}>
-            <CardsComercios
-              src="logos-2019-01.jpg"
-            />
-          </div>
-
-          <div style={{ margin: "20px" }}>
-            <CardsComercios
-              src="Burger_King_logo_(1999).svg.png"
-            />
-          </div>
-          <div className={styles.tarjeta}>
-            <CardsComercios
-              src="Logo-freddo.jpg"
-            />
-          </div>
-
-          <div className={styles.tarjeta}>
-            <CardsComercios
-              src="MostazaLogo.jpg"
-            />
-          </div>
-
-          <div className={styles.tarjeta}>
-            <CardsComercios
-              src="logoWallmart.png"
-            />
-          </div>
-
-          <div className={styles.tarjeta}>
-            <CardsComercios
-              src="barilocheLogo.jpg"
-            />
-          </div>
-
-          <div className={styles.tarjeta}>
-            <CardsComercios
-              src="GlupsLogo.png"
-            />
-          </div>
+          {cardsImg.map((cardImg) => {
+            return (
+              <div className={styles.tarjeta} key={cardImg}>
+                <CardsComercios  src={cardImg} />
+              </div>
+            );
+          })}
         </div>
       </div>
     </>
