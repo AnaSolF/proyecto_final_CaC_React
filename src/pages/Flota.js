@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../styles/flota.module.css";
 import data from "../Data/data.json";
+import { Key } from "@mui/icons-material";
 
 const Flota = () => {
   const { imgFlota } = data; //Agrego constante para solucionar un error
@@ -9,8 +10,7 @@ const Flota = () => {
       <div className={styles.flota}>
         <div>
           <div className={styles.titulo}>
-            {" "}
-            <h2>La flota más grande</h2>{" "}
+            <h2>{"La flota más grande"}</h2>
           </div>
           <div className={styles.titulo}>
             <h6>de Latinoamérica</h6>
@@ -22,8 +22,7 @@ const Flota = () => {
           <div className={styles.imagenes}>
             {imgFlota.map((imgFlota, Key) => {
               return (
-                <div Key={imgFlota.id} className={styles.image}>
-                  <img src={imgFlota.img} />
+                <div key={imgFlota.id} className={styles.image}><img src={imgFlota.img}></img>
                 </div>
               );
             })}

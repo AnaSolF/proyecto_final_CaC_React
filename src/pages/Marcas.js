@@ -10,8 +10,9 @@ const Marcas = () => {
         <h2 className={styles.h2}>nos eligen</h2>
         </div>
         <div className={styles.slider}>
-          
-      </div>
+          slideShow
+        </div>
+        <div>Controles</div>
       </div>
     </>
   )
