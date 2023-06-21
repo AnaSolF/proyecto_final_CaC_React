@@ -1,6 +1,9 @@
-*{
-    margin:0;
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Poppins:wght@400;700&family=Roboto:wght@300;500&family=Satisfy&display=swap');
+
+* {
+    margin: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 Link a {
@@ -11,11 +14,11 @@ ul li {
     list-style-type: none;
 }
 
-.logo{
+.logo {
     width: 200px;
 }
 
-.logoP{
+.logoP {
     background-color: red;
     border-radius: 50%;
     width: 30px;
@@ -23,15 +26,15 @@ ul li {
     padding: 5px;
 }
 
-.barra{
+.barra {
     display: flex;
 }
 
-#basic-nav-dropdown{
+#basic-nav-dropdown {
     margin-left: 10px;
 }
 
-.btnNav{
+.btnNav {
     margin-right: 30px;
     font-size: small;
     font-weight: 600;
@@ -39,25 +42,26 @@ ul li {
     justify-content: space-around;
 }
 
-.Nav.Link{
+.Nav.Link {
     margin-bottom: 20px;
 }
 
-h1{
+h1 {
     padding-top: 80px;
 }
 
 .dark {
     background-color: black;
     color: white;
-  }
-  
+}
+
 /* prueba */
-.verde{
+.verde {
     background-color: green;
     color: white;
 }
-.rojo{
+
+.rojo {
     background-color: red;
     color: white;
 }

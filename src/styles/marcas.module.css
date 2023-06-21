@@ -2,3 +2,19 @@
     height: 50vh;
     background-color: aliceblue;
 }
+
+.titulo{
+    text-align: center;
+    padding-top: 30px;
+}
+
+.h2{
+font-size: 45px;
+font-weight: bold;
+}
+
+.slider{
+    max-width: 1000px;
+    margin: 50px auto;
+    overflow: hidden;
+}

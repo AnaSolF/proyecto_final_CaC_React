@@ -5,6 +5,7 @@ import Accordion from "react-bootstrap/Accordion";
 const Preguntas = () => {
   return (
     <>
+      <div className={styles.titulo} ><h2>Preguntas Frecuentes</h2></div>
       <div className={styles.preguntas}>
         <Accordion>
           <Accordion.Item eventKey="0">
@@ -12,7 +13,7 @@ const Preguntas = () => {
               ¿Qué necesito para registrar mi local en Pedí Ya?
             </Accordion.Header>
             <Accordion.Body>
-              CUIL o CUIT Documento de identidad Cuenta bancaria
+             <p className={styles.parrafo}>CUIL o CUIT Documento de identidad Cuenta bancaria.</p>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="1">
@@ -20,10 +21,10 @@ const Preguntas = () => {
               ¿Cómo y cuándo son las liquidaciones y pagos?
             </Accordion.Header>
             <Accordion.Body>
-              En la sección "Finanzas" de Partner Portal, podrás ver tu estado
+              <p className={styles.parrafo}>En la sección "Finanzas" de Partner Portal, podrás ver tu estado
               de cuenta y las fechas de emisión de tu pago. Cada semana,
               recibirás tu liquidación. Emitiremos tus pagos por transferencia
-              bancaria en la fecha correspondiente.
+              bancaria en la fecha correspondiente.</p>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="2">
@@ -31,7 +32,7 @@ const Preguntas = () => {
               ¿Cómo gestiono la información/ datos de mi negocio?
             </Accordion.Header>
             <Accordion.Body>
-              En PedidosYa contás con Partner Portal, nuestro sitio de
+              <p className={styles.parrafo}>En PediYa contás con Partner Portal, nuestro sitio de
               autogestión, donde podrás visualizar datos relevantes de tu
               negocio y realizar acciones como modificar precios, descripciones,
               productos y mucho más. Además, contás con un chat de Ayuda en
@@ -41,7 +42,7 @@ const Preguntas = () => {
               utilizaste para registrar tu negocio. Las credenciales, una vez
               que te son enviadas, tienen apenas unas horas de vigencia, por lo
               que te recomendamos realizar el registro apenas recibas el correo
-              electrónico.
+              electrónico.</p>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="3">
@@ -49,11 +50,11 @@ const Preguntas = () => {
               ¿Con quién me contacto si tengo algún problema?
             </Accordion.Header>
             <Accordion.Body>
-              Para poder ayudarte en cualquier tema vinculado a tu cuenta,
+              <p className={styles.parrafo}>Para poder ayudarte en cualquier tema vinculado a tu cuenta,
               dudas, consultas o problemas con alguna orden, podés comunicarte a
               través de Ayuda en Línea en Partner Portal o en tu sistema de
               recepción de pedidos (GoDroid o GoWin) las 24 hs todos los días de
-              la semana.
+              la semana.</p>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="5">
@@ -61,12 +62,15 @@ const Preguntas = () => {
               ¿Cómo debo operar en el día a día?
             </Accordion.Header>
             <Accordion.Body>
-              En PedidosYa cuidamos mucho a nuestros usuarios y queremos
+              <p className={styles.parrafo}>En PedidosYa cuidamos mucho a nuestros usuarios y queremos
               ofrecerles una experiencia increíble, rápida y fácil, por eso es
-              muy importante que: 1- Aceptes los pedidos de manera rápida para
-              evitar que se cancelen. 2- Evites rechazar pedidos porque es muy
+                muy importante que:</p>
+              <p className={styles.parrafo}>1- Aceptes los pedidos de manera rápida para
+              evitar que se cancelen. </p>
+              <p className={styles.parrafo}>2- Evites rechazar pedidos porque es muy
               frustrante para los clientes y a su vez, tu comercio pierde
-              reputación. 3- Verifiques en la orden el horario de llegada del
+              reputación. </p>
+              <p className={styles.parrafo}>3- Verifiques en la orden el horario de llegada del
               repartidor para evitar demoras en la promesa de entrega a nuestros
               usuarios. Es clave prestar atención a estos puntos para evitar
               cierres de tu local por fallas operativas. Estos cierres son
@@ -74,7 +78,7 @@ const Preguntas = () => {
               experiencia del usuario y la salud de nuestra plataforma. Si
               tienes inconvenientes o demoras en la cocina, no dudes en
               contactarte con Ayuda en Línea en Partner Portal para que podamos
-              guiarte sobre cómo resolverlos.
+              guiarte sobre cómo resolverlos.</p>
             </Accordion.Body>
           </Accordion.Item>
 
@@ -83,15 +87,17 @@ const Preguntas = () => {
               ¿Qué debo tener en cuenta a la hora de recibir un pedido?
             </Accordion.Header>
             <Accordion.Body>
-              En PedidosYa, cuidamos mucho la experiencia de nuestros usuarios y
+              <p className={styles.parrafo}> En PediYa, cuidamos mucho la experiencia de nuestros usuarios y
               queremos que vuelvan a pedir. Por eso, cuando recibas un pedido,
-              es muy importante: 1- Que prestes atención a tu sistema de
+                es muy importante:</p>
+              <p className={styles.parrafo}> 1- Que prestes atención a tu sistema de
               recepción y confirmes el pedido antes de los 5 minutos de haber
-              ingresado, para evitar que ese pedido se cancele. 2- Que evites
+              ingresado, para evitar que ese pedido se cancele.</p>
+              <p className={styles.parrafo}> 2- Que evites
               rechazar órdenes ya que esto implica una cancelación para los
               usuarios. Si aceptás órdenes de manera rápida y no las cancelas,
               podrás asegurar una buena experiencia para tus clientes, ¡que
-              volverán a elegirte!
+              volverán a elegirte!</p>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="7">
@@ -99,13 +105,13 @@ const Preguntas = () => {
               ¿Cómo funcionan las áreas de entrega?
             </Accordion.Header>
             <Accordion.Body>
-              En PedidosYa queremos garantizar la mejor experiencia para
+              <p className={styles.parrafo}> En PediYa queremos garantizar la mejor experiencia para
               nuestros usuarios y la calidad de los productos que reciben. Por
               eso nuestras áreas de entrega se determinan en función de tiempos
               de manejo. Las áreas de entrega son dinámicas, esto significa que
               pueden modificarse en días de mucha lluvia o de mucho tráfico. De
               esta forma, evitamos que los tiempos se vean afectados y
-              aseguramos la calidad de tus productos.
+              aseguramos la calidad de tus productos.</p>
             </Accordion.Body>
           </Accordion.Item>
           <Accordion.Item eventKey="8">
@@ -113,14 +119,14 @@ const Preguntas = () => {
               ¿Puedo contratar publicidad en la app de Pedí Ya?
             </Accordion.Header>
             <Accordion.Body>
-              En PedidosYa contamos con varias propuestas para que destaques tu
+              <p className={styles.parrafo}>En PediYa contamos con varias propuestas para que destaques tu
               restaurante en la app con espacios de posicionamiento promocionado
               según tus objetivos de venta. Podés gestionarlos desde Partner
               Portal en forma directa. También podrás sumarte a campañas de
               Marketing con productos seleccionados y aplicar descuentos en
               productos específicos o en todo tu menú. Esto te da mayor
               visibilidad, atrae mucho a los usuarios y ayuda a potenciar tu
-              negocio.
+              negocio.</p>
             </Accordion.Body>
           </Accordion.Item>
         </Accordion>

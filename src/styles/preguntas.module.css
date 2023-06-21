@@ -1,4 +1,39 @@
 .preguntas{
-    height: 120vh;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 80vh;
+    max-height: 110vh;
+    font-size: small;
+}
+
+.parrafo{
+    text-align: justify;
+}
+
+.titulo{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-size: larger;
+}
+
+.Header{
+    font-size: small;
+}
+
+@media only screen and (min-width: 770px) {
+    .preguntas{
+       margin-left: 25%;
+       margin-right: 25%;
+    }
+
+ .titulo{
+    text-align: center;
+    font-size: larger;
+    padding-top: 100px;
+    padding-bottom: 0px;
+}
+
 }
