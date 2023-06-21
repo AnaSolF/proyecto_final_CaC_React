@@ -53,13 +53,14 @@
     .promo {
         width: 170px;
         height: 130px;
+        align-self:flex-start;
     }
 
     .text {
         height: 100vh;
         margin-right: 20px;
-        margin-top: 80px;
-        margin-left: 20px;
+        margin-top: 50px;
+        margin-left: 20%;
     }
 
 }
