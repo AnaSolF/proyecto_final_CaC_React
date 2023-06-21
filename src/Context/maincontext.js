@@ -1,5 +1,4 @@
 const defaultState = {
-    language : "es",
     darkMode : false,
     isLoggedIn: false,
     username : "anonymous"

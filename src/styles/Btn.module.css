@@ -1,0 +1,13 @@
+.MyButton{
+    text-transform: lowercase;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    width: 90%;
+    margin-left: 10px;
+}
+
+.MyButton::first-letter{
+    text-transform: uppercase;
+}
+

@@ -1,0 +1,61 @@
+.funcional{
+    height: 150vh;
+    background-color: white;
+    margin-left: 5%;
+    margin-right: 5%;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.cardsImage{
+    width: 150px;
+    height: 150px;
+    margin-bottom: 200px;
+}
+
+.titles{
+  text-align: center;  
+  margin-bottom: 30px;
+  margin-top: 50px;
+}
+
+.titles h2{
+     text-align: center;
+    font-size: 35px;
+    font-weight: 800;
+    padding-bottom: 30px;
+}
+
+.text{
+    color: black;
+    font-size: smaller;
+    margin-bottom: 50px;
+}
+
+@media only screen and (min-width: 770px) {
+    .cardsImage{
+        width: 200px;
+        height: 200px;
+        margin: 30px;
+    }  
+
+    .text{
+       font-size: small; 
+    }
+
+    .funcional{
+        height: 80vh;
+    }
+
+    .titles h5{
+        font-size: medium;
+    }
+  
+}

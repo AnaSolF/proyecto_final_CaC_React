@@ -9,13 +9,20 @@
 
 .loginUno {
     margin: 0 auto;
-    height: 95vh;
-    width: 90%;
+    height: 100vh;
+    width: 100%;
     border-radius: 10px;
     background: linear-gradient(rgb(225, 14, 84) 40%, white 40%);
     display: flex;
     flex-direction: column;
     text-align: center;
+}
+
+.fondo{
+    background: linear-gradient(rgb(225, 14, 84) 40%, white 40%); 
+    margin: 0 auto;
+    height: 100vh;
+    width: 100%; 
 }
 
 .No {
@@ -35,9 +42,32 @@
     padding-bottom: 35%;
 }
 
-.loginBody {
+.loginBody,
+.container {
     margin-bottom: 30%;
     height: 50vh;
+}
+
+.formulario{
+margin-top: 15%;
+background-color:rgb(237, 233, 227);
+padding: 20px;
+height: 85vh;
+width: 90%;
+border-radius: 10px;
+}
+
+.botonContinuar{
+    background-color: rgb(251, 176, 189);
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 10px;
+    color: white;
+
+}
+
+.botonContinuar:hover{
+    background-color: rgb(220, 110, 129);
 }
 
 .logoP {
@@ -84,6 +114,8 @@
     text-align: center;
 }
 
+
+
 /* .logoP1 {
     margin-left: 30px;
     margin-bottom: 30px;
@@ -94,7 +126,7 @@
 
 
 @media only screen and (min-width: 801px) {
-
+    
     .loginUno {
         height: 80vh;
         width: 33%;
@@ -119,6 +151,12 @@
 
     .logos {
         padding-bottom: 15%;
+    }
+
+    .formulario{
+        margin-top: 8%;
+        width: 35%;
+        height: 70vh;
     }
 }
 

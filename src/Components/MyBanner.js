@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import BannerText from "./BannerText";
 import styles from "@/styles/Banner.module.css";
-import MyInput from "./MyInput";
+import MyModal from "./MyModal";
 
 export default function MyBanner(props) {
   return (
@@ -31,11 +31,7 @@ export default function MyBanner(props) {
             </Row>
             <Row className={styles.inputB}>
               <Col className="col-9">
-                <MyInput
-                 type="text"
-                 className="form-control"
-                    placeholder=" Dirección o punto de referencia"
-                  />
+                  <MyModal />
               </Col>
             </Row>
           </Container>

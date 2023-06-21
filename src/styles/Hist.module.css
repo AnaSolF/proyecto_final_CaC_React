@@ -1,0 +1,68 @@
+.historia{
+display: flex;
+flex-direction: column;
+background-image: url("/pink-blue-yellow.jpg");
+height: 110vh;
+color: white;
+align-items: center;
+}
+
+.title {  
+    text-align: center;
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
+.title h2{
+    font-size: 45px;
+    font-weight: bolder;
+}
+
+.title p{
+font-size: 35px;
+margin-left: 10%;
+margin-right: 10%;
+}
+
+.parrafo{
+    padding: 20px;
+    text-align:center;
+    font-weight: 500;
+    text-align: center;
+}
+
+.videoLarge{
+    display: none;
+}
+
+.video{
+    display: flex;
+}
+
+.button{
+width:60%;
+background-color: yellow;
+padding: 10px;
+font-size: small;
+margin-bottom: 40px;
+border: none;
+border-radius: 5px;
+}
+
+@media only screen and (min-width: 770px) {
+.videoLarge{
+    display: flex;
+}
+
+.video{
+    display: none;
+}
+
+.button{
+    width: 15%;
+}
+
+.parrafo{
+    width: 50%;
+}
+}

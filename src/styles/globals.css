@@ -3,7 +3,7 @@
     box-sizing: border-box;
 }
 
-a {
+Link a {
     text-decoration: none;
 }
 
@@ -51,4 +51,13 @@ h1{
     background-color: black;
     color: white;
   }
-
+  
+/* prueba */
+.verde{
+    background-color: green;
+    color: white;
+}
+.rojo{
+    background-color: red;
+    color: white;
+}

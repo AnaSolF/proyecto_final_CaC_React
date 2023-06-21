@@ -8,6 +8,7 @@ import Tops from "@/Components/Tops";
 import MyFooter from "@/Components/MyFooter";
 import { maincontextState } from "@/Context/maincontextprovider";
 import { useContext } from "react";
+import Darkmode from "./Darkmode";
 
 export default function MyMain({ section }) {
   let context = useContext(maincontextState);
@@ -16,7 +17,6 @@ export default function MyMain({ section }) {
   //Guardo valor de newcontextState en local storage
   saveContextState(newcontextState)
   
-
   return (
     <>
       {

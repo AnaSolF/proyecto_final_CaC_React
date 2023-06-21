@@ -1,0 +1,49 @@
+.vender{
+    display: flex;
+    flex-direction: column;
+    height: 130vh;
+}
+
+.image{
+    padding: 10px;
+    display: flex;
+}
+
+.parrafo
+.parrafoOne{
+    padding: 20px;
+    text-align:center;
+    font-weight: 500;
+}
+
+.titles{
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 50px;
+}
+
+@media only screen and (min-width: 770px){
+  .vender{
+    align-items: center;
+    height: 130vh;
+  }
+
+  .images{
+    display: flex;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-right: 10px;
+    justify-content: center;
+  }
+
+  .titles{
+    margin-top: 50px;
+  }
+
+  .parrafoOne{
+    margin-left: 25%;
+    margin-right: 25%;
+    font-size: 14px;
+    text-align: center;
+  }
+}

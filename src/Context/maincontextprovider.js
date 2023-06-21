@@ -26,7 +26,7 @@ export default function MainContextProvider ( { children }) {
     
     return (
         <>
-            <maincontextState.Provider value={{ darkMode: context.darkMode, setDarkmode: setDarkMode, isLoggedIn: context.isLoggedIn, language: context.language }}>
+            <maincontextState.Provider value={{ darkMode: context.darkMode, setDarkmode: setDarkMode, isLoggedIn: context.isLoggedIn, username: context.username }}>
                 {children}
             </maincontextState.Provider>
         </>

@@ -1,16 +1,20 @@
 import styles from "@/styles/Login.module.css";
 import Image from "react-bootstrap/Image";
-import { appFirebase } from "@/firebase/InitConfig";
-import { getAuth, signInWithPopup, linkWithPopup } from "firebase/auth";
+import { app } from "@/firebase/InitConfig";
+import { getAuth, signInWithPopup } from "firebase/auth";
 import { GoogleAuthProvider, FacebookAuthProvider } from "firebase/auth";
 import Button from "react-bootstrap/Button";
+
+// import Button from "react-bootstrap/Button";
+import SwipeableEdgeDrawer from "./SwipeableEdgeDrawer";
+
 
 export default function SocialLogin() {
   const googleProvider = new GoogleAuthProvider();
   const facebookProvider = new FacebookAuthProvider();
 
   function doLogin(provider) {
-    const auth = getAuth(appFirebase);
+    const auth = getAuth(app);
     signInWithPopup(auth, provider)
       .then((credentials) => {
         const user = credentials.user;
@@ -35,9 +39,9 @@ export default function SocialLogin() {
         <Image
           src="/icons8-logo-de-google-94.png"
           width={"20px"}
-          style={{ marginRight: "5px" }}
-        />
-           {"Continuar con Google"}
+          style={{ marginRight: "15px" }}
+        />{"Continuar con Google"}
+      {/* <Nav.Link href="/SesionUsuario"></Nav.Link>  */}
       </Button>
 
       <Button
@@ -52,6 +56,7 @@ export default function SocialLogin() {
           style={{ marginBottom: "5px" }}
         />{"Iniciar sesión con Facebook "}
       </Button>
+      
     </>
   );
 }

@@ -1,6 +1,5 @@
 import styles from "@/styles/BannerText.module.css";
-import MyInput from "./MyInput";
-
+import MyModal from "./MyModal";
 
 export default function BannerText() {
   return (
@@ -12,12 +11,7 @@ export default function BannerText() {
           Más de 10.000 restaurantes con delivery en Argentina
         </p>
         <label>Veamos qué tenés cerca</label>
-        <MyInput 
-          type="text"
-          width="50%"
-          className="form-control"
-          placeholder=" Dirección o punto de referencia"
-        />
+        <MyModal />
       </div>
     </>
   );

@@ -1,16 +1,8 @@
 import CardsComercios from "./CardsComercios";
 import styles from "@/styles/Comercios.module.css";
+import { cardsImg } from "../Data/data.json"
 
 export default function ComerciosAdheridos(props) {
-  let cardsImg = [
-    "Burger_King_logo_(1999).svg.png",
-    "logoCarrefour.png",
-    "mcdonalds-logo.webp",
-    "logos-2019-01.jpg",
-    "logoWallmart.png",
-    "barilocheLogo.jpg",
-    "GlupsLogo.png",
-  ];
   return (
     <>
       <div>
@@ -23,10 +15,10 @@ export default function ComerciosAdheridos(props) {
             justifyContent: "center",
           }}
         >
-          {cardsImg.map((cardImg) => {
+          {cardsImg.map((cardImg, key) => {
             return (
-              <div className={styles.tarjeta} key={cardImg}>
-                <CardsComercios  src={cardImg} />
+              <div className={styles.tarjeta} key={cardImg.id}>
+                <CardsComercios src={ cardImg.imagen } />
               </div>
             );
           })}

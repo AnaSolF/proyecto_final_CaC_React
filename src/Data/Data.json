@@ -1,15 +1,73 @@
-[{
-    "id": 1,
-    "image": "Burger_King_logo_(1999).svg.png" 
-},
-
 {
-    "id": 2,
-    "image": ""
-},
-
-{
-    "id": 3,
-    "image": ""
+  "cards": [
+    {
+      "id": 1,
+      "img": "IconTab.svg",
+      "title": "Cómo recibir los pedidos",
+      "text": "Con tu sistema de recepción podrás aceptar tus pedidos, verificar el horario de entrega y tendrás toda la información necesaria para entregarlo correctamente. +info"
+    },
+    {
+      "id": 2,
+      "img": "IconDisp.svg",
+      "title": "Cómo gestionar tu local",
+      "text": "En Partner Portal podrás modificar tu menú y horarios de apertura, descargar tu Estado de Cuenta y mucho, muchísimo más."
+    },
+    {
+      "id": 3,
+      "img": "IconBolsa.svg",
+      "title": "Cómo entregar los pedidos",
+      "text": "Cumplir con los tiempos de entrega y las expectativas de los clientes permite asegurarles una gran experiencia. ¡Cuidar tu operativa es clave para que los usuarios vuelvan a confiar y así poder vender cada vez más!"
+    },
+    {
+      "id": 4,
+      "img": "IconCohe.svg",
+      "title": "Cómo potenciar tus ventas",
+      "text": "Te ofrecemos distintas herramientas para publicitar tu local y aumentar tu visibilidad en nuestra aplicación, ¡logrando así más ventas y nuevos clientes!"
+    }
+  ],
+  "cardsImg": [
+    {
+      "id": 5,
+      "imagen": "Burger_King_logo_(1999).svg.png"
+    },
+    {
+      "id": "6",
+      "imagen": "logoCarrefour.png"
+    },
+    {
+      "id": 7,
+      "imagen": "mcdonalds-logo.webp"
+    },
+    {
+      "id": 8,
+      "imagen": "logos-2019-01.jpg"
+    },
+    {
+      "id": 9,
+      "imagen": "logoWallmart.png"
+    },
+    {
+      "id": 10,
+      "imagen": "barilocheLogo.jpg"
+    },
+    {
+      "id": 11,
+      "imagen": "GlupsLogo.png"
+    }
+  ],
+  
+  "imgFlota": [
+    {
+      "id": 12,
+      "img": "blue-yellow-1.jpg"
+    },
+    {
+      "id": 13,
+      "img": "blue-yellow-2.jpg"
+    },
+    {
+      "id": 14,
+      "img": "blue-yellow-3.jpg"
+    }
+  ]
 }
-]
