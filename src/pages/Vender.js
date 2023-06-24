@@ -35,7 +35,7 @@ const Vender = () => {
           </div>
 
           </div>
-          <div className={styles.parrafo}>
+          <div className={styles.parrafoOne}>
           Además, te compartiremos distintos entrenamientos para que todo quede claro durante el proceso y puedas potenciar tus ventas desde el primer día.
         </div>
         

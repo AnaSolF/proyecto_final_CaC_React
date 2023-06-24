@@ -1,51 +1,78 @@
-import React from 'react'
-import Form from 'react-bootstrap/Form';
-import InputGroup from 'react-bootstrap/InputGroup';
-import styles from "../styles/formRegistroLocal.module.css"
+import React from "react";
+// import InputGroup from 'react-bootstrap/InputGroup';
+import styles from "../styles/formRegistroLocal.module.css";
+// import Form from 'react-bootstrap/Form';
+import FormControl from "@mui/material/FormControl";
+import MyInput from "@/Components/MyInput";
 
 const FormRegistroLocal = () => {
+  const names = [
+    "Bebidas",
+    "Café",
+    "Carnicería",
+    "Congelados",
+    "Farmacia",
+    "Ferretería- Tienda de materiales",
+    "Flores y plantas",
+    "Frutas y verduras",
+    "Gourmet/Fiambrería",
+    "Kioscos",
+    "Lácteos",
+    "Librería/Papelería",
+    "Mamás & bebés/Pañales",
+    "Mascotas",
+    "Minimercados",
+    "Panaderías/Pastelerías",
+    "Pasta Fresca",
+    "Pastelería",
+    "Regalos & accesorios",
+    "Restaurantes",
+    "Salud & belleza",
+    "Suplementos",
+    "Tienda natural y productos saludables/ Dietética",
+    "Vapes y tabaco",
+  ];
 
   return (
-    <><div className={styles.inputGroup}>
-      <InputGroup >
-        <InputGroup.Text id="basic-addon1">@</InputGroup.Text>
-        <Form.Control
-          placeholder="Username"
-          aria-label="Username"
-          aria-describedby="basic-addon1"
+    <>
+      <div className={styles.inputGroup}>
+        <h5>Registro de tu local</h5>
+        <FormControl>
+        <MyInput type="text" placeholder="Nombre del local" />
+        <div className={styles.groupOne}>
+          <MyInput
+            className={styles.input}
+            type="text"
+            placeholder="Tipo de negocio"
+          />
+          <MyInput
+            className={styles.input}
+            type="number"
+            placeholder="Sucursales"
+          />
+        </div>
+        <div className={styles.groupOne}>
+          <MyInput type="text" placeholder="Nombre " />
+
+          <MyInput type="text" placeholder="Apellido" />
+        </div>
+        <div className={styles.groupOne}>
+          <MyInput type="number" placeholder="Teléfono" />
+
+          <MyInput type="email" placeholder="e-mail" />
+        </div>
+
+        <MyInput
+        type="password" placeholder="Password"
         />
-      </InputGroup>
-
-      <InputGroup className="mb-3">
-        <Form.Control
-          placeholder="Recipient's username"
-          aria-label="Recipient's username"
-          aria-describedby="basic-addon2"
-        />
-        <InputGroup.Text id="basic-addon2">@example.com</InputGroup.Text>
-      </InputGroup>
-
-      <Form.Label htmlFor="basic-url">Your vanity URL</Form.Label>
-      <InputGroup className="mb-3">
-        <InputGroup.Text id="basic-addon3">
-          https://example.com/users/
-        </InputGroup.Text>
-        <Form.Control id="basic-url" aria-describedby="basic-addon3" />
-      </InputGroup>
-
-      <InputGroup className="mb-3">
-        <InputGroup.Text>$</InputGroup.Text>
-        <Form.Control aria-label="Amount (to the nearest dollar)" />
-        <InputGroup.Text>.00</InputGroup.Text>
-      </InputGroup>
-
-      <InputGroup>
-        <InputGroup.Text>With textarea</InputGroup.Text>
-        <Form.Control as="textarea" aria-label="With textarea" />
-      </InputGroup>
+       
+        <button className={styles.btn} onClick={() => console.log("Primary")}>
+          Comenzar
+          </button>
+          </FormControl>
       </div>
     </>
   );
-}
+};
 
-export default FormRegistroLocal
+export default FormRegistroLocal;

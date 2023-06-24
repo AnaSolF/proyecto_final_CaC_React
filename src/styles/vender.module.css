@@ -12,8 +12,20 @@
 .parrafo
 .parrafoOne{
     padding: 20px;
+    margin: 5px;
     text-align:center;
     font-weight: 500;
+}
+.parrafo{
+  font-size: 12px;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.parrafoOne{
+  width: 100%;
+  padding: 30px;
+  
 }
 
 .titles{
@@ -41,9 +53,8 @@
   }
 
   .parrafoOne{
-    margin-left: 25%;
-    margin-right: 25%;
     font-size: 14px;
     text-align: center;
+    width: 50%;
   }
 }

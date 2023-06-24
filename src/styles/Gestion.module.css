@@ -56,6 +56,9 @@ margin-right: 10%;
 
 
 @media only screen and (min-width: 770px) {
+    .gestion{
+        height: 110vh;
+    }
     
     .button{
         width: 15%;

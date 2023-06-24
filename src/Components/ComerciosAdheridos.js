@@ -1,8 +1,10 @@
 import CardsComercios from "./CardsComercios";
 import styles from "@/styles/Comercios.module.css";
-import { cardsImg } from "../Data/data.json"
+import data from "../Data/data.json"
 
 export default function ComerciosAdheridos(props) {
+
+  const { cardsImg } = data;
   return (
     <>
       <div>

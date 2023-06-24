@@ -2,16 +2,13 @@ import styles from "@/styles/Login.module.css";
 import Image from "react-bootstrap/Image";
 import { app } from "@/firebase/InitConfig";
 import { getAuth, signInWithPopup } from "firebase/auth";
-import { GoogleAuthProvider, FacebookAuthProvider } from "firebase/auth";
+import { GoogleAuthProvider } from "firebase/auth";
 import Button from "react-bootstrap/Button";
-
-// import Button from "react-bootstrap/Button";
+import { Nav, Link } from "react-bootstrap";
 import SwipeableEdgeDrawer from "./SwipeableEdgeDrawer";
-
 
 export default function SocialLogin() {
   const googleProvider = new GoogleAuthProvider();
-  const facebookProvider = new FacebookAuthProvider();
 
   function doLogin(provider) {
     const auth = getAuth(app);
@@ -27,7 +24,6 @@ export default function SocialLogin() {
         console.log(errorMessage);
       });
   }
-
   return (
     <>
       <Button
@@ -40,23 +36,21 @@ export default function SocialLogin() {
           src="/icons8-logo-de-google-94.png"
           width={"20px"}
           style={{ marginRight: "15px" }}
-        />{"Continuar con Google"}
-      {/* <Nav.Link href="/SesionUsuario"></Nav.Link>  */}
+        />
+        {"Continuar con Google"}
+        {/* <Nav.Link href="/SesionUsuario"></Nav.Link>  */}
       </Button>
 
-      <Button
-        onClick={() => doLogin(facebookProvider)}
-        className={styles.btnNav}
-        variant="outline-dark"
-        color="light"
-      >
-        <Image
-          src="/icons8-facebook-rodeado-de-círculo-48.png"
-          width={"20px"}
-          style={{ marginBottom: "5px" }}
-        />{"Iniciar sesión con Facebook "}
-      </Button>
-      
+      <Nav.Link href="/RegistroUsuario" className={styles.nav}>
+        <Button className={styles.btnNav} variant="outline-dark" color="white">
+          <Image
+            src="icons8-usuario-48.png"
+            width={"20px"}
+            style={{ marginBottom: "5px", marginRight: "12px" }}
+          />
+          {"Registrarme "}
+        </Button>
+      </Nav.Link>
     </>
   );
 }

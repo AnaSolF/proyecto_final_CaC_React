@@ -4,45 +4,43 @@ import { useState } from "react";
 import styles from "@/styles/Login.module.css";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import { Nav } from "react-bootstrap";
-import FormLogin from "@/pages/FormLogin";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
-// import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+
 
 export default function CustomLog({ handleSubmit }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
- 
-
-// const auth = getAuth();
-// createUserWithEmailAndPassword(auth, email, password)
-//   .then((userCredential) => {
-//     // Signed in
-//     const user = userCredential.user;
-//     // ...
-//   })
-  // .catch((error) => {
-  //   const errorCode = error.code;
-  //   const errorMessage = error.message;
-  //   // ..
-  // });
+  const auth = getAuth();
+createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed in
+      const user = userCredential.user;
+      // ...
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // ..
+    });
 
   return (
     <>
       <div className={styles.fondo}>
         <div className={styles.login}>
-          <div className={styles.formulario}>
+          <div className={styles.form}>
             <Nav.Link href="/LoginBack">
               <ArrowBackIosIcon />
             </Nav.Link>
             <br></br>
-            <h4 style={{ padding: "10px" }}>Inicia sesión con tu e-mail</h4>
+            <h4 style={{ padding: "10px" }}>REGISTRO</h4>
             <p style={{ fontSize: "small" }}>Ingresá tus datos</p>
             <>
               <Form
                 onSubmit={(e) => {
                   e.preventDefault();
-                  handleSubmit({ email, password });
+                 handleSubmit({ email, password });
                 }}
               >
                 <FloatingLabel label="Email address" className="mb-3">
@@ -53,9 +51,8 @@ export default function CustomLog({ handleSubmit }) {
                     required
                     value={email}
                     onChange={(e) => {
-                      setEmail(e.target.value)
+                      setEmail(e.target.value);
                     }}
-                  
                   />
                 </FloatingLabel>
 
@@ -67,19 +64,22 @@ export default function CustomLog({ handleSubmit }) {
                     id="password"
                     value={password}
                     onChange={(e) => {
-                    setPassword(e.target.value);
+                      setPassword(e.target.value);
                     }}
-                  
                   />
                 </FloatingLabel>
               </Form>
             </>
-            <p style={{ fontSize: "small", marginTop: "10px" }}>
+            {/* <p style={{ fontSize: "small", marginTop: "10px" }}>
               Olvidé mi contraseña
-            </p>
-            <Button type="submit" onClick={(e) => {
-                    console.log({email, password});
-                    }} className={styles.botonContinuar}>
+            </p> */}
+            <Button
+              type="submit"
+              onClick={(e) => {
+                console.log({ email, password });
+              }}
+              className={styles.botonContinuar}
+            >
               Continuar
             </Button>
           </div>
@@ -88,4 +88,3 @@ export default function CustomLog({ handleSubmit }) {
     </>
   );
 }
-

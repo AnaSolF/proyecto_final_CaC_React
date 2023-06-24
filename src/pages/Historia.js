@@ -1,9 +1,11 @@
 import styles from "../styles/Hist.module.css"
-import React from 'react'
+import React, { useState } from 'react'
 import { Button } from "react-bootstrap";
 import Iframe from "@/Components/Iframe";
 
 const Historia = () => {
+  // const [cookie, setCookie] = useState("")
+  
   return (
       <div className={styles.historia}>
           <div className={styles.title}><p>Una historia de</p><h2>Crecimiento</h2></div>

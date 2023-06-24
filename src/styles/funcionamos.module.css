@@ -57,5 +57,9 @@
     .titles h5{
         font-size: medium;
     }
+
+    .titles{
+        margin-top: 120px;
+    }
   
 }

@@ -29,7 +29,7 @@ export default function BtnsOtroMetodo() {
           endIcon={<ArrowForwardIosIcon />}
           className={styles.MyButton}
         >
-         <Link href="/CustomLog">{"Continuar con e-mail"}</Link> 
+         <Link href="/CustomLogin">{"Continuar con e-mail"}</Link> 
         </Button>
       </div>
     </>

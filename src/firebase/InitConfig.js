@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { FacebookAuthProvider } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
+import { GoogleAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyATrpdmJXLYBCDwIZ4u_drHsYxuzjQ364k",
@@ -15,6 +16,8 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
-
-const provider = new FacebookAuthProvider();
+// Initialize Cloud Firestore and get a reference to the service
+const db = getFirestore(app);
+const provider = new GoogleAuthProvider();
+export { getFirestore }
 export { provider };

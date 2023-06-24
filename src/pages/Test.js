@@ -1,4 +1,4 @@
-import CustomLog from "@/pages/CustomLog";
+import CustomLog from "@/pages/RegistroUsuario";
 import { Component } from "react";
 import Container from "@mui/material/Container";
 import { useState } from "react";

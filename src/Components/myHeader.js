@@ -41,7 +41,7 @@ export default function MyHeader(props) {
               <img className={styles.logoP} src="/LogoP.png"></img>
               <NavDropdown title="" id="basic-nav-dropdown">
                 <NavDropdown.Item
-                  href="#action/3.1"
+
                   style={{ fontSize: "12px" }}
                 >
                   <i

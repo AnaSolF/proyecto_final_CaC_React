@@ -49,8 +49,17 @@
 }
 
 .formulario{
+    background-color:rgb(237, 233, 227);
+}
+
+.form{
+    background-color: rgb(214, 3, 45);
+    color: white;
+}
+
+.formulario,
+.form{
 margin-top: 15%;
-background-color:rgb(237, 233, 227);
 padding: 20px;
 height: 85vh;
 width: 90%;
@@ -59,11 +68,10 @@ border-radius: 10px;
 
 .botonContinuar{
     background-color: rgb(251, 176, 189);
-    margin-top: 10px;
+    margin-top: 50px;
     width: 100%;
     border-radius: 10px;
     color: white;
-
 }
 
 .botonContinuar:hover{
@@ -114,8 +122,11 @@ border-radius: 10px;
     text-align: center;
 }
 
-
-
+.nav{
+width: 100%;
+margin-top: 5px;
+margin-bottom: 5px;
+}
 /* .logoP1 {
     margin-left: 30px;
     margin-bottom: 30px;
@@ -153,7 +164,8 @@ border-radius: 10px;
         padding-bottom: 15%;
     }
 
-    .formulario{
+    .formulario,
+    .form{
         margin-top: 8%;
         width: 35%;
         height: 70vh;
