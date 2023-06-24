@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/flota.module.css";
-import data from "../Data/data.json";
+import data from "../Data/Data.json";
 import { Key } from "@mui/icons-material";
 
 const Flota = () => {
