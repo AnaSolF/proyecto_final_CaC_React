@@ -3,7 +3,9 @@ const nextConfig = {
   reactStrictMode: true,
 }
 
-export const compiler = {
-  // ssr and displayName are configured by default
-  styledComponents: false,
+module.exports = {
+  compiler: {
+    // ssr and displayName are configured by default
+    styledComponents: true,
+  },
 }
