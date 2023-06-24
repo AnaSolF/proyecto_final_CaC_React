@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/marcas.module.css";
-import data from "../Data/data.json";
+import data from "../Data/Data.json";
 
 const Marcas = () => {
   const { MarcasImg } = data;

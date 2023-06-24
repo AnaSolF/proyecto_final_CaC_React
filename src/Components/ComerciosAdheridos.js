@@ -1,6 +1,6 @@
 import CardsComercios from "./CardsComercios";
 import styles from "@/styles/Comercios.module.css";
-import data from "../Data/data.json"
+import data from "../Data/Data.json"
 
 export default function ComerciosAdheridos(props) {
 

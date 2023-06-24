@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "../styles/funcionamos.module.css";
 import { Card } from "react-bootstrap";
-import  data from "../Data/data.json"
+import  data from "../Data/Data.json"
 
 const Funcionamos = () => {
   const { cards } = data;
