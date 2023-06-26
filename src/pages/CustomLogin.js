@@ -6,13 +6,27 @@ import { Nav } from "react-bootstrap";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 import { useState } from "react";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 
-const CustomLogin = () => {
+export default function CustomLogin(){
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const auth = getAuth();
   function validation() {  
   }
+
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed in
+    const user = userCredential.user;
+      // ...
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // ..
+    });
  
   return (
     <>
@@ -64,9 +78,10 @@ const CustomLogin = () => {
           {/* <p style={{ fontSize: "small", marginTop: "10px" }}>
             Olvidé mi contraseña
           </p> */}
-          <Button type="submit" onClick={(e) => {
-                  console.log({email, password});//Agregar función de validación
-                  }} className={styles.botonContinuar}>
+          <Button type="submit"  onSubmit={(e) => {
+                e.preventDefault();
+                handleSubmit({ email, password });
+              }} className={styles.botonContinuar}>
             Continuar
           </Button>
         </div>
@@ -75,5 +90,3 @@ const CustomLogin = () => {
   </>
   )
 }
-
-export default CustomLogin

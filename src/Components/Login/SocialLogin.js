@@ -24,6 +24,7 @@ export default function SocialLogin() {
         console.log(errorMessage);
       });
   }
+  
   return (
     <>
       <Button
@@ -41,14 +42,14 @@ export default function SocialLogin() {
         {/* <Nav.Link href="/SesionUsuario"></Nav.Link>  */}
       </Button>
 
-      <Nav.Link href="/RegistroUsuario" className={styles.nav}>
+      <Nav.Link href="/CustomLogin" className={styles.nav}>
         <Button className={styles.btnNav} variant="outline-dark" color="white">
           <Image
             src="icons8-usuario-48.png"
             width={"20px"}
             style={{ marginBottom: "5px", marginRight: "12px" }}
           />
-          {"Registrarme "}
+      {"Ingresar con Email"}
         </Button>
       </Nav.Link>
     </>

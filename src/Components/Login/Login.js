@@ -3,8 +3,7 @@ import { Nav } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 import SocialLogin from "@/Components/Login/SocialLogin";
 // import Button from "react-bootstrap/Button";
-import SwipeableEdgeDrawer from "./SwipeableEdgeDrawer";
-import { Container} from "@mui/material";
+
 
 export default function Login() {
   return (
@@ -26,10 +25,6 @@ export default function Login() {
             <h6 className={styles.titulo}>Elegí cómo querés ingresar</h6>
             <div className={styles.buttons}>
               <SocialLogin />
-              <div >
-              <SwipeableEdgeDrawer />
-              </div>
-              
             </div>
 
             <p className={styles.parrafo}>
