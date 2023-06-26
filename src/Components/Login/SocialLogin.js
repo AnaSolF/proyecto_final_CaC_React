@@ -5,7 +5,6 @@ import { getAuth, signInWithPopup } from "firebase/auth";
 import { GoogleAuthProvider } from "firebase/auth";
 import Button from "react-bootstrap/Button";
 import { Nav, Link } from "react-bootstrap";
-import SwipeableEdgeDrawer from "./SwipeableEdgeDrawer";
 
 export default function SocialLogin() {
   const googleProvider = new GoogleAuthProvider();
