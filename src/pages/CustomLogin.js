@@ -8,7 +8,6 @@ import Form from "react-bootstrap/Form";
 import { useState } from "react";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
-
 export default function CustomLogin(){
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -78,12 +77,14 @@ export default function CustomLogin(){
           {/* <p style={{ fontSize: "small", marginTop: "10px" }}>
             Olvidé mi contraseña
           </p> */}
+            
+          <Nav.Link href="/SesionUsuario">
           <Button type="submit"  onSubmit={(e) => {
                 e.preventDefault();
                 handleSubmit({ email, password });
               }} className={styles.botonContinuar}>
             Continuar
-          </Button>
+          </Button></Nav.Link> 
         </div>
       </div>
     </div>

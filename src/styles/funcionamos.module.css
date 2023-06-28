@@ -4,7 +4,6 @@
     margin-left: 5%;
     margin-right: 5%;
     flex-direction: column;
-    margin-top: 20px;
 }
 
 .cards{
@@ -23,7 +22,6 @@
 .titles{
   text-align: center;  
   margin-bottom: 30px;
-  margin-top: 50px;
 }
 
 .titles h2{
@@ -31,6 +29,7 @@
     font-size: 35px;
     font-weight: 800;
     padding-bottom: 30px;
+    margin-top: 12%;
 }
 
 .text{

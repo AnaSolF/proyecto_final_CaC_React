@@ -25,7 +25,7 @@ export default function SocialLogin() {
   }
   
   return (
-    <>
+    <><Nav.Link href="/SesionUsuario" className={styles.nav}>
       <Button
         onClick={() => doLogin(googleProvider)}
         className={styles.btnNav}
@@ -40,7 +40,7 @@ export default function SocialLogin() {
         {"Continuar con Google"}
         {/* <Nav.Link href="/SesionUsuario"></Nav.Link>  */}
       </Button>
-
+      </Nav.Link>
       <Nav.Link href="/CustomLogin" className={styles.nav}>
         <Button className={styles.btnNav} variant="outline-dark" color="white">
           <Image

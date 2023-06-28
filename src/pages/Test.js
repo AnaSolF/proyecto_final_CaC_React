@@ -1,6 +1,7 @@
 import { Component } from "react";
 import Container from "@mui/material/Container";
 import { useState } from "react";
+import WatsonChat from "./WatsonChat";
 
 export default function Test() {
   //PRUEBAS/ EJERCICIOS
@@ -61,7 +62,7 @@ export default function Test() {
       </button>
       <p>Nuevo nombre: {nombre}</p>
       {/* import {people} from './data.js'; import {getImageUrl} from './utils.js'; */}
-
+    <WatsonChat />
     </>
   );
 }
