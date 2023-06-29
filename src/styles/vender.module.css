@@ -1,7 +1,7 @@
 .vender{
     display: flex;
     flex-direction: column;
-    height: 130vh;
+    height: 250vh;
 }
 
 .image{
@@ -16,6 +16,7 @@
     text-align:center;
     font-weight: 500;
 }
+
 .parrafo{
   font-size: 12px;
   margin-top: 10px;
@@ -24,8 +25,7 @@
 
 .parrafoOne{
   width: 100%;
-  padding: 30px;
-  
+  padding-bottom: 55%; 
 }
 
 .titles{

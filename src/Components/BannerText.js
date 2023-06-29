@@ -6,7 +6,7 @@ export default function BannerText(props) {
     <>
       <div className={styles.contenedor}>
         <h1 className={styles.tituloDos}>{ props.text}</h1>
-
+       
         <p className={styles.parrafo}>
          {props.parrafo}
         </p>

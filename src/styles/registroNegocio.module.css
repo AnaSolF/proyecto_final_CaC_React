@@ -7,7 +7,7 @@
     background-attachment: fixed;
     background-size: cover;
     background-color: #464646;
-    height: 190vh;
+    height: 250vh;
 }
 
 .sectionOne {
@@ -28,25 +28,28 @@
 }
 
 .historia {
-    height: 110vh;
+    height: 120vh;
 }
 
 .gestion{
-    height: 100vh;
+    height: 120vh;
 }
 
 .funcional{
-    height: 130vh;
+    height: 150vh;
 }
 
 .flota{
-    height: 120vh;
+    height: 130vh;
 }
 
 .marcas{
     height: 50vh;
 }
 
+.vender{
+    height: 200vh;
+}
 
 @media only screen and (min-width: 770px) {
 
