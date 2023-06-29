@@ -54,7 +54,6 @@ export default function Test() {
       {/* import {people} from './data.js'; import {getImageUrl} from './utils.js'; */}
       {/* <WatsonChat /> */}
       
-    <SesionUsuario />
     </>
   );
 }
