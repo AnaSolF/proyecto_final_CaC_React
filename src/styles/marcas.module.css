@@ -1,12 +1,12 @@
 .marcas{
-    height: 50vh;
+    height: 60vh;
     width: 100%;
     background-color:aliceblue;
 }
 
 .titulo{
     text-align: center;
-    padding-top: 30px;
+    padding-top: 50px;
 }
 
 .h2{
@@ -62,5 +62,9 @@ z-index: 999;
 
     .btn{
        padding-top: 40px; 
+    }
+
+    .titulo{
+        padding-top: 80px;
     }
   }

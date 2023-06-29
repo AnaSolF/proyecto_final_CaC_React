@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     background-image: url("/blue-yellow.jpg");
-    height: 130vh;
+    height: 120vh;
     text-align: center;
     justify-content:space-around;
 }
@@ -88,10 +88,6 @@ overflow:hidden;
 
 @media only screen and (min-width: 770px) {
 
-    .flota {
-        padding-top: 30px;
-    }
-
     .image {
         width: 200px;
         height: 200px;
@@ -128,5 +124,10 @@ overflow:hidden;
         padding-top: 30px;
         font-size: medium;
     }
+
+    .titulo h2 {
+       margin-top: 30px
+    }
+    
 
 }

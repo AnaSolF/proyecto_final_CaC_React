@@ -50,15 +50,15 @@
     }
 
     .funcional{
-        height: 80vh;
+        height: 70vh;
     }
 
     .titles h5{
         font-size: medium;
     }
 
-    .titles{
-        margin-top: 120px;
+    .titles h2{
+        margin-top: 2%;
     }
   
 }
