@@ -1,6 +1,5 @@
 import Card from "react-bootstrap/Card";
 import { Container, Row, Col } from "react-bootstrap";
-import Form from "react-bootstrap/Form";
 import BannerText from "./BannerText";
 import styles from "@/styles/Banner.module.css";
 import MyModal from "./MyModal";
@@ -11,7 +10,11 @@ export default function MyBanner(props) {
       {/* <h1>{props.title}</h1>
         <span>{props.text}</span> */}
 
-      <BannerText />
+      <BannerText
+        text="Delivery de comida online"
+        parrafo=" Más de 10.000 restaurantes con delivery en Argentina"
+        label="Veamos qué tenés cerca"
+      />
       <div>
       <Card className={styles.inicio}>
           <Card.Img src={props.src} className={styles.BackImg}></Card.Img>
