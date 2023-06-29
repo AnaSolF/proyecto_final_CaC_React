@@ -15,18 +15,23 @@ export default function MyMain({ section }) {
   let darkMode = context.darkMode;
   let newcontextState = darkMode;
   //Guardo valor de newcontextState en local storage
-  saveContextState(newcontextState)
-  
+  saveContextState(newcontextState);
+
   return (
     <>
       {
         <section className={darkMode ? styles.dark : styles.light}>
           <div className="contenedor">
-            <MyHeader />
+            <MyHeader text="Registrá tu negocio" href="/Negocios"
+            icon= <i className="bi bi-shop-window"
+            style={{ marginRight: "5px" }}
+              ></i>
+            />
             <MyBanner
               className={styles.banner}
               title="¡Pedí lo que quieras!"
               text="Restaurantes, mercados, farmacias, kioscos y mucho más."
+              src="/home-background-ar.png"
             ></MyBanner>
             <div className="comerciosAd">
               <ComerciosAdheridos style={{ marginTop: "10%" }} />
@@ -43,7 +48,7 @@ export default function MyMain({ section }) {
 }
 
 export function saveContextState(newcontextState) {
-  if (typeof window !== 'undefined') {
-    localStorage.setItem("contextState", JSON.stringify(newcontextState))
+  if (typeof window !== "undefined") {
+    localStorage.setItem("contextState", JSON.stringify(newcontextState));
   }
 }

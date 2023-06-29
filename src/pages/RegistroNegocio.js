@@ -24,7 +24,10 @@ const RegistroNegocio = () => {
   return (
     <>
   <section className={darkMode ? styles.dark : styles.light}>
-      <MyHeader />
+        <MyHeader
+          text="Regresar"
+          href="/"
+        />
       <section className={styles.section}>
       <section className={styles.sectionOne}>
         <RegistroLocalText />

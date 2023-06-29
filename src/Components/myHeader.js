@@ -26,17 +26,16 @@ export default function MyHeader(props) {
             <Darkmode />
             <Navbar.Brand className={styles.barra}>
               <Button
-                href="/Negocios"
+                href={props.href}
                 className="btnNav"
                 variant="outline-dark"
                 color="black"
                 style={{ fontSize: "12px", fontWeight: "700" }}
+                text={props.text}
+                icon={props.icon}
               >
-                <i
-                  className="bi bi-shop-window"
-                  style={{ marginRight: "5px" }}
-                ></i>
-                Registrá tu negocio
+                {props.icon}
+                {props.text}
               </Button>
               <img className={styles.logoP} src="/LogoP.png"></img>
               <NavDropdown title="" id="basic-nav-dropdown">

@@ -14,7 +14,7 @@ export default function MyBanner(props) {
       <BannerText />
       <div>
       <Card className={styles.inicio}>
-        <Card.Img src="/home-background-ar.png" className={styles.BackImg}  />
+          <Card.Img src={props.src} className={styles.BackImg}></Card.Img>
         <Card.ImgOverlay className={styles.BackImg}>
           <Container className={styles.cont}>
             <Row>

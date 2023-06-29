@@ -1,0 +1,16 @@
+.producto{
+   margin-top: 10px;
+}
+
+
+
+@media only screen and (min-width: 770px) {
+    .producto{
+        height: 700px;
+       margin: 5px;
+    }
+
+    .cardBody{
+        height: 30vh;
+    }
+}

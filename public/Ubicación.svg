@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80">
-    <g fill="none" fill-rule="evenodd">
+    <g fill="none" fillRule="evenodd">
         <g>
             <g>
-                <g fill="#EDE7E7" fill-rule="nonzero">
+                <g fill="#EDE7E7" fillRule="nonzero">
                     <g>
                         <path d="M40 80c22.091 0 40-17.909 40-40S62.091 0 40 0 0 17.909 0 40s17.909 40 40 40z" transform="translate(-17 -970) translate(17 970)"/>
                     </g>
