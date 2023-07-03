@@ -1,6 +1,6 @@
 import '@/styles/globals.css'
 import "bootstrap/dist/css/bootstrap.min.css"
-import "@/firebase/InitConfig"
+import { app } from "@/firebase/InitConfig"
 import "@mui/material"
 import { BrowserRouter, Route, Routes, Router, Link, Rout, Switch } from 'react-router-dom'
 import Grido from './Grido'
