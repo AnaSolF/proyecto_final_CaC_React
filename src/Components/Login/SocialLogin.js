@@ -1,6 +1,6 @@
 import styles from "@/styles/Login.module.css";
 import Image from "react-bootstrap/Image";
-import { app } from "@/firebase/InitConfig";
+import { appFireConfig } from "@/firebase/InitConfig";
 import { getAuth, signInWithPopup } from "firebase/auth";
 import { GoogleAuthProvider } from "firebase/auth";
 import Button from "react-bootstrap/Button";

@@ -6,7 +6,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import MainContextProvider from "@/Context/maincontextprovider";
 import MyMain from "@/Components/myMain";
 import "@fontsource/roboto/400.css";
-import "../firebase/InitConfig"
+
 
 const inter = Inter({ subsets: ["latin"] });
 
