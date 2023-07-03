@@ -33,7 +33,7 @@ const UnProducto = () => {
     //   <div> <Card.Img variant="top" src={data.infoNutricional} className={styles.info} />
     //   </div>
     // </div>
-    <>Un producto</>
+    <> <h1>Un producto</h1></>
   );
 };
 
