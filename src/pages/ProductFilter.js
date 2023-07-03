@@ -8,8 +8,6 @@ import {
   where,
 } from "firebase/firestore";
 import { useParams } from "react-router-dom";
-import styles from "../styles/unProducto.module.css";
-import ItemView from "./ItemsView";
 
 const ProductFilter = () => {
   //Traer servicio de firestore
