@@ -14,7 +14,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const appFireConfig = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
 // Initialize Cloud Firestore and get a reference to the service
 const provider = new GoogleAuthProvider();

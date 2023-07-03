@@ -1,6 +1,6 @@
 import styles from "@/styles/Login.module.css";
 import Image from "react-bootstrap/Image";
-import { appFireConfig } from "@/firebase/InitConfig";
+import { app } from "@/firebase/InitConfig";
 import { getAuth, signInWithPopup } from "firebase/auth";
 import { GoogleAuthProvider } from "firebase/auth";
 import Button from "react-bootstrap/Button";
@@ -10,7 +10,7 @@ export default function SocialLogin() {
   const googleProvider = new GoogleAuthProvider();
 
   function doLogin(provider) {
-    const auth = getAuth(appFireConfig);
+    const auth = getAuth(app);
     signInWithPopup(auth, provider)
       .then((credentials) => {
         const user = credentials.user;
