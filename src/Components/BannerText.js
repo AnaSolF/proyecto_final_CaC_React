@@ -10,7 +10,7 @@ export default function BannerText(props) {
         <p className={styles.parrafo}>
          {props.parrafo}
         </p>
-        <label>{props.label}</label>
+        <label className={styles.label}>{props.label}</label>
         <MyModal />
       </div>
     </>

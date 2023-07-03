@@ -1,6 +1,6 @@
-import { Component } from "react";
-import Container from "@mui/material/Container";
 import { useState } from "react";
+import ProductFilter from "./ProductFilter";
+import UnProducto from "./UnProducto";
 // import WatsonChat from "./WatsonChat";
 
 export default function Test() {
@@ -53,7 +53,7 @@ export default function Test() {
       <p>Nuevo nombre: {nombre}</p>
       {/* import {people} from './data.js'; import {getImageUrl} from './utils.js'; */}
       {/* <WatsonChat /> */}
-      
+
     </>
   );
 }

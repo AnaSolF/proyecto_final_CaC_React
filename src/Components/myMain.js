@@ -22,10 +22,43 @@ export default function MyMain({ section }) {
       {
         <section className={darkMode ? styles.dark : styles.light}>
           <div className="contenedor">
-            <MyHeader text="Registrá tu negocio" href="/Negocios"
-            icon= <i className="bi bi-shop-window"
-            style={{ marginRight: "5px" }}
-              ></i>
+            <MyHeader
+              textbtn="Registrá tu negocio" 
+              hrefbtn="/Negocios"
+              textLinkDos="Ingresar/ Registrarme" 
+              textLink="Ingresar/ Registrarme" 
+              textLinkUno="Ayuda en línea"
+              titleText=" Qué bonito tenerte aquí"
+              textcart="Mis compras"
+              iconcart={
+                <i
+                  className="bi bi-cart-plus-fill"
+                  style={{ marginRight: "15px" }}
+                ></i>
+              }
+              
+              iconlogout={
+                <i
+                  className="bi bi-box-arrow-right"
+                  style={{ marginRight: "5px" }}
+                ></i>
+              }
+              iconnegocio={
+                <i
+                  className="bi bi-shop-window"
+                  style={{ marginRight: "20px" }}
+                ></i>
+              }
+              iconhelp={
+                <i
+                  className="bi bi-headset"
+                  style={{ marginRight: "10px" }}
+                ></i>
+              }
+              iconhome={
+                <i className="bi bi-house-fill" style={{ marginRight: "20px" }}></i>
+              }
+             
             />
             <MyBanner
               className={styles.banner}
@@ -33,7 +66,7 @@ export default function MyMain({ section }) {
               text="Restaurantes, mercados, farmacias, kioscos y mucho más."
               src="/home-background-ar.png"
             ></MyBanner>
-            <div className="comerciosAd">
+            <div className={styles.comerciosAd}>
               <ComerciosAdheridos style={{ marginTop: "10%" }} />
             </div>
             <Tops style={{ margin: "0 auto" }} />

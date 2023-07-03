@@ -10,7 +10,7 @@ import Card from "react-bootstrap/Card";
 //Traer el dato con una promesa
 
 const UnProducto = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState();
   const { detalleId } = useParams();
   useEffect(() => {
     const queryDb = getFirestore(); //Traer Firestore
@@ -18,11 +18,11 @@ const UnProducto = () => {
     getDoc(queryDoc) //Traer el doc
       //getDoc(doc(getFirestore(),"Negocios", "hUBvoX3L0I5KFpQ9UjPo"))//Ponemos todo junto y es lo mismo.
       .then((res) => setData({ id: res.id, ...res.data() }));
-  }, []);
+  }, [detalleId]);
   return (
     <div className={styles.producto}>
       <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={data.imagen} />
+        <Card.Img variant="top" src={data.imagen} style={{height:"300px"}}/>
         <Card.Body>
           <Card.Title>{data.nombre}</Card.Title>
           <Card.Text>{data.descripcion}</Card.Text>
@@ -30,6 +30,9 @@ const UnProducto = () => {
           <Button variant="primary">Go somewhere</Button>
         </Card.Body>
       </Card>
+      <div> <Card.Img variant="top" src={data.infoNutricional} className={styles.info}/></div>
+     
+
     </div>
   );
 };

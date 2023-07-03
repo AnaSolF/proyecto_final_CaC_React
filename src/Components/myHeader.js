@@ -6,6 +6,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "@/styles/Header.module.css";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import Darkmode from "./Darkmode";
+import Link from "next/link";
+import { NavLink } from "react-router-dom";
 
 export default function MyHeader(props) {
   return (
@@ -25,39 +27,38 @@ export default function MyHeader(props) {
             </Navbar.Brand>
             <Darkmode />
             <Navbar.Brand className={styles.barra}>
+              <Nav.Link href="/Carrito" style={{ marginRight: "30px", marginTop: "5px" }}
+              iconcart={props.iconcart}
+              >{props.iconcart}</Nav.Link>  
               <Button
-                href={props.href}
+                href={props.hrefbtn}
                 className="btnNav"
                 variant="outline-dark"
                 color="black"
                 style={{ fontSize: "12px", fontWeight: "700" }}
-                text={props.text}
-                icon={props.icon}
+                textbtn={props.textbtn}
+                iconnegocio={props.iconnegocio}
               >
-                {props.icon}
-                {props.text}
+                {props.iconnegocio}
+                {props.textbtn}
               </Button>
               <img className={styles.logoP} src="/LogoP.png"></img>
               <NavDropdown title="" id="basic-nav-dropdown">
                 <NavDropdown.Item
-
                   style={{ fontSize: "12px" }}
+                  iconhelp={props.iconhelp}
                 >
-                  <i
-                    className="bi bi-headset"
-                    style={{ marginRight: "5px" }}
-                  ></i>
-                  Ayuda en línea
+                 { props.iconhelp }
+                 {props.textLinkUno}
                 </NavDropdown.Item>
                 <NavDropdown.Item
                   href="/LoginBack"
                   style={{ fontSize: "12px" }}
+                  texto={props.textLink}
+                  iconlogout={props.iconlogout}
                 >
-                  <i
-                    className="bi bi-box-arrow-right"
-                    style={{ marginRight: "5px" }}
-                  ></i>
-                  {"Iniciar sesión/ Registrarse"}
+                 {props.iconlogout}
+                  {props.textLink}
                 </NavDropdown.Item>
               </NavDropdown>
             </Navbar.Brand>
@@ -82,35 +83,46 @@ export default function MyHeader(props) {
                     </Nav.Link>
                     <Offcanvas.Title
                       id={`offcanvasNavbarLabel-expand-${expand}`}
-                      style={{ fontSize: "x-large", textAlign: "center" }}
+                      style={{ fontSize: "x-large", textAlign: "center", paddingBottom: "20px" }}
+                      texto={props.titleTex}
                     >
-                      Qué bonito tenerte aquí
+                     {props.titleText}
                     </Offcanvas.Title>
-                    <Nav.Link href="/" style={{ marginTop: "20px" }}>
-                      <i
-                        className="bi bi-house-door-fill"
-                        style={{ marginRight: "20px" }}
-                      ></i>
-                      {"Inicio"}
+                    <Nav.Link href="/Carrito"
+                      iconcart={props.iconcart}
+                      textcart={props.textcart}
+                    >
+                      {props.iconcart}
+                      {props.textcart}
+                    </Nav.Link>  
+                    
+                    <Nav.Link href="/"
+                      texto={props.textLinkUno}
+                      iconlogout={props.iconhelp}
+                    >
+                      {props.iconhelp}
+                      {props.textLinkUno}
                     </Nav.Link>
-                    <Nav.Link href="/Test">
-                      <i
-                        className="bi bi-headset"
-                        style={{ marginRight: "20px" }}
-                      ></i>
-                      {"Ayuda en línea "}
-                    </Nav.Link>
-                    <Nav.Link  href="/LoginBack" className={styles.registro}>
-                      <i
-                        className="bi bi-box-arrow-right"
-                        style={{ marginRight: "20px" }}
-                      ></i>
-                      {"Registrarse "}/{"Iniciar sesión"}
+
+                    {/* <Nav.Link href="/ItemView"
+                      texto={props.textLink}
+                      iconhome={props.iconhome}
+                    >
+                      {props.iconhome}
+                      {props.textLink}
+                    </Nav.Link> */}
+                    
+                    <Nav.Link href="/LoginBack" className={styles.registro}
+                      texto={props.textLink}
+                      icon={props.iconlogout}
+                    >
+                     {props.iconlogout}
+                     {props.textLinkDos}
                     </Nav.Link>
                   </Nav>
                 </Offcanvas.Body>
               </Navbar.Offcanvas>
-              <Navbar.Brand href="#">
+              <Navbar.Brand href="/">
                 <img className="logo" src="/PedidosYa.png"></img>
               </Navbar.Brand>
             </Container>

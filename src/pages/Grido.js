@@ -6,12 +6,13 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import styles from "../styles/unProducto.module.css";
 
-const Collection = () => {
+const Grido = () => {
   //Traer servicio de firestore
   //Crear un puntero al dato que queremos traer
   //Traer el dato con una promesa
   const [data, setData] = useState([]);
   const { productoId } = useParams();
+  const [coleccion, setColeccion]= useState()//Cómo hacer variable la colección?
   useEffect(
     () => {
       const queryDb = getFirestore(); //Traer Firestore
@@ -26,9 +27,9 @@ const Collection = () => {
     [productoId],
     console.log(data)
   );
-  return data.map((negocio) => (
+  return data.map((negocio, key) => (
     <div key={negocio.id} className={styles.producto}>
-      <Card style={{ width: "17rem" }}>
+      <Card style={{ width: "17rem" }} >
         <Card.Img variant="top" src={negocio.imagen} />
         <Card.Body className={styles.cardBody}>
           <Card.Title>{negocio.nombre}</Card.Title>
@@ -39,6 +40,7 @@ const Collection = () => {
           <Button
             variant="outline"
             style={{ border: "none", float: "right" }}
+            href="/UnProducto"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -58,4 +60,4 @@ const Collection = () => {
   ));
 };
 
-export default Collection;
+export default Grido;

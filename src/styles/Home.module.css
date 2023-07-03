@@ -12,9 +12,41 @@
 }
 
 .contenedor{
-  justify-content: space-between;
+  justify-content: center;
 }
 /* 
 .comerciosAd{
   margin-top: 10%;
 } */
+
+.sesion{
+  display: flex;
+  justify-content:space-evenly;
+  margin-bottom: 20px;
+}
+
+.menu{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.menu li{
+  padding: 10px;
+}
+
+.menuContainer{
+margin: 0 auto;
+}
+
+@media only screen and (min-width: 770px) {
+
+  .sesion {
+    justify-content: center;
+  }
+
+  .item{
+    margin: 10px;
+  }
+}
