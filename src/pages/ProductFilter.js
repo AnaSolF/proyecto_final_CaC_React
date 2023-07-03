@@ -47,7 +47,8 @@ const ProductFilter = () => {
     console.log(data)
   );
   return (
-    <ItemView data={ data } />
+    // <ItemView data={ data } />
+    <>Item</>
  )
 };
 
