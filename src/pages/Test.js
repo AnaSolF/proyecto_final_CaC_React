@@ -1,6 +1,4 @@
 import { useState } from "react";
-import ProductFilter from "./ProductFilter";
-import UnProducto from "./UnProducto";
 // import WatsonChat from "./WatsonChat";
 
 export default function Test() {

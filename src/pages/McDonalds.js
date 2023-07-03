@@ -37,7 +37,6 @@ const McDonalds = () => {
           <Card.Text>
             <strong>$ {producto.precio}</strong>
           </Card.Text>
-          {/* <Link to={`UnProducto/[id]`}></Link> */}
         </Card.Body>
       </Card>
       </div>

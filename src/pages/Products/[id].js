@@ -1,5 +1,5 @@
 import { useRouter } from "next/router"//Lee los parámetros de la URL
-import ItemDetailContainer from "../ItemsDetailContainer"
+
 
 const EntradaProducts = () => {
   return (
