@@ -10,7 +10,7 @@ export default function SocialLogin() {
   const googleProvider = new GoogleAuthProvider();
 
   function doLogin(provider) {
-    const auth = getAuth(app);
+    const auth = getAuth(appFire);
     signInWithPopup(auth, provider)
       .then((credentials) => {
         const user = credentials.user;
