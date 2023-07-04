@@ -3,9 +3,7 @@ import styles from "../styles/unProducto.module.css";
 import { getFirestore, doc, getDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import { CardImg } from "react-bootstrap";
 
 const UnProducto = () => {
   const [data, setData] = useState({});
