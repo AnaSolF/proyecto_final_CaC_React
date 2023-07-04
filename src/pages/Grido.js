@@ -28,7 +28,7 @@ const Grido = () => {
     console.log(data)
   );
   return data.map((negocio, key) => (
-    <div key={negocio.id} className={styles.producto}>
+    <div key={negocio.id} className={styles.products}>
       <Card style={{ width: "17rem" }} >
         <Card.Img variant="top" src={negocio.imagen} />
         <Card.Body className={styles.cardBody}>
