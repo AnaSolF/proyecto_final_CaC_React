@@ -7,7 +7,8 @@ import Card from "react-bootstrap/Card";
 const ItemDetail = ({ data }) => {
   return (
     <>
-    <Link href={`/${data.id}`}>Grido</Link> </>
+      {/* <Link href={`/${data.id}`}>Grido</Link> */}
+    </>
   )
 }
 
