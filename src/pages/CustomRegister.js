@@ -30,7 +30,6 @@ export default function CustomLogin(){
     });
   }
  
-  
     function validateEmail(email) {
       // Validar el formato del correo electrónico utilizando una expresión regular
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -64,7 +63,7 @@ export default function CustomLogin(){
             <ArrowBackIosIcon />
           </Nav.Link>
           <br></br>
-          <h4 style={{ padding: "10px" }}>Ingresá con tú email</h4>
+          <h4 style={{ padding: "10px" }}>Registráte con tu Email</h4>
           <p style={{ fontSize: "small" }}>Ingresá tus datos</p>
           <>
             <Form>
