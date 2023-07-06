@@ -11,48 +11,75 @@
   color: white;
 }
 
-.contenedor{
+.contenedor {
   justify-content: center;
 }
+
 /* 
 .comerciosAd{
   margin-top: 10%;
 } */
 
-.sesion{
+.sesion {
   display: flex;
-  justify-content:space-evenly;
-  height: 35vh;
-  padding-top: 60px;
+  justify-content: space-evenly;
+  height: 30vh;
+  padding-top: 90px;
   background-color: rgb(240, 243, 243);
+  
 }
 
-.titulo{
+.sesion img{
+-webkit-transition:all .9s ease; 
+-moz-transition:all .9s ease; 
+-o-transition:all .9s ease; 
+-ms-transition:all .9s ease; 
+width:100%;
+}
+
+.sesion img:hover {
+  -webkit-transform:scale(2);
+  -moz-transform:scale(2);
+  -ms-transform:scale(2);
+  -o-transform:scale(2);
+  transform:scale(2);
+}
+
+.titulo {
   text-align: center;
   padding: 40px 20px;
 }
-.menu{
+
+.menu {
   display: flex;
   text-align: center;
   justify-content: center;
   padding: 10px;
 }
 
-.menu li{
+.menu li {
   padding: 10px;
 }
 
-.menuContainer{
-margin: 0 auto;
+.menuContainer {
+  margin: 0 auto;
+}
+
+.tarjeta:hover{
+
 }
 
 @media only screen and (min-width: 770px) {
 
   .sesion {
-    justify-content: space-evenly;
+    justify-content: center;
   }
 
-  .item{
+  .item {
     margin: 10px;
+  }
+
+  .tarjeta {
+    margin-left: 30px;
   }
 }
