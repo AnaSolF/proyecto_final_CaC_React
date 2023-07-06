@@ -114,8 +114,10 @@ export default function CustomLogin(){
               handleSubmit({ email, password });
             }} className={styles.botonContinuar}
             href='/SesionUsuario'>
-              Continuar
-          </Button>
+              Registrarme
+            </Button>
+            <Button className={styles.botonContinuar}
+            href='/CustomLogin'>Ingresar con tu Email</Button>
         </div>
       </div>
     </div>
