@@ -11,7 +11,6 @@ import { NavLink } from "react-router-dom";
 
 export default function MyHeader(props) {
   return (
-
     <>
       <div>
         <Navbar
@@ -27,9 +26,13 @@ export default function MyHeader(props) {
             </Navbar.Brand>
             <Darkmode />
             <Navbar.Brand className={styles.barra}>
-              <Nav.Link href="/Carrito" style={{ marginRight: "30px", marginTop: "5px" }}
-              iconcart={props.iconcart}
-              >{props.iconcart}</Nav.Link>  
+              <Nav.Link
+                href="/Carrito"
+                style={{ marginRight: "30px", marginTop: "5px" }}
+                iconcart={props.iconcart}
+              >
+                {props.iconcart}
+              </Nav.Link>
               <Button
                 href={props.hrefbtn}
                 className="btnNav"
@@ -48,8 +51,8 @@ export default function MyHeader(props) {
                   style={{ fontSize: "12px" }}
                   iconhelp={props.iconhelp}
                 >
-                 { props.iconhelp }
-                 {props.textLinkUno}
+                  {props.iconhelp}
+                  {props.textLinkUno}
                 </NavDropdown.Item>
                 <NavDropdown.Item
                   href="/LoginBack"
@@ -57,7 +60,7 @@ export default function MyHeader(props) {
                   texto={props.textLink}
                   iconlogout={props.iconlogout}
                 >
-                 {props.iconlogout}
+                  {props.iconlogout}
                   {props.textLink}
                 </NavDropdown.Item>
               </NavDropdown>
@@ -83,20 +86,26 @@ export default function MyHeader(props) {
                     </Nav.Link>
                     <Offcanvas.Title
                       id={`offcanvasNavbarLabel-expand-${expand}`}
-                      style={{ fontSize: "x-large", textAlign: "center", paddingBottom: "20px" }}
+                      style={{
+                        fontSize: "x-large",
+                        textAlign: "center",
+                        paddingBottom: "20px",
+                      }}
                       texto={props.titleTex}
                     >
-                     {props.titleText}
+                      {props.titleText}
                     </Offcanvas.Title>
-                    <Nav.Link href="/Carrito"
+                    <Nav.Link
+                      href="/Carrito"
                       iconcart={props.iconcart}
                       textcart={props.textcart}
                     >
                       {props.iconcart}
                       {props.textcart}
-                    </Nav.Link>  
-                    
-                    <Nav.Link href="/"
+                    </Nav.Link>
+
+                    <Nav.Link
+                      href="/"
                       texto={props.textLinkUno}
                       iconlogout={props.iconhelp}
                     >
@@ -111,13 +120,15 @@ export default function MyHeader(props) {
                       {props.iconhome}
                       {props.textLink}
                     </Nav.Link> */}
-                    
-                    <Nav.Link href="/LoginBack" className={styles.registro}
+
+                    <Nav.Link
+                      href="/LoginBack"
+                      className={styles.registro}
                       texto={props.textLink}
                       icon={props.iconlogout}
                     >
-                     {props.iconlogout}
-                     {props.textLinkDos}
+                      {props.iconlogout}
+                      {props.textLinkDos}
                     </Nav.Link>
                   </Nav>
                 </Offcanvas.Body>
@@ -128,7 +139,7 @@ export default function MyHeader(props) {
             </Container>
           </Navbar>
         ))}
-        </div>
+      </div>
     </>
   );
 }

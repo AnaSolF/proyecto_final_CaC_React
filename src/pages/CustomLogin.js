@@ -19,7 +19,7 @@ const CustomLogin = () => {
   const auth = getAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const router = useRouter("")
+  const router = useRouter()
   //agrego función para setear isLoggedIn
     
   function Autenticacion() {

@@ -1,0 +1,7 @@
+.carrito{
+height: 50vh;
+justify-content: center;
+display: flex;
+flex-wrap: wrap;
+padding-top: 12%;
+}

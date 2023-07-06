@@ -5,15 +5,21 @@ import { getAuth, signInWithPopup } from "firebase/auth";
 import { GoogleAuthProvider } from "firebase/auth";
 import Button from "react-bootstrap/Button";
 import { Nav, Link } from "react-bootstrap";
+import { useRouter } from 'next/router'
+
 
 export default function SocialLogin() {
   const googleProvider = new GoogleAuthProvider();
+  const router = useRouter("")
 
   function doLogin(provider) {
-    const auth = getAuth(appFire);
+    const auth = getAuth();
     signInWithPopup(auth, provider)
       .then((credentials) => {
         const user = credentials.user;
+        if (user) {
+          router.push('/SesionUsuario') 
+        }
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -24,7 +30,7 @@ export default function SocialLogin() {
   }
   
   return (
-    <><Nav.Link href="/SesionUsuario" className={styles.nav}>
+    <><div className={styles.nav}>
       <Button
         onClick={() => doLogin(googleProvider)}
         className={styles.btnNav}
@@ -39,8 +45,8 @@ export default function SocialLogin() {
         {"Continuar con Google"}
         {/* <Nav.Link href="/SesionUsuario"></Nav.Link>  */}
       </Button>
-      </Nav.Link>
-      <Nav.Link href="/CustomRegister" className={styles.nav}>
+      </div> 
+      <div className={styles.nav}>
         <Button className={styles.btnNav} variant="outline-dark" color="white">
           <Image
             src="icons8-usuario-48.png"
@@ -49,7 +55,7 @@ export default function SocialLogin() {
           />
       {"Ingresar con Email"}
         </Button>
-      </Nav.Link>
+      </div>
     </>
   );
 }

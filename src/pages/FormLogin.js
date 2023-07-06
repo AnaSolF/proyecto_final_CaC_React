@@ -2,7 +2,7 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 
-function PlaintextExample() {
+function FormLogin() {
   return (
     <Form>
       <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail">
@@ -20,4 +20,4 @@ function PlaintextExample() {
   );
 }
 
-export default PlaintextExample;
+export default FormLogin;

@@ -32,6 +32,7 @@ const RegistroNegocio = () => {
           style={{ fontSize: "12px", fontWeight: "700" }}
           textLinkUno="Ayuda en línea"
           textcart="Mis compras"
+          textLinkDos="Salir"
           iconcart={
             <i
               className="bi bi-cart-plus-fill"
