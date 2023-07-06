@@ -14,7 +14,6 @@ export default function SocialLogin() {
     signInWithPopup(auth, provider)
       .then((credentials) => {
         const user = credentials.user;
-        console.log(user);
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -41,7 +40,7 @@ export default function SocialLogin() {
         {/* <Nav.Link href="/SesionUsuario"></Nav.Link>  */}
       </Button>
       </Nav.Link>
-      <Nav.Link href="/CustomLogin" className={styles.nav}>
+      <Nav.Link href="/CustomRegister" className={styles.nav}>
         <Button className={styles.btnNav} variant="outline-dark" color="white">
           <Image
             src="icons8-usuario-48.png"

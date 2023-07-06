@@ -60,7 +60,7 @@ const UnProductoView = ({data}) => {
         Nuestros productos
       </h2>
       <div className={styles.productos}>
-        <UnProducto data={data} />
+        <UnProducto />
       </div>
       <MyFooter  />
     </div>

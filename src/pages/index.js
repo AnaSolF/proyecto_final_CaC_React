@@ -7,7 +7,6 @@ import MainContextProvider from "@/Context/maincontextprovider";
 import MyMain from "@/Components/myMain";
 import "@fontsource/roboto/400.css";
 
-
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home(main) {
@@ -19,10 +18,10 @@ export default function Home(main) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/LogoP.png" />
       </Head>
-     
+
       <MainContextProvider>
         <main className={`${styles.main} ${inter.className}`}>
-          <MyMain />
+            <MyMain />
         </main>
       </MainContextProvider>
     </>

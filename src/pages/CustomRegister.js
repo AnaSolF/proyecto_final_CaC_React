@@ -16,17 +16,44 @@ export default function CustomLogin(){
   function validation() {  
   }
 
-  createUserWithEmailAndPassword(auth, email, password)
+  function handleSubmit() {
+    createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-      // Signed in
-    const user = userCredential.user;
-      // ...
+      const user = userCredential.user;
+      console.log(user)
+      alert("Registro exitoso")
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      // ..
+      console.error(`Error (${errorCode}): ${errorMessage}`);
     });
+  }
+ 
+  
+    function validateEmail(email) {
+      // Validar el formato del correo electrónico utilizando una expresión regular
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+  
+    function validatePassword(password) {
+      // Validar contraseña 
+
+      return (
+        password.length >= 8 &&
+        /[a-zA-Z]/.test(password) &&
+        /[0-9]/.test(password)
+      );
+    }
+  
+    function handleRegister(email, password) {
+      if (!validateEmail(email)) {
+      }
+  
+      if (!validatePassword(password)) {
+      }
+    }
  
   return (
     <>
@@ -40,23 +67,23 @@ export default function CustomLogin(){
           <h4 style={{ padding: "10px" }}>Ingresá con tú email</h4>
           <p style={{ fontSize: "small" }}>Ingresá tus datos</p>
           <>
-            <Form
-              onSubmit={(e) => {
-                e.preventDefault();
-                handleSubmit({ email, password });
-              }}
-            >
+            <Form>
               <FloatingLabel label="Email address" className="mb-3">
                 <Form.Control
                   type="email"
                   placeholder="name@example.com"
                   id="email"
                   required
-                  value={email}
-                  onChange={(e) => {
-                    setEmail(e.target.value)
-                  }}
                 
+                  onChange={(e) => {
+                    const { value } = e.target;
+                    e.preventDefault
+                    if (value.includes("@") && value.includes(".com")) {
+                      setEmail(value);
+                    } else {
+                      setEmail("");
+                    }
+                  }}
                 />
               </FloatingLabel>
 
@@ -66,9 +93,14 @@ export default function CustomLogin(){
                   placeholder="Password"
                   required
                   id="password"
-                  value={password}
-                  onChange={(e) => {
-                  setPassword(e.target.value);
+                    onChange={(e) => {
+                    e.preventDefault
+                    const { value } = e.target;
+                    if ( value.length > 8 ) {
+                      setPassword(value);
+                    } else {
+                      setPassword('');
+                    }
                   }}
                 
                 />
@@ -78,14 +110,13 @@ export default function CustomLogin(){
           {/* <p style={{ fontSize: "small", marginTop: "10px" }}>
             Olvidé mi contraseña
           </p> */}
-            
-          <Nav.Link href="/SesionUsuario">
-          <Button type="submit"  onSubmit={(e) => {
-                e.preventDefault();
-                handleSubmit({ email, password });
-              }} className={styles.botonContinuar}>
-            Continuar
-          </Button></Nav.Link> 
+            <Button type="submit"
+              onClick={(e) => {
+              handleSubmit({ email, password });
+            }} className={styles.botonContinuar}
+            href='/SesionUsuario'>
+              Continuar
+          </Button>
         </div>
       </div>
     </div>

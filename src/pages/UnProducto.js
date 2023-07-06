@@ -4,6 +4,9 @@ import { getFirestore, doc, getDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Card from "react-bootstrap/Card";
+import { Button } from "react-bootstrap";
+import ButtonPlus from "@/Components/ButtonPlus";
+import { app } from "../firebase/InitConfig";
 
 const UnProducto = () => {
   const [data, setData] = useState({});
@@ -21,9 +24,13 @@ const UnProducto = () => {
         <Card.Body className={styles.cardBody}>
           <Card.Title>{data.nombre}</Card.Title>
           <Card.Text>{data.descripcion}</Card.Text>
-          <Card.Text style={{ marginTop:"50px", fontSize:"20px", textAlign:"left"}} >
+          <Card.Text style={{ marginTop:"50px", fontSize:"20px", textAlign:"center"}} >
             <strong>$ {data.precio}</strong>
           </Card.Text>
+          <ButtonPlus />
+          <div style={{ textAlign: "center" }}>
+            <Button>Comprar</Button>
+          </div>
         </Card.Body>
       </Card>
       <Card.Img variant="top" className={styles.info} src={data.infoNutricional} />

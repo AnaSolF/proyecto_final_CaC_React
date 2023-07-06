@@ -1,5 +1,7 @@
+import ButtonPlus from "@/Components/ButtonPlus";
 import { useState } from "react";
 // import WatsonChat from "./WatsonChat";
+
 
 export default function Test() {
   const [nombre, setNombre] = useState("");
@@ -51,7 +53,9 @@ export default function Test() {
       <p>Nuevo nombre: {nombre}</p>
       {/* import {people} from './data.js'; import {getImageUrl} from './utils.js'; */}
       {/* <WatsonChat /> */}
-
+      <div>producto</div>
+      <ButtonPlus />
+      
     </>
   );
 }
