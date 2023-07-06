@@ -1,9 +1,8 @@
 import CardsComercios from "./CardsComercios";
 import styles from "@/styles/Comercios.module.css";
-import data from "../Data/Data.json"
+import data from "../Data/Data.json";
 
 export default function ComerciosAdheridos(props) {
-
   const { cardsImg } = data;
   return (
     <>
@@ -20,7 +19,7 @@ export default function ComerciosAdheridos(props) {
           {cardsImg.map((cardImg, key) => {
             return (
               <div className={styles.tarjeta} key={cardImg.id}>
-                <CardsComercios src={ cardImg.imagen } />
+                <CardsComercios src={cardImg.imagen} />
               </div>
             );
           })}

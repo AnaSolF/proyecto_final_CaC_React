@@ -8,12 +8,13 @@ import Form from "react-bootstrap/Form";
 import { useState } from "react";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { app } from "../firebase/InitConfig";
+import { useRouter } from 'next/router'
 
 export default function CustomLogin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const auth = getAuth();
-  function validation() {}
+  const router = useRouter("")
 
   function handleSubmit() {
     createUserWithEmailAndPassword(auth, email, password)
@@ -21,12 +22,22 @@ export default function CustomLogin() {
         handleRegister(email, password);
         const user = userCredential.user;
         console.log(user);
+        if (user) {
+          router.push('/CustomLogin') 
+        }
         alert("Registro exitoso");
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
         console.error(`Error (${errorCode}): ${errorMessage}`);
+        
+        if (errorCode || errorMessage) {
+          
+          alert("Verifique que su usuario no se encuentre registrado ")
+          router.push('/CustomLogin') 
+        }
+      
       });
   }
 
@@ -38,7 +49,7 @@ export default function CustomLogin() {
 
   function validatePassword(password) {
     // Validar contraseña
-    return password.length >= 8;
+    return (password.length >= 8 && password != null);
   }
 
   function handleRegister(email, password) {
@@ -112,12 +123,13 @@ export default function CustomLogin() {
                 handleSubmit({ email, password });
               }}
               className={styles.botonContinuar}
-              href="/CustomLogin"
             >
               Registrarme
             </Button>
-            <Button className={styles.botonContinuar} href="/CustomLogin">
-              Ingresar con tu Email
+            <Button
+              href="/CustomLogin"
+            className={styles.botonLogin}>
+              Ya tengo cuenta
             </Button>
           </div>
         </div>

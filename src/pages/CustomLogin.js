@@ -6,21 +6,31 @@ import { Nav } from "react-bootstrap";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 import { useState } from "react";
+import { useRouter } from 'next/router'
 import { app } from "../firebase/InitConfig";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { defaultState } from "../Context/maincontext";
+import { useContext } from "react";
+import { maincontextState } from "@/Context/maincontextprovider";
+import SesionUsuario from "./SesionUsuario";
+import { isLoggedIn, getInitialState } from "../Context/maincontext"
 
 const CustomLogin = () => {
   const auth = getAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const router = useRouter("")
+  //agrego función para setear isLoggedIn
+    
   function Autenticacion() {
     signInWithEmailAndPassword(auth, email, password)
       .then((credentials) => {
         const user = credentials.user;
-        alert("Bienvenido!");
+        console.log(user)
+        if (user) {
+          router.push('/SesionUsuario') 
+        }
       })
-
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
@@ -91,11 +101,10 @@ const CustomLogin = () => {
                 Autenticacion();
               }}
               className={styles.botonContinuar}
-              href="/SesionUsuario"
             >
               Iniciar Sesión
             </Button>
-            <Button className={styles.botonContinuar} href="/CustomRegister">
+            <Button className={styles.botonLogin} href="/CustomRegister">
               Registrarme
             </Button>
           </div>

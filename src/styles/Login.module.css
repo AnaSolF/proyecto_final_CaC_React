@@ -67,16 +67,25 @@ border-radius: 10px;
 }
 
 .botonContinuar{
-    background-color: rgb(251, 176, 189);
-    margin-top: 50px;
+    background-color: rgb(241, 94, 119);
+    margin-top: 30px;
     width: 100%;
     border-radius: 10px;
     color: white;
 }
 
 .botonContinuar:hover{
-    background-color: rgb(220, 110, 129);
+    background-color: rgb(187, 14, 43);
 }
+
+.botonLogin{
+    background-color:rgb(205, 175, 6);
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 10px;
+    color: white;
+}
+   
 
 .logoP {
     margin-left: 40px;

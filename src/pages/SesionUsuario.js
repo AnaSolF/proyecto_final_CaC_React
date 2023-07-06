@@ -5,8 +5,10 @@ import MyHeader from "@/Components/myHeader";
 import React from "react";
 import { Nav } from "react-bootstrap";
 import styles from "@/styles/Home.module.css";
+import data from "../Data/Data.json"
 
 const SesionUsuario = (props) => {
+  const { cardsImg } = data;
   return (
     <>
       <MyHeader
@@ -61,24 +63,15 @@ const SesionUsuario = (props) => {
         text="Restaurantes, mercados, farmacias, kioscos y mucho más."
         src="/home-background-ar.png"
       />
-      <nav className={styles.menuContainer}>
-        <ul className={styles.menu}>
-          <li>
-            <a href="#">Categoría</a>
-          </li>
-          <li>
-            <a href="#">Otros negocios</a>
-          </li>
-        </ul>
-      </nav>
+      <h2 className={styles.titulo}>Explorar</h2>
       <div className={styles.sesion}>
-        <Nav.Link href="/McDonaldsContainer" className={styles.item}>
-          <CardsComercios src="mcdonalds.jpeg " />
-        </Nav.Link>
-
-        <Nav.Link href="/GridoContainer" className={styles.item}>
-          <CardsComercios src="grido.jpeg" />
-        </Nav.Link>
+      {cardsImg.map((cardImg, key) => {
+            return (
+              <div className={styles.tarjeta} key={cardImg.id}>
+                <CardsComercios src={cardImg.imagen} href={cardImg.href} />
+              </div>
+            );
+          })}
       </div>
       <MyFooter />
     </>

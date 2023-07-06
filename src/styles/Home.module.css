@@ -22,9 +22,15 @@
 .sesion{
   display: flex;
   justify-content:space-evenly;
-  margin-bottom: 20px;
+  height: 35vh;
+  padding-top: 60px;
+  background-color: rgb(240, 243, 243);
 }
 
+.titulo{
+  text-align: center;
+  padding: 40px 20px;
+}
 .menu{
   display: flex;
   text-align: center;
@@ -43,7 +49,7 @@ margin: 0 auto;
 @media only screen and (min-width: 770px) {
 
   .sesion {
-    justify-content: center;
+    justify-content: space-evenly;
   }
 
   .item{
