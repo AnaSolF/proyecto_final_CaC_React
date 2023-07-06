@@ -50,7 +50,7 @@ export default function CustomLogin() {
       alert("Ingrese una contraseña de más de 8 caracteres");
     }
   }
-
+  
   return (
     <>
       <div className={styles.fondo}>
@@ -84,7 +84,6 @@ export default function CustomLogin() {
                   }}
                 />
               </FloatingLabel>
-
               <FloatingLabel label="Password">
                 <Form.Control
                   type="password"

@@ -38,11 +38,13 @@ const Grido = () => {
           <Card.Text>
             <strong>$ {negocio.precio}</strong>
           </Card.Text>
-        <NavLink href="/:productoId">Ver</NavLink>
+            <Button
+              href="/Carrito"
+              variant="outline"
+            ><strong>+ Agregar</strong></Button>
         </Card.Body>
       </Card>
     </div>
-   
     ));
 };
 
