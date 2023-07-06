@@ -4,6 +4,7 @@ import { getFirestore, getDocs, collection } from "firebase/firestore";
 import { useParams } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import styles from "../styles/unProducto.module.css";
+import ButtonPlus from "@/Components/ButtonPlus";
 
 
 const McDonalds = () => {
@@ -28,15 +29,16 @@ const McDonalds = () => {
     console.log(data)
   );
   return data.map((producto, key) => (
-    <div key={producto.id} className={styles.producto}>
+    <div key={producto.id} className={styles.products}>
       <Card style={{ width: "17rem" }}>
         <Card.Img variant="top" src={producto.imagen} />
         <Card.Body className={styles.cardBody}>
-          <Card.Title>{producto.nombre}</Card.Title>
+          <Card.Title className={styles.Title}>{producto.nombre}</Card.Title>
           <Card.Text>{producto.descripcion}</Card.Text>
           <Card.Text>
             <strong>$ {producto.precio}</strong>
           </Card.Text>
+          <ButtonPlus />
         </Card.Body>
       </Card>
       </div>

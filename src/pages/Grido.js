@@ -6,6 +6,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import styles from "../styles/unProducto.module.css";
 import { NavLink } from "react-bootstrap";
+import ButtonPlus from "@/Components/ButtonPlus";
 
 const Grido = () => {
   //Traer servicio de firestore
@@ -30,14 +31,15 @@ const Grido = () => {
   );
     return data.map((negocio, key) => (
     <div key={negocio.id} className={styles.products}>
-      <Card style={{ width: "17rem" }} >
+      <Card style={{ width: "18rem" }} >
         <Card.Img variant="top" src={negocio.imagen} />
         <Card.Body className={styles.cardBody}>
-          <Card.Title>{negocio.nombre}</Card.Title>
+          <Card.Title className={styles.Title}>{negocio.nombre}</Card.Title>
           <Card.Text>{negocio.descripcion}</Card.Text>
           <Card.Text>
-            <strong>$ {negocio.precio}</strong>
-          </Card.Text>
+              <strong>$ {negocio.precio}</strong>
+            </Card.Text>
+            <ButtonPlus />
             <Button
               href="/Carrito"
               variant="outline"
