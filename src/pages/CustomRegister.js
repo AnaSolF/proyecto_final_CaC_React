@@ -7,7 +7,7 @@ import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 import { useState } from "react";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-import { app } from "firebase/app";
+import { app } from "../firebase/InitConfig";
 
 export default function CustomLogin(){
   const [email, setEmail] = useState("");
@@ -22,8 +22,10 @@ export default function CustomLogin(){
       const user = userCredential.user;
       console.log(user)
       alert("Registro exitoso")
+     
     })
-    .catch((error) => {
+      .catch((error) => {
+      
       const errorCode = error.code;
       const errorMessage = error.message;
       console.error(`Error (${errorCode}): ${errorMessage}`);
@@ -65,7 +67,6 @@ export default function CustomLogin(){
           <br></br>
           <h4 style={{ padding: "10px" }}>Registráte con tu Email</h4>
           <p style={{ fontSize: "small" }}>Ingresá tus datos</p>
-          <>
             <Form>
               <FloatingLabel label="Email address" className="mb-3">
                 <Form.Control
@@ -77,7 +78,7 @@ export default function CustomLogin(){
                   onChange={(e) => {
                     const { value } = e.target;
                     e.preventDefault
-                    if (value.includes("@") && value.includes(".com")) {
+                    if (value.includes("@") && value.includes(".com") && value != null) {
                       setEmail(value);
                     } else {
                       setEmail("");
@@ -95,7 +96,7 @@ export default function CustomLogin(){
                     onChange={(e) => {
                     e.preventDefault
                     const { value } = e.target;
-                    if ( value.length > 8 ) {
+                    if ( value.length > 8 && value != null ) {
                       setPassword(value);
                     } else {
                       setPassword('');
@@ -105,7 +106,6 @@ export default function CustomLogin(){
                 />
               </FloatingLabel>
             </Form>
-          </>
           {/* <p style={{ fontSize: "small", marginTop: "10px" }}>
             Olvidé mi contraseña
           </p> */}
