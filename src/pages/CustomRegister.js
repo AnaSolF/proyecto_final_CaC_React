@@ -30,12 +30,11 @@ export default function CustomLogin() {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.error(`Error (${errorCode}): ${errorMessage}`);
-        
-        if (errorCode || errorMessage) {
-          
-          alert("Verifique que su usuario no se encuentre registrado ")
-          router.push('/CustomLogin') 
+        // console.error(`Error (${errorCode}): ${errorMessage}`);
+        if (errorCode ==="auth/email-already-in-use") {
+          alert("Verifique que su email no se encuentra registrado")
+        } if (errorCode === "auth/missing-password") {
+          alert("Password inválido")
         }
       
       });
@@ -119,7 +118,7 @@ export default function CustomLogin() {
             <Button
               type="submit"
               onClick={(e) => {
-                handleRegister(email, password);
+               
                 handleSubmit({ email, password });
               }}
               className={styles.botonContinuar}

@@ -20,12 +20,34 @@ const CustomLogin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const router = useRouter()
-  //agrego función para setear isLoggedIn
+
+  function validateEmail(email) {
+    // Validar el formato del correo electrónico utilizando una expresión regular
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+
+  function validatePassword(password) {
+    // Validar contraseña
+    return (password.length >= 8 && password != null);
+  }
+
+  function handleRegister(email, password) {
+    if (!validateEmail(email)) {
+      alert("Ingrese un email válido");
+    }
+
+    if (!validatePassword(password)) {
+      alert("Ingrese una contraseña de más de 8 caracteres");
+    }
+  }
     
   function Autenticacion() {
     signInWithEmailAndPassword(auth, email, password)
       .then((credentials) => {
         const user = credentials.user;
+        handleRegister(email, password)
+        alert("Será redireccionado a su Sesión")
         console.log(user)
         if (user) {
           router.push('/SesionUsuario') 
