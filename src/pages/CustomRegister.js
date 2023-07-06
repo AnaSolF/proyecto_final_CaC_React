@@ -18,14 +18,14 @@ export default function CustomLogin(){
 
   function handleSubmit() {
     createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
+      .then((userCredential) => {
+      handleRegister(email, password)
       const user = userCredential.user;
       console.log(user)
       alert("Registro exitoso")
      
     })
       .catch((error) => {
-      
       const errorCode = error.code;
       const errorMessage = error.message;
       console.error(`Error (${errorCode}): ${errorMessage}`);
@@ -40,19 +40,18 @@ export default function CustomLogin(){
   
     function validatePassword(password) {
       // Validar contraseña 
-
       return (
-        password.length >= 8 &&
-        /[a-zA-Z]/.test(password) &&
-        /[0-9]/.test(password)
+        password.length >= 8 
       );
     }
   
     function handleRegister(email, password) {
       if (!validateEmail(email)) {
+        alert("Ingrese un email válido")
       }
   
       if (!validatePassword(password)) {
+        alert("Ingrese una contraseña de más de 8 caracteres")
       }
     }
  
@@ -98,8 +97,10 @@ export default function CustomLogin(){
                     const { value } = e.target;
                     if ( value.length > 8 && value != null ) {
                       setPassword(value);
+                      
                     } else {
                       setPassword('');
+                     
                     }
                   }}
                 
@@ -111,9 +112,10 @@ export default function CustomLogin(){
           </p> */}
             <Button type="submit"
               onClick={(e) => {
+              handleRegister(email, password)
               handleSubmit({ email, password });
             }} className={styles.botonContinuar}
-            href='/SesionUsuario'>
+            href='#'>
               Registrarme
             </Button>
             <Button className={styles.botonContinuar}
