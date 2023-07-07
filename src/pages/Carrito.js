@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "../styles/carrito.module.css";
 import MyHeader from "@/Components/myHeader";
 import MyFooter from "@/Components/MyFooter";
-import { useEffect, useState } from "react";
 import IconNegocios from "@/Components/Icons/IconNegocios";
 import IconHelp from "@/Components/Icons/IconHelp";
 import IconLogout from "@/Components/Icons/IconLogout";
