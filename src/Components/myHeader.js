@@ -28,14 +28,14 @@ export default function MyHeader(props) {
             <Navbar.Brand className={styles.barra}>
               <Nav.Link
                 href="/Carrito"
-                style={{ marginRight: "30px", marginTop: "5px" }}
+                style={{ marginRight: "30px", marginTop: "20px" }}
                 iconcart={props.iconcart}
               >
                 {props.iconcart}
               </Nav.Link>
               <Button
                 href={props.hrefbtn}
-                className="btnNav"
+                className={styles.btnNav}
                 variant="outline-dark"
                 color="black"
                 style={{ fontSize: "12px", fontWeight: "700" }}
@@ -46,7 +46,7 @@ export default function MyHeader(props) {
                 {props.textbtn}
               </Button>
               <img className={styles.logoP} src="/LogoP.png"></img>
-              <NavDropdown title="" id="basic-nav-dropdown">
+              <NavDropdown title="" id="basic-nav-dropdown" className={styles.btn}>
                 <NavDropdown.Item
                   style={{ fontSize: "12px" }}
                   iconhelp={props.iconhelp}
@@ -56,9 +56,9 @@ export default function MyHeader(props) {
                 </NavDropdown.Item>
                 <NavDropdown.Item
                   href="/LoginBack"
-                  style={{ fontSize: "12px" }}
-                  texto={props.textLink}
+                  style={{ fontSize: "12px"}}
                   iconlogout={props.iconlogout}
+                  texto={props.textLink}
                 >
                   {props.iconlogout}
                   {props.textLink}

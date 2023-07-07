@@ -23,7 +23,8 @@ const SesionUsuario = (props) => {
         style={{ fontSize: "12px", fontWeight: "700" }}
         textbtn="Salir"
         textLinkUno="Ayuda en línea"
-        textcart="Mis compras"
+        textLink="Salir"
+        textcart="  Mis compras"
         textLinkDos="Salir"
         hrefbtn="/"
         iconcart={<IconCart />}

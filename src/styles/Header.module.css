@@ -50,6 +50,8 @@
 
 .btnNav{
     margin: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .LogoP img{
@@ -90,13 +92,14 @@ padding-top: 30px;
     width: 30px;
     height: 30px;
     padding: 5px;
+    margin-top: 20px;
 }
 
 .barra{
     display: flex;
 }
 
-#basic-nav-dropdown{
+#basic-nav-dropdown {
     margin-left: 10px;
 }
 
@@ -106,6 +109,10 @@ padding-top: 30px;
     font-weight: 600;
     padding-left: 10px;
     justify-content: space-around;
+}
+
+.btn{
+   margin-top: 20px; 
 }
 
 .Nav.Link{

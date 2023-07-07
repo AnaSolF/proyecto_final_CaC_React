@@ -29,6 +29,7 @@ export default function McDonaldsContainer() {
           textLink="Inicio"
           iconnegocio={<IconNegocios />}
           iconhelp={<IconHelp />}
+          textLinkDos="Salir"
         />
         <MyBanner
           src="Banner_APP_WEB_Mc_Melt_1440_X650_WEB_DESKTOP_89958df220.jpg"
