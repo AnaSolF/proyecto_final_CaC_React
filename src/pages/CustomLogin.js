@@ -56,8 +56,8 @@ const CustomLogin = () => {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorCode);
-        console.log(errorMessage);
+        // console.log(errorCode);
+        // console.log(errorMessage);
         if (errorCode === "auth/user-not-found") {
           alert("Usuario no registrado");
         }

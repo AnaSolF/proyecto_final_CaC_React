@@ -4,8 +4,15 @@ import styles from "../styles/formRegistroLocal.module.css";
 // import Form from 'react-bootstrap/Form';
 import FormControl from "@mui/material/FormControl";
 import MyInput from "@/Components/MyInput";
+import MainContextProvider from "@/Context/maincontextprovider";
+import Darkmode from "@/Components/Darkmode";
+import { useContext } from "react";
+import { maincontextState } from "@/Context/maincontextprovider";
 
 const FormRegistroLocal = () => {
+  let context = useContext(maincontextState);
+  let darkMode = context.darkMode;
+  let newcontextState = darkMode;
   const names = [
     "Bebidas",
     "Café",
@@ -35,7 +42,8 @@ const FormRegistroLocal = () => {
 
   return (
     <>
-      <div className={styles.inputGroup}>
+      <div className={darkMode ? styles.dark : styles.inputGroup}>
+     
         <h5>Registro de tu local</h5>
         <FormControl>
         <MyInput type="text" placeholder="Nombre del local" />
@@ -70,7 +78,8 @@ const FormRegistroLocal = () => {
           Comenzar
           </button>
           </FormControl>
-      </div>
+        </div>
+      
     </>
   );
 };

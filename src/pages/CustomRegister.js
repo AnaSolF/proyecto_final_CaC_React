@@ -32,7 +32,7 @@ export default function CustomLogin() {
         const errorMessage = error.message;
         // console.error(`Error (${errorCode}): ${errorMessage}`);
         if (errorCode ==="auth/email-already-in-use") {
-          alert("Verifique que su email no se encuentra registrado")
+          alert("Verifique que su email no se encuentre registrado")
         } if (errorCode === "auth/missing-password") {
           alert("Password inválido")
         }
