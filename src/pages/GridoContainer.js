@@ -7,6 +7,7 @@ import Grido from "./Grido";
 import IconNegocios from "@/Components/Icons/IconNegocios";
 import IconHelp from "@/Components/Icons/IconHelp";
 import IconLogout from "@/Components/Icons/IconLogout";
+import IconCart from "@/Components/Icons/IconCart";
 
 const GridoContainer = () => {
   return (
@@ -21,7 +22,7 @@ const GridoContainer = () => {
           textbtn="Salir"
           textLink="Inicio"
           textLinkDos="Salir"
-          text
+          iconcart={ <IconCart />}
           iconnegocio={<IconNegocios />}
           iconhelp={<IconHelp />}
           textLinkUno="Ayuda en línea"
