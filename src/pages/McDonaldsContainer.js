@@ -11,6 +11,9 @@ import MyFooter from "@/Components/MyFooter";
 import McDonalds from "./McDonalds";
 import IconNegocios from "@/Components/Icons/IconNegocios";
 import IconHelp from "@/Components/Icons/IconHelp";
+import IconCart from "@/Components/Icons/IconCart";
+import IconLogout from "@/Components/Icons/IconLogout";
+
 
 export default function McDonaldsContainer() {
   const [data, setData] = useState([]);
@@ -20,16 +23,19 @@ export default function McDonaldsContainer() {
     <>
       <div className={styles.grido}>
         <MyHeader
-          hrefbtn="/"
-          className="btnNav"
-          variant="outline-dark"
-          color="black"
-          style={{ fontSize: "12px", fontWeight: "700" }}
-          textbtn="Salir"
-          textLink="Inicio"
-          iconnegocio={<IconNegocios />}
-          iconhelp={<IconHelp />}
-          textLinkDos="Salir"
+         hrefbtn="/"
+         className="btnNav"
+         variant="outline-dark"
+         color="black"
+         style={{ fontSize: "12px", fontWeight: "700" }}
+         textbtn="Salir"
+         textLink="Inicio"
+         textLinkDos="Salir"
+         iconcart={ <IconCart />}
+         iconnegocio={<IconNegocios />}
+         iconhelp={<IconHelp />}
+         textLinkUno="Ayuda en línea"
+         iconlogout={<IconLogout />}
         />
         <MyBanner
           src="Banner_APP_WEB_Mc_Melt_1440_X650_WEB_DESKTOP_89958df220.jpg"
