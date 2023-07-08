@@ -28,7 +28,7 @@ export default function MyMain({ section }) {
         <section className={darkMode ? styles.dark : styles.light}>
           <div className="contenedor">
             <MyHeader
-              textbtn="Registrá tu negocio"
+              textbtn=" Registrá tu negocio"
               hrefbtn="/Negocios"
               textLinkDos="Ingresar/ Registrarme"
               textLink="Ingresar/ Registrarme"
