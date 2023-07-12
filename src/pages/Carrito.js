@@ -6,8 +6,8 @@ import IconNegocios from "@/Components/Icons/IconNegocios";
 import IconHelp from "@/Components/Icons/IconHelp";
 import IconLogout from "@/Components/Icons/IconLogout";
 import IconCart from "@/Components/Icons/IconCart";
-import { useContext } from "react";//Importo hook(Sigue del contexto del carrito)
-import { CartProvider  } from '../Context/CartContext'; //Importo el contexto que quiero usar
+import { useMainContextProvider } from "@/Context/maincontextprovider";
+ //Importo el contexto que quiero usar
 
 const Carrito = (props) => {
   const [carrito, setCarrito] = useState([]);
