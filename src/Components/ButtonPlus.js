@@ -8,9 +8,9 @@ export default function ButtonPlus ( {info} ) {
 
     function increment () {
         
-    let contPlus = contador + 1;
-    setContador(contPlus)
-    localStorage.setItem("Mas", contPlus) 
+    let cantidad = contador + 1;
+    setContador(cantidad)
+    localStorage.setItem("Cantidad", cantidad) 
     }
 
     function decrement() {
@@ -19,8 +19,8 @@ export default function ButtonPlus ( {info} ) {
             counter = 0
         }
         
-        let cantidad = setContador(counter);
-        localStorage.setItem("Menos", counter) 
+        setContador(counter);
+        // localStorage.setItem("Menos", counter) 
     }
 
     

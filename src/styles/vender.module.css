@@ -1,8 +1,9 @@
 .vender{
     display: flex;
     flex-direction: column;
-    height: 250vh;
+    height: 150vh;
     color: black;
+    padding-top: 40%;
 }
 
 .image{
@@ -44,7 +45,8 @@
 @media only screen and (min-width: 770px){
   .vender{
     align-items: center;
-    height: 130vh;
+    height: 100vh;
+    padding-top: 0;
   }
 
   .images{

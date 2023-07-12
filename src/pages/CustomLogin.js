@@ -1,26 +1,26 @@
 import React from "react";
-import Button from "@mui/material/Button";
+import button from "react-bootstrap";
 import styles from "@/styles/Login.module.css";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import { Nav } from "react-bootstrap";
+import { ButtonGroup, Nav } from "react-bootstrap";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 import { useState } from "react";
 import { useRouter } from 'next/router'
 import { app } from "../firebase/InitConfig";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { defaultState } from "../Context/maincontext";
-import { useContext } from "react";
 import { maincontextState } from "@/Context/maincontextprovider";
 import SesionUsuario from "./SesionUsuario";
-import { isLoggedIn, getInitialState } from "../Context/maincontext"
+import { useMainContextProvider } from "@/Context/maincontextprovider";
 
 const CustomLogin = () => {
   const auth = getAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const router = useRouter()
+  let { isLoggedIn }= useMainContextProvider();
 
+ console.log(isLoggedIn)
   function validateEmail(email) {
     // Validar el formato del correo electrónico utilizando una expresión regular
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -29,7 +29,7 @@ const CustomLogin = () => {
 
   function validatePassword(password) {
     // Validar contraseña
-    return (password.length >= 8 && password != null);
+    return (password.length >= 6 && password !== null);
   }
 
   function handleRegister(email, password) {
@@ -50,7 +50,7 @@ const CustomLogin = () => {
         alert("Será redireccionado a su Sesión")
         console.log(user)
         if (user) {
-          router.push('/SesionUsuario') 
+          router.push('/SesionUsuario')
         }
       })
       .catch((error) => {
@@ -108,7 +108,7 @@ const CustomLogin = () => {
                   onChange={(e) => {
                     e.preventDefault;
                     const { value } = e.target;
-                    if (value.length > 8 && value != null) {
+                    if (value.length > 6 && value !== null) {
                       setPassword(value);
                     } else {
                       setPassword("");
@@ -117,7 +117,7 @@ const CustomLogin = () => {
                 />
               </FloatingLabel>
             </Form>
-            <Button
+            <button
               type="submit"
               onClick={(e) => {
                 Autenticacion();
@@ -125,10 +125,10 @@ const CustomLogin = () => {
               className={styles.botonContinuar}
             >
               Iniciar Sesión
-            </Button>
-            <Button className={styles.botonLogin} href="/CustomRegister">
+            </button>
+            <button className={styles.botonLogin} href="/CustomRegister">
               Registrarme
-            </Button>
+            </button>
           </div>
         </div>
       </div>

@@ -1,7 +1,8 @@
 const defaultState = {
     darkMode : false,
     isLoggedIn: false,
-    username : "anonymous"
+    username: "anonymous",
+    cart: []
 }
 //Almaceno el defaultState en localStorage
 export default function getInitialState() {
@@ -13,7 +14,7 @@ export default function getInitialState() {
 
 export function saveContextState ( newcontextState ) {
     if (typeof window !== 'undefined') {
-        localStorage.setItem("contextState", JSON.stringify(newcontextState))
+        localStorage.setItem("newContextState", JSON.stringify(newcontextState.isLoggedIn))
     }
     return newcontextState;
 }

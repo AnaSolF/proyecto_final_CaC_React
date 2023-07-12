@@ -22,15 +22,18 @@
 
 .sesion {
   display: flex;
-  justify-content: space-evenly;
   height: 30vh;
-  padding-top: 90px;
+  padding-top: 70px;
   background-color: rgb(240, 243, 243);
-  
+  width: 80%;
+  margin: 0 auto;
+  overflow-y: auto;
+  overflow: overlay;
+  justify-content: space-evenly;
 }
 
 .sesion img{
-  transition:all .9s ease;;
+transition:all .9s ease;;
 -webkit-transition:all .9s ease; 
 -moz-transition:all .9s ease; 
 -o-transition:all .9s ease; 
@@ -44,6 +47,10 @@ width:100%;
   -ms-transform:scale(2);
   -o-transform:scale(2);
   transform:scale(2);
+}
+
+.sesion::-webkit-scrollbar{
+  display: none;
 }
 
 .titulo {
@@ -66,10 +73,16 @@ width:100%;
   margin: 0 auto;
 }
 
+.tarjeta{
+  margin-left:"10px";
+}
+
 @media only screen and (min-width: 770px) {
 
   .sesion {
     justify-content: center;
+    width: 100%;
+    margin: 5px;
   }
 
   .item {

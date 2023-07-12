@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap";
 import Iframe from "@/Components/Iframe";
 
 const Historia = () => {
-  // const [cookie, setCookie] = useState("")
+  
   
   return (
       <div className={styles.historia}>

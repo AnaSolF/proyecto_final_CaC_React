@@ -9,6 +9,7 @@ const Negocios = () => {
   let context = useContext(maincontextState);
   let darkMode = context.darkMode;
   let newcontextState = darkMode;
+
   return (
     <>
       <MainContextProvider>

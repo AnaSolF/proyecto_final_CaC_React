@@ -9,6 +9,27 @@
     background-color: whitesmoke;
     align-items: center;
 }
+.slider {
+    width: 70%;
+    margin: 0 auto;
+    overflow-y: auto;
+    overflow: overlay;
+    margin-top: 30px;
+  }
+  
+  .tarjeta {
+    margin: 20px;
+  }
+  
+  .slider::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .titulo {
+  text-align: center;
+  margin-top: 70px;
+  }
+  
 
 @media only screen and (min-width: 770px) {
     .productos{
@@ -17,5 +38,10 @@
         padding-top: 40px; 
         justify-content: center;
     }   
+    
+    .slider {
+        width: 100%;
+        margin: 5px;
+      }
 }
 

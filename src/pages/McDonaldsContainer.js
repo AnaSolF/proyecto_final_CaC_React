@@ -15,9 +15,10 @@ import IconCart from "@/Components/Icons/IconCart";
 import IconLogout from "@/Components/Icons/IconLogout";
 
 
-export default function McDonaldsContainer() {
+export default function McDonaldsContainer({info}) {
   const [data, setData] = useState([]);
   const { productoId } = useParams();
+ 
 
   return (
     <>
@@ -28,9 +29,9 @@ export default function McDonaldsContainer() {
          variant="outline-dark"
          color="black"
          style={{ fontSize: "12px", fontWeight: "700" }}
-         textbtn="Salir"
-         textLink="Inicio"
-         textLinkDos="Salir"
+         textbtn=" Salir"
+         textLink=" Inicio"
+         textLinkDos=" Salir"
          iconcart={ <IconCart />}
          iconnegocio={<IconNegocios />}
          iconhelp={<IconHelp />}
