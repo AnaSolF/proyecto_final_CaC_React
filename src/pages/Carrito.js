@@ -10,9 +10,9 @@ import { useMainContextProvider } from "@/Context/maincontextprovider";
  //Importo el contexto que quiero usar
 
 const Carrito = (props) => {
-  const [carrito, setCarrito] = useState([]);
+  // const [carrito, setCarrito] = useState([]);
   //const nombre = useContext(CartProvider)// Traemos el value (nombre Pablo en este caso) que habíamos agregado en el provider del comp. app.
-  console.log("carrito: ", nombre)
+  // console.log("carrito: ", nombre)
   return (
     <>
       <div className={styles.carritoContainer}>
