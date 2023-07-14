@@ -30,16 +30,19 @@ export default function MainContextProvider({ children }) {
     setContext({ ...context, ["username"]: username });
   };
 
+///////////////////////////////////////////////////////////////
+
   //Carrito LOGICA
   const [cart, setCart] = useState([]);
-
-  //Agregar al carrito
-  function addProduct(item, cantidad) {
-    const nuevoCarrito = cart.filter((prod) => prod.id !== item.id);
-    nuevoCarrito.push({ ...item, cantidad: cantidad });
-    setCart(nuevoCarrito);
-  };
-
+  
+  //Agregar producto
+  function agregar(producto) {
+    const nuevoCarrito = cart.filter((prod) => prod.id !== producto.id);
+    nuevoCarrito.push(producto)
+    setCart(nuevoCarrito)
+    alert("Agregaste: " +" "+ producto.nombre)
+    console.log(nuevoCarrito)
+  }
   //vaciar carrito
 
   const clearCart = () => setCart([]);
@@ -54,7 +57,7 @@ export default function MainContextProvider({ children }) {
   
   //Prueba
   const prueba = () =>{ console.log("Funciona")}
-
+ //Pasamos las funciones al provider
   return (
     <>
       <maincontextState.Provider
@@ -64,12 +67,10 @@ export default function MainContextProvider({ children }) {
           isLoggedIn: context.isLoggedIn,
           username: context.username,
           cart: context.cart,
-          clearCart: context.clearCart,
-          inCart: context.inCart,
-          removeProduct: context.removeProduct,
-          addProduct: context.addProduct,
-          //Pasamos las funciones al provider
-          nombre: "Pablo"
+          clearCart,
+          inCart: inCart,
+          removeProduct,
+          agregar
         }}
       >
         {children}

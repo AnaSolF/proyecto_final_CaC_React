@@ -1,12 +1,11 @@
 import React from 'react'
-import { useEffect, useState, useConext } from "react";
+import { useEffect, useState } from "react";
 import { getFirestore, getDocs, collection } from "firebase/firestore";
 import { useParams } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import styles from "../styles/unProducto.module.css";
 import ButtonPlus from "@/Components/ButtonPlus";
 import { Button } from 'react-bootstrap';
-import { Context } from 'react';
 import { useMainContextProvider } from "@/Context/maincontextprovider";
 
 const McDonalds = ({ info }) => {
@@ -15,22 +14,20 @@ const McDonalds = ({ info }) => {
   //Traer el dato con una promesa
   const [data, setData] = useState([]);
   const { prodId } = useParams();
-  const { prueba } = useMainContextProvider();
+  const { agregar } = useMainContextProvider();
   let cantidad;
-  // const carrito = context.carrito;
-  // console.log(carrito)
+
   const { addProduct } = useMainContextProvider() //
   const [goToCart, setGoToCart] = useState(false)
-  const { carrito } = useMainContextProvider()
+  const { cart } = useMainContextProvider()
   const {nombre} = useMainContextProvider()//Transmite el valor correctamente
-  function onAdd(cantidad) {
-    setGoToCart(true);
-    addProduct()//No interpreta como función
-  }
 
   //FALTA RESOLVER ERROR DE PASO DE FUNCIONES DESDE EL useMainContextProvider
-
-  console.log(carrito)
+  // function onAdd(cantidad) {
+  //   setGoToCart(true);
+  //   addProduct()
+  // }  
+  
   useEffect(
     () => {
       const queryDb = getFirestore(); //Traer Firestore
@@ -57,7 +54,7 @@ const McDonalds = ({ info }) => {
             <strong>$ {producto.precio}</strong>
           </Card.Text>
           <ButtonPlus info={cantidad} />
-          <Button style={{marginTop:"10px", marginBottom:"15px"}} onClick={()=>alert("click")}>Agregar al carrito</Button>
+          <Button style={{ marginTop: "10px", marginBottom: "15px" }} onClick={() => agregar(producto)}>Agregar al carrito</Button>
         </Card.Body>
       </Card>
       </div>

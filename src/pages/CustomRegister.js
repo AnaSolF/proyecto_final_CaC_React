@@ -8,13 +8,13 @@ import Form from "react-bootstrap/Form";
 import { useState } from "react";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { app } from "../firebase/InitConfig";
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router";
 
 export default function CustomLogin() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const auth = getAuth();
-  const router = useRouter("")
+  const router = useRouter("");
 
   function handleSubmit() {
     createUserWithEmailAndPassword(auth, email, password)
@@ -23,7 +23,7 @@ export default function CustomLogin() {
         const user = userCredential.user;
         console.log(user);
         if (user) {
-          router.push('/CustomLogin') 
+          router.push("/CustomLogin");
         }
         alert("Registro exitoso");
       })
@@ -31,12 +31,12 @@ export default function CustomLogin() {
         const errorCode = error.code;
         const errorMessage = error.message;
         // console.error(`Error (${errorCode}): ${errorMessage}`);
-        if (errorCode ==="auth/email-already-in-use") {
-          alert("Verifique que su email no se encuentre registrado")
-        } if (errorCode === "auth/missing-password") {
-          alert("Password inválido")
+        if (errorCode === "auth/email-already-in-use") {
+          alert("Verifique que su email no se encuentre registrado");
         }
-      
+        if (errorCode === "auth/missing-password") {
+          alert("Password inválido");
+        }
       });
   }
 
@@ -48,7 +48,7 @@ export default function CustomLogin() {
 
   function validatePassword(password) {
     // Validar contraseña
-    return (password.length >= 8 && password != null);
+    return password.length >= 8 && password != null;
   }
 
   function handleRegister(email, password) {
@@ -60,7 +60,7 @@ export default function CustomLogin() {
       alert("Ingrese una contraseña de más de 8 caracteres");
     }
   }
-  
+
   return (
     <>
       <div className={styles.fondo}>
@@ -108,16 +108,13 @@ export default function CustomLogin() {
             <Button
               type="submit"
               onClick={(e) => {
-               
                 handleSubmit({ email, password });
               }}
               className={styles.botonContinuar}
             >
               Registrarme
             </Button>
-            <Button
-              href="/CustomLogin"
-            className={styles.botonLogin}>
+            <Button href="/CustomLogin" className={styles.botonLogin}>
               Ya tengo cuenta
             </Button>
           </div>
