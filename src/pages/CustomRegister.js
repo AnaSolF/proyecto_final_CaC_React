@@ -79,18 +79,11 @@ export default function CustomLogin() {
                   placeholder="name@example.com"
                   id="email"
                   required
+                  value={email}
                   onChange={(e) => {
                     const { value } = e.target;
                     e.preventDefault;
-                    if (
-                      value.includes("@") &&
-                      value.includes(".com") &&
-                      value != null
-                    ) {
-                      setEmail(value);
-                    } else {
-                      setEmail("");
-                    }
+                    setEmail(value);
                   }}
                 />
               </FloatingLabel>
@@ -100,14 +93,11 @@ export default function CustomLogin() {
                   placeholder="Password"
                   required
                   id="password"
+                  value={password}
                   onChange={(e) => {
-                    e.preventDefault;
                     const { value } = e.target;
-                    if (value.length > 8 && value != null) {
-                      setPassword(value);
-                    } else {
-                      setPassword("");
-                    }
+                    e.preventDefault;
+                    setPassword(value);
                   }}
                 />
               </FloatingLabel>

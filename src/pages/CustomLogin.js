@@ -13,14 +13,15 @@ import { maincontextState } from "@/Context/maincontextprovider";
 import SesionUsuario from "./SesionUsuario";
 import { useMainContextProvider } from "@/Context/maincontextprovider";
 
+
 const CustomLogin = () => {
   const auth = getAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const router = useRouter()
-  let { isLoggedIn }= useMainContextProvider();
+  // let { isLoggedIn }= useMainContextProvider();
 
- console.log(isLoggedIn)
+//  console.log(isLoggedIn)
   function validateEmail(email) {
     // Validar el formato del correo electrónico utilizando una expresión regular
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -66,6 +67,7 @@ const CustomLogin = () => {
         }
       });
   }
+
   return (
     <>
       <div className={styles.fondo}>
@@ -84,18 +86,11 @@ const CustomLogin = () => {
                   placeholder="name@example.com"
                   id="email"
                   required
+                  value={email}
                   onChange={(e) => {
                     const { value } = e.target;
                     e.preventDefault;
-                    if (
-                      value.includes("@") &&
-                      value.includes(".com") &&
-                      value != null
-                    ) {
-                      setEmail(value);
-                    } else {
-                      setEmail("");
-                    }
+                    setEmail(value);
                   }}
                 />
               </FloatingLabel>
@@ -105,14 +100,11 @@ const CustomLogin = () => {
                   placeholder="Password"
                   required
                   id="password"
+                  value={password}
                   onChange={(e) => {
-                    e.preventDefault;
                     const { value } = e.target;
-                    if (value.length > 6 && value !== null) {
-                      setPassword(value);
-                    } else {
-                      setPassword("");
-                    }
+                    e.preventDefault;
+                    setPassword(value);
                   }}
                 />
               </FloatingLabel>
@@ -137,3 +129,4 @@ const CustomLogin = () => {
 };
 
 export default CustomLogin;
+
