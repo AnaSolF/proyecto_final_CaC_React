@@ -20,7 +20,8 @@ const McDonalds = ({ info }) => {
   const { addProduct } = useMainContextProvider() //
   const [goToCart, setGoToCart] = useState(false)
   const { cart } = useMainContextProvider()
-  const {nombre} = useMainContextProvider()//Transmite el valor correctamente
+  const { nombre } = useMainContextProvider()//Transmite el valor correctamente
+  const { clearCart } = useMainContextProvider()
 
   //FALTA RESOLVER ERROR DE PASO DE FUNCIONES DESDE EL useMainContextProvider
   // function onAdd(cantidad) {
@@ -55,6 +56,7 @@ const McDonalds = ({ info }) => {
           </Card.Text>
           <ButtonPlus info={cantidad} />
           <Button style={{ marginTop: "10px", marginBottom: "15px" }} onClick={() => agregar(producto)}>Agregar al carrito</Button>
+          <Button style={{ marginTop: "10px", marginBottom: "15px" }} onClick={() => clearCart(producto) }>Quitar</Button>
         </Card.Body>
       </Card>
       </div>

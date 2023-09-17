@@ -3,14 +3,18 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { SSRProvider } from "react-bootstrap";
 import React from "react";
 import MainContextProvider from "@/Context/maincontextprovider";
-import { app } from "../firebase/InitConfig"
+import AuthContextProvider from "../Context/AuthContext"
+
+
 
 export default function App({ Component, pageProps }) {
   return (
-    <MainContextProvider>
-      <SSRProvider>
-        <Component {...pageProps} />
-      </SSRProvider>
-    </MainContextProvider>
+    <AuthContextProvider>
+      <MainContextProvider>
+        <SSRProvider>
+          <Component {...pageProps} />
+        </SSRProvider>
+      </MainContextProvider>
+      </AuthContextProvider>
   );
 }

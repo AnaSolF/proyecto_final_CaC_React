@@ -6,7 +6,7 @@ import React from "react";
 const maincontextState = React.createContext([{}, () => {}]);
 export const useMainContextProvider = () => useContext(maincontextState);
 export default function MainContextProvider({ children }) {
-  const [context, setContext] = useState(getInitialState());
+const [context, setContext] = useState(getInitialState());
 
   // const [carrito, setCarrito] = useState([]);
 
@@ -20,16 +20,17 @@ export default function MainContextProvider({ children }) {
 
   //agrego función para setear isLoggedIn
 
-  const setIsLoggedIn = (isLoggedIn) => {
-    setContext({ ...context, ["isLoggedIn"]: isLoggedIn });
-  };
+  // const setIsLoggedIn = (isLoggedIn) => {
+  //   setContext({ ...context, ["isLoggedIn"]: isLoggedIn });
+  // };
 
-  //agrego función para setear username
+  // //agrego función para setear username
 
-  const setUsername = (username) => {
-    setContext({ ...context, ["username"]: username });
-  };
+  // const setUsername = (username) => {
+  //   setContext({ ...context, ["username"]: username });
+  // };
 
+  
 ///////////////////////////////////////////////////////////////
 
   //Carrito LOGICA

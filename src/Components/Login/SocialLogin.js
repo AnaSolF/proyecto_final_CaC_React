@@ -48,7 +48,7 @@ export default function SocialLogin() {
       </div> 
       <div className={styles.nav}>
         <Button className={styles.btnNav}
-          href="/CustomRegister" variant="outline-dark"
+          href="/NewRegister" variant="outline-dark"
           color="white">
           <Image
             src="icons8-usuario-48.png"

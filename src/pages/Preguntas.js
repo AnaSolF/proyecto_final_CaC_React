@@ -21,8 +21,7 @@ const Preguntas = () => {
               ¿Cómo y cuándo son las liquidaciones y pagos?
             </Accordion.Header>
             <Accordion.Body>
-              <p className={styles.parrafo}>En la sección "Finanzas" de Partner Portal, podrás ver tu estado
-              de cuenta y las fechas de emisión de tu pago. Cada semana,
+              <p className={styles.parrafo}>En la sección "Finanzas" de Partner Portal, podrás ver tu estado de cuenta y las fechas de emisión de tu pago. Cada semana,
               recibirás tu liquidación. Emitiremos tus pagos por transferencia
               bancaria en la fecha correspondiente.</p>
             </Accordion.Body>
@@ -62,7 +61,7 @@ const Preguntas = () => {
               ¿Cómo debo operar en el día a día?
             </Accordion.Header>
             <Accordion.Body>
-              <p className={styles.parrafo}>En PedidosYa cuidamos mucho a nuestros usuarios y queremos
+              <p className={styles.parrafo}>En PediYa cuidamos mucho a nuestros usuarios y queremos
               ofrecerles una experiencia increíble, rápida y fácil, por eso es
                 muy importante que:</p>
               <p className={styles.parrafo}>1- Aceptes los pedidos de manera rápida para
