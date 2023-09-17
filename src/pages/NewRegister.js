@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Button from "@mui/material/Button";
 import styles from "@/styles/Login.module.css";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import { Nav } from "react-bootstrap";
@@ -67,7 +66,7 @@ const NewRegister = (props) => {
             {/* <p style={{ fontSize: "small", marginTop: "10px" }}>
         Olvidé mi contraseña
       </p> */}
-            <Button
+            <button
               type="submit"
               // onClick={(e) => {
               //   handleSubmit(e);
@@ -78,10 +77,10 @@ const NewRegister = (props) => {
               className={styles.botonContinuar}
             >
               Registrarme
-            </Button>
-            <Button href="/CustomLog" className={styles.botonLogin}>
+            </button>
+            <button href="/CustomLog" className={styles.botonLogin}>
               Ya tengo cuenta
-            </Button>
+            </button>
           </div>
         </div>
       </div>
