@@ -28,7 +28,7 @@ const RegistroNegocio = () => {
       <section className={darkMode ? styles.dark : styles.light}>
         <MyHeader
           textbtn="Regresar"
-          hrefbtn="/"
+          href="/"
           className="btnNav"
           variant="outline-dark"
           color="black"

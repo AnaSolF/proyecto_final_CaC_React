@@ -15,7 +15,7 @@ import IconCart from "./Icons/IconCart";
 import IconHelp from "./Icons/IconHelp";
 import IconHome from "./Icons/IconHome";
 
-export default function MyMain({ section }) {
+export default function MyMain({ props }) {
   let context = useContext(maincontextState);
   let darkMode = context.darkMode;
   let newcontextState = darkMode;
@@ -28,8 +28,8 @@ export default function MyMain({ section }) {
         <section className={darkMode ? styles.dark : styles.light}>
           <div className="contenedor">
             <MyHeader
-              textbtn=" Registrá tu negocio"
-              hrefbtn="/Negocios"
+              textbtn="Registrá tu negocio"
+              href="/RegistroNegocio"
               textLinkDos="Ingresar/ Registrarme"
               textLink="Ingresar/ Registrarme"
               textLinkUno="Ayuda en línea"

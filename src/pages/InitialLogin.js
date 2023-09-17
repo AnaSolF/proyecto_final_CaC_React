@@ -13,27 +13,17 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 
 export default function InitialLogin(props) {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("")
-  const auth = getAuth(); 
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const auth = getAuth();
   //Entrar a https://www.npmjs.com/package/firebase (biblioteca js)
 
-    // let context = useContext(maincontextState);
-    // let isLoggedIn = context.isLoggedIn;
-
-    // if (isLoggedIn){
-    //     return <Logout/>
-    // } else {
-    //     return <Login/>
-    // }
-
-    //return isLoggedIn? <Logout/>:<Login/>;
-  //console.log(email)
-  const submit =()=>{
-    console.log(email, password)
-  }
-    return (<>
-       <div className={styles.fondo}>
+  const submit = () => {
+    console.log(email, password);
+  };
+  return (
+    <>
+      <div className={styles.fondo}>
         <div className={styles.login}>
           <div className={styles.formulario}>
             <Nav.Link href="/LoginBack">
@@ -57,19 +47,18 @@ export default function InitialLogin(props) {
               </FloatingLabel>
               <span>
                 <FloatingLabel label="Password">
-                <Form.Control
-                  type="password"
-                  placeholder="Password"
-                  required
-                  id="password"
-                  onChange={(e) => {
-                   // const { value } = e.target;
-                    setPassword(e.target.value);
-                  }}
-                />
-              </FloatingLabel>
+                  <Form.Control
+                    type="password"
+                    placeholder="Password"
+                    required
+                    id="password"
+                    onChange={(e) => {
+                      // const { value } = e.target;
+                      setPassword(e.target.value);
+                    }}
+                  />
+                </FloatingLabel>
               </span>
-              
             </Form>
             <p class="d-flex justify-content-end">
               <button
@@ -79,16 +68,15 @@ export default function InitialLogin(props) {
                 onClick={() => {
                   change();
                 }}
-
               >
-               {/* {texto} */}
+                {/* {texto} */}
               </button>
             </p>
             <button
               type="submit"
               onClick={(e) => {
                 // Autenticacion();
-                submit()
+                submit();
               }}
               className={styles.botonContinuar}
             >
@@ -99,8 +87,7 @@ export default function InitialLogin(props) {
             </button>
           </div>
         </div>
-      </div>   
-     </>)
-
-
+      </div>
+    </>
+  );
 }

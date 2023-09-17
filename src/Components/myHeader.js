@@ -34,7 +34,7 @@ export default function MyHeader(props) {
                 {props.iconcart}
               </Nav.Link>
               <Button
-                href={props.hrefbtn}
+                href={props.href}
                 className={styles.btnNav}
                 variant="outline-dark"
                 color="black"
