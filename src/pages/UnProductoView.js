@@ -19,7 +19,6 @@ const UnProductoView = ({ data }) => {
         textbtn="Salir"
         textLinkUno="Ayuda en línea"
         textcart="Mis compras"
-        hrefbtn="/"
         iconcart={
           <i
             className="bi bi-cart-plus-fill"

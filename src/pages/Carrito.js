@@ -27,7 +27,6 @@ const Carrito = (props) => {
           textcart=" Mis compras"
           textLinkDos=" Salir"
           textLink=" Salir"
-          hrefbtn="/"
           iconcart={<IconCart />}
           iconnegocio={<IconNegocios />}
           iconhelp={<IconHelp />}

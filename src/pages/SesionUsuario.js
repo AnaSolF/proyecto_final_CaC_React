@@ -26,7 +26,6 @@ const SesionUsuario = (props) => {
         textLink="Salir"
         textcart="  Mis compras"
         textLinkDos="Salir"
-        hrefbtn="/"
         iconcart={<IconCart />}
         iconnegocio={<IconNegocios />}
         iconhelp={<IconHelp />}

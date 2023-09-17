@@ -24,7 +24,7 @@ export default function McDonaldsContainer({info}) {
     <>
       <div className={styles.grido}>
         <MyHeader
-         hrefbtn="/"
+         href="/"
          className="btnNav"
          variant="outline-dark"
          color="black"
