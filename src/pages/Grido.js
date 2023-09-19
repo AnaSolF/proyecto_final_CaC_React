@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import React from "react";
-import { getFirestore, getDocs, collection, getData } from "firebase/firestore";
-import { BrowserRouter, Link, useParams } from "react-router-dom";
+import { getFirestore, getDocs, collection } from "firebase/firestore";
+import { useParams } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import styles from "../styles/unProducto.module.css";
-import { NavLink } from "react-bootstrap";
+import ButtonPlus from "@/Components/ButtonPlus";
 
 const Grido = () => {
   //Traer servicio de firestore
@@ -13,7 +13,8 @@ const Grido = () => {
   //Traer el dato con una promesa
   const [data, setData] = useState([]);
   const { productoId } = useParams();
-  const [coleccion, setColeccion]= useState()//Cómo hacer variable la colección?
+  const [coleccion, setColeccion] = useState()//Cómo hacer variable la colección?
+  let [contador, setContador] = useState(0);
   useEffect(
     () => {
       const queryDb = getFirestore(); //Traer Firestore
@@ -29,44 +30,28 @@ const Grido = () => {
 
   )
 
-    let [contador, setContador] = useState( 0);
-    function increment () {
-    let cantidad = contador + 1;
-    setContador(cantidad)
-    localStorage.setItem("Cantidad", cantidad) 
-    }
+// Función para calcular el precio total
+  const calcularPrecioTotal = (precio, cantidad) => {
+    return precio * cantidad;
+  };
 
-    function decrement() {
-        let counter = contador - 1
-        if ( counter <= 0 ) {
-            counter = 0
-        }
-        
-        setContador(counter);
-        // localStorage.setItem("Menos", counter) 
-  }
-  
+  // Manejar el clic en el botón "Agregar"
+  const handleAgregarClick = (producto, cantidad) => {
+    const precioTotal = calcularPrecioTotal(producto.precio, cantidad);
+    console.log("Precio total:", precioTotal);
+    return precioTotal 
+  };
     return data.map((negocio, key) => (
     <div key={negocio.id} className={styles.products}>
       <Card style={{ width: "18rem" }} >
         <Card.Img variant="top" src={negocio.imagen} />
         <Card.Body className={styles.cardBody}>
           <Card.Title className={styles.Title}>{negocio.nombre}</Card.Title>
-          <Card.Text>{negocio.descripcion}</Card.Text>
+          <Card.Text className={styles.p}>{negocio.descripcion}</Card.Text>
           <Card.Text>
-              <strong>$ {negocio.precio * contador}</strong>
+              <strong>$ { contador*negocio.precio }</strong>
             </Card.Text>
-            <div style={{ marginBottom: "15px", textAlign:"center"}}>
-            <div style={{ margin: "0 auto" }}>
-                <button style={{margin:"5px", border:"none"}} onClick={ () => decrement() }>
-                    -
-                </button>
-                <button style={{margin:"5px", border:"none"}} onClick={ () => increment() }>
-                    +
-            </button>
-            </div>
-                <br></br>
-                <span> Cantidad: {contador} </span></div>
+            <ButtonPlus cantidad={contador} setCantidad={setContador} />
             <Button
               href="/Carrito"
               variant="outline"

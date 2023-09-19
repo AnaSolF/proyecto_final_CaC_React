@@ -1,42 +1,37 @@
-import { Component } from "react";
-import { useState } from "react";
 
-export default function ButtonPlus ( {info} ) {
-   
-    let [contador, setContador] = useState( 0);
-    
-
-    function increment () {
-        
-    let cantidad = contador + 1;
-    setContador(cantidad)
-    localStorage.setItem("Cantidad", cantidad) 
+const ButtonPlus = ({ cantidad, setCantidad }) => {
+  const incrementarCantidad = () => {
+    // Incrementa la cantidad y llama a la función en el componente padre para actualizarla
+    setCantidad(cantidad + 1);
+  };
+  const Decrement = () => {
+   setCantidad(cantidad-1);
+    if (cantidad <= 0) {
+      setCantidad(0)
     }
+  };
 
-    function decrement() {
-        let counter = contador - 1
-        if ( counter <= 0 ) {
-            counter = 0
-        }
-        
-        setContador(counter);
-        // localStorage.setItem("Menos", counter) 
-    }
+  return (
 
-    
-    return (
-        <>  <div style={{ marginBottom: "15px", textAlign:"center"}}>
-            <div style={{ margin: "0 auto" }}>
-                <button style={{margin:"5px", border:"none"}} onClick={ () => decrement() }>
-                    -
-                </button>
-                <button style={{margin:"5px", border:"none"}} onClick={ () => increment() }>
-                    +
-            </button>
-            </div>
-                <br></br>
-                <span> Cantidad: {contador} </span></div>
-            </>
-    )
-    
-}
+    <div style={{ marginBottom: "15px", textAlign: "center" }}>
+      <div style={{ margin: "0 auto" }}>
+      <button
+        onClick={Decrement}
+        style={{ margin: "5px", border: "none", background:"none" }}
+      >
+        -
+      </button>
+      
+      <button
+        onClick={incrementarCantidad}
+        style={{ margin: "5px", border: "none", background:"none" }}
+      >
+        +
+      </button>
+        <p>Cantidad: {cantidad}</p>
+        </div>
+    </div>
+  );
+};
+
+export default ButtonPlus;
