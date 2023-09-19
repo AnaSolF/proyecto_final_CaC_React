@@ -6,7 +6,6 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import styles from "../styles/unProducto.module.css";
 import { NavLink } from "react-bootstrap";
-import ButtonPlus from "@/Components/ButtonPlus";
 
 const Grido = () => {
   //Traer servicio de firestore
@@ -27,8 +26,26 @@ const Grido = () => {
       );
     },
     [productoId],
-    console.log(data)
-  );
+
+  )
+
+    let [contador, setContador] = useState( 0);
+    function increment () {
+    let cantidad = contador + 1;
+    setContador(cantidad)
+    localStorage.setItem("Cantidad", cantidad) 
+    }
+
+    function decrement() {
+        let counter = contador - 1
+        if ( counter <= 0 ) {
+            counter = 0
+        }
+        
+        setContador(counter);
+        // localStorage.setItem("Menos", counter) 
+  }
+  
     return data.map((negocio, key) => (
     <div key={negocio.id} className={styles.products}>
       <Card style={{ width: "18rem" }} >
@@ -37,9 +54,19 @@ const Grido = () => {
           <Card.Title className={styles.Title}>{negocio.nombre}</Card.Title>
           <Card.Text>{negocio.descripcion}</Card.Text>
           <Card.Text>
-              <strong>$ {negocio.precio}</strong>
+              <strong>$ {negocio.precio * contador}</strong>
             </Card.Text>
-            <ButtonPlus />
+            <div style={{ marginBottom: "15px", textAlign:"center"}}>
+            <div style={{ margin: "0 auto" }}>
+                <button style={{margin:"5px", border:"none"}} onClick={ () => decrement() }>
+                    -
+                </button>
+                <button style={{margin:"5px", border:"none"}} onClick={ () => increment() }>
+                    +
+            </button>
+            </div>
+                <br></br>
+                <span> Cantidad: {contador} </span></div>
             <Button
               href="/Carrito"
               variant="outline"

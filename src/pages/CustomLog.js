@@ -31,11 +31,10 @@ const CustomLog = (props) => {
     var pass = document.getElementById("password");
     if (visible) {
       pass.type = "text";
-      setTexto("Ocultar");
+      setTexto("Ocultar contraseña");
     } else {
       pass.type = "password";
-        setTexto("Mostrar");
-        console.log(user)
+        setTexto("Mostrar contraseña");
     }
   };
 
@@ -85,7 +84,6 @@ const CustomLog = (props) => {
             </Form>
             <p class="d-flex justify-content-end">
               <button
-                text={props.text}
                 className={styles.cs}
                 id="btnPass"
                 onClick={() => {

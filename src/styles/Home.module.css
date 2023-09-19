@@ -13,6 +13,7 @@
 
 .contenedor {
   justify-content: center;
+  width: 100%;
 }
 
 /* 
@@ -24,8 +25,7 @@
   display: flex;
   height: 30vh;
   padding-top: 70px;
-  background-color: rgb(240, 243, 243);
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   overflow-y: auto;
   overflow: overlay;
@@ -75,6 +75,7 @@ width:100%;
 
 .tarjeta{
   margin-left:"10px";
+  margin: 5px;
 }
 
 @media only screen and (min-width: 770px) {

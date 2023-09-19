@@ -6,7 +6,7 @@ import React from "react";
 const maincontextState = React.createContext([{}, () => {}]);
 export const useMainContextProvider = () => useContext(maincontextState);
 export default function MainContextProvider({ children }) {
-const [context, setContext] = useState(getInitialState());
+  const [context, setContext] = useState(getInitialState());
 
   // const [carrito, setCarrito] = useState([]);
 
@@ -30,19 +30,21 @@ const [context, setContext] = useState(getInitialState());
   //   setContext({ ...context, ["username"]: username });
   // };
 
-  
-///////////////////////////////////////////////////////////////
+  ///////////////////////////////////////////////////////////////
 
   //Carrito LOGICA
   const [cart, setCart] = useState([]);
-  
+
   //Agregar producto
-  function agregar(producto) {
-    const nuevoCarrito = cart.filter((prod) => prod.id !== producto.id);
-    nuevoCarrito.push(producto)
-    setCart(nuevoCarrito)
-    alert("Agregaste: " +" "+ producto.nombre)
-    console.log(nuevoCarrito)
+
+  function agregar() {
+    var producto = { id: 1, nombre: "Jamón", precio: 20 };
+    //var prod = { id: 1, nombre: "Jamón", precio: 20 }
+    var prod = { id: 2, nombre: "Papas", precio: 10 };
+    cart.push(producto)
+      setCart(cart);
+    console.log(cart)  
+    alert("Agregaste: " + " " + producto.nombre)
   }
   //vaciar carrito
 
@@ -55,10 +57,12 @@ const [context, setContext] = useState(getInitialState());
   //Remover un producto
   const removeProduct = (id) =>
     setCart(cart.filter((product) => product.id !== id));
-  
+
   //Prueba
-  const prueba = () =>{ console.log("Funciona")}
- //Pasamos las funciones al provider
+  const prueba = () => {
+    console.log("Funciona");
+  };
+  //Pasamos las funciones al provider
   return (
     <>
       <maincontextState.Provider
@@ -71,7 +75,7 @@ const [context, setContext] = useState(getInitialState());
           clearCart,
           inCart: inCart,
           removeProduct,
-          agregar
+          agregar,
         }}
       >
         {children}

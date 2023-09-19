@@ -13,6 +13,7 @@ import IconCart from "@/Components/Icons/IconCart";
 
 const SesionUsuario = (props) => {
   const { cardsImg } = data;
+
   return (
     <>
       <MyHeader
