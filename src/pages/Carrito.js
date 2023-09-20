@@ -69,7 +69,7 @@ const Carrito = (props) => {
           variant="outline-dark"
           color="black"
           style={{ fontSize: "12px", fontWeight: "700" }}
-          textbtn=" Salir"
+          textbtn=" Regresar"
           textLinkUno="Ayuda en línea"
           textcart=" Mis compras"
           textLinkDos=" Salir"
