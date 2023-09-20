@@ -18,27 +18,27 @@ const Carrito = (props) => {
   let [contador, setContador] = useState(0);
   const { cart } = useMainContextProvider();
   const { setCart } = useMainContextProvider();
-  var newCart = [];
-  var unProd = [];
+  // var newCart = [];
+  // var unProd = [];
   const router = useRouter()
 
-  useEffect(() => {
-    mostrar();
-  }, []);
+  // useEffect(() => {
+  //   mostrar();
+  // }, []);
 
   // Función para calcular el precio total
   const calcularPrecioTotal = (precio, cantidad) => {
     return precio * cantidad;
   };
-  const mostrar = () => {
-    if (typeof window !== "undefined") {
-      newCart = JSON.parse(localStorage.getItem("cart"));
-      unProd = newCart[0]
-      return unProd
-    }
-  };
+  // const mostrar = () => {
+  //   if (typeof window !== "undefined") {
+  //     newCart = JSON.parse(localStorage.getItem("cart"));
+  //     unProd = newCart[0]
+  //     return unProd
+  //   }
+  // };
 
-  let nuevoCarrito = mostrar();
+ // let nuevoCarrito = mostrar();
 
   // Manejar el clic en el botón "Agregar"
   // const handleAgregarClick = (producto, cantidad) => {
@@ -72,7 +72,7 @@ const Carrito = (props) => {
           iconhelp={<IconHelp />}
           iconlogout={<IconLogout />}
         />
-        <div className={styles.carrito}>
+        {/* <div className={styles.carrito}>
           <h2 className={styles.title}>Su carrito está vacío</h2>
           <h2 className={styles.title}>Mi Compra</h2>
             <div className={styles.products}>
@@ -84,7 +84,7 @@ const Carrito = (props) => {
           <Link className={styles.link} href={"/SesionUsuario"}>Agregar mas</Link>
           </div>
          
-        </div>
+        </div> */}
         
         {/* {newCart.map((producto, key) => {
         <div key={producto.id} className={styles.products}>
