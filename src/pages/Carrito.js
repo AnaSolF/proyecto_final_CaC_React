@@ -8,7 +8,10 @@ import IconLogout from "@/Components/Icons/IconLogout";
 import IconCart from "@/Components/Icons/IconCart";
 import { useMainContextProvider } from "@/Context/maincontextprovider";
 import Card from "react-bootstrap/Card";
-
+import { useRouter } from "next/router";
+import ButtonPlus from "@/Components/ButtonPlus";
+import { Button } from "react-bootstrap";
+import Link from "next/link";
 //Importo el contexto que quiero usar
 
 const Carrito = (props) => {
@@ -16,35 +19,47 @@ const Carrito = (props) => {
   const { cart } = useMainContextProvider();
   const { setCart } = useMainContextProvider();
   var newCart = [];
+  var unProd = [];
+  const router = useRouter()
 
-  
-  useEffect(()=>{const mostrar = () => {
-    if (typeof window !== "undefined") {
-      newCart = JSON.parse(localStorage.getItem("cart"));
-      setCart(newCart)
-      console.log(cart)
-  }
-  }},[])
+  useEffect(() => {
+    mostrar();
+  }, []);
+
   // Función para calcular el precio total
   const calcularPrecioTotal = (precio, cantidad) => {
     return precio * cantidad;
   };
-
-
-  // Manejar el clic en el botón "Agregar"
-  const handleAgregarClick = (producto, cantidad) => {
-    const precioTotal = calcularPrecioTotal(producto.precio, cantidad);
-    let newCArt = cart.push(producto)
-    localStorage.setItem("cart", JSON.stringify(cart));
-    console.log(precioTotal);
-    return precioTotal; 
+  const mostrar = () => {
+    if (typeof window !== "undefined") {
+      newCart = JSON.parse(localStorage.getItem("cart"));
+      unProd = newCart[0]
+      console.log(unProd)
+      for (const producto in unProd) {
+        console.log(producto)
+        return unProd
+      }
+      
+    }
   };
 
-  const sumar = () => {
-    let [total, setTotal] = useState([]);
-    total.push(precioTotal)
-  }
-  
+  let nuevoCarrito = mostrar();
+  console.log(nuevoCarrito.nombre)
+
+  // Manejar el clic en el botón "Agregar"
+  // const handleAgregarClick = (producto, cantidad) => {
+  //   const precioTotal = calcularPrecioTotal(producto.precio, cantidad);
+  //   let newCArt = cart.push(producto)
+  //   localStorage.setItem("cart", JSON.stringify(cart));
+  //   console.log(precioTotal);
+  //   return precioTotal;
+  // };
+
+  // const sumar = () => {
+  //   let [total, setTotal] = useState([]);
+  //   total.push(precioTotal)
+  // }
+
   return (
     <>
       <div className={styles.carritoContainer}>
@@ -64,37 +79,19 @@ const Carrito = (props) => {
           iconlogout={<IconLogout />}
         />
         <div className={styles.carrito}>
-          <h2>Su carrito está vacío</h2>
-          {cart.map((producto, key) => {
-            return
-            <div key={producto.id} className={styles.products}>
-        <Card style={{ width: "20rem" }}>
-              <Card.Img variant="top" src={producto.imagen} />
-              <Card.Body className={styles.cardBody}>
-                <Card.Title className={styles.Title}>
-                  {producto.nombre}
-                </Card.Title>
-                <Card.Text className={styles.p}>
-                  {producto.descripcion}
-                </Card.Text>
-                <Card.Text>
-                  <strong>$ {contador * producto.precio}</strong>
-                </Card.Text>
-                <ButtonPlus cantidad={contador} setCantidad={setContador} />
-                <Button
-                  //href="/Carrito"
-                  variant="outline"
-                  onClick={() => {
-                    handleAgregarClick(producto, contador);
-                  }}
-                >
-                  <strong>+ Agregar</strong>
-                </Button>
-              </Card.Body>
-            </Card>
-        </div>;
-         })}
+          <h2 className={styles.title}>Su carrito está vacío</h2>
+          <h2 className={styles.title}>Mi Compra</h2>
+            <div className={styles.products}>
+            {nuevoCarrito.nombre}
+            <ButtonPlus cantidad={contador} setCantidad={setContador} />
+            <p>PRECIO $ {nuevoCarrito.precio}</p> 
+            <p>TOTAL $ {nuevoCarrito.precio * contador}</p> 
+            <Button style={{width:"30%", margin:"0 auto", marginBottom:"30px"}}>Comprar</Button>
+          <Link className={styles.link} href={"/SesionUsuario"}>Agregar mas</Link>
+          </div>
+         
         </div>
+        
         {/* {newCart.map((producto, key) => {
         <div key={producto.id} className={styles.products}>
         <Card style={{ width: "20rem" }}>
@@ -124,8 +121,7 @@ const Carrito = (props) => {
         </div>;
         })}
          */}
-        
-        
+
         <MyFooter />
       </div>
     </>

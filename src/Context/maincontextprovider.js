@@ -72,6 +72,7 @@ export default function MainContextProvider({ children }) {
           isLoggedIn: context.isLoggedIn,
           username: context.username,
           cart: context.cart,
+          setCart,
           clearCart,
           inCart: inCart,
           removeProduct,

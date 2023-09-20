@@ -3,7 +3,6 @@ import MyBanner from "@/Components/MyBanner";
 import MyFooter from "@/Components/MyFooter";
 import MyHeader from "@/Components/myHeader";
 import React from "react";
-import { Nav } from "react-bootstrap";
 import styles from "@/styles/Home.module.css";
 import data from "../Data/Data.json";
 import IconNegocios from "@/Components/Icons/IconNegocios";

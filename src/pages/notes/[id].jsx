@@ -31,6 +31,7 @@ export default () => {
   const [data, setData] = useState({});
   let [contador, setContador] = useState(0);
   const { cart } = useMainContextProvider();
+  const { setCart } = useMainContextProvider();
   // Función para calcular el precio total
   const calcularPrecioTotal = (precio, cantidad) => {
     return precio * cantidad;
@@ -39,7 +40,8 @@ export default () => {
   // Manejar el clic en el botón "Agregar"
   const handleAgregarClick = (producto, cantidad) => {
     const precioTotal = calcularPrecioTotal(producto.precio, cantidad);
-    let newCArt = cart.push(producto);
+    cart.push(producto);
+    setCart(cart)
     router.push("/Carrito")
       localStorage.setItem("cart", JSON.stringify(cart))
     return precioTotal 
@@ -57,12 +59,12 @@ export default () => {
   return (
     <>
       <MyHeader 
-          href="/"
+          href="/SesionUsuario"
          className="btnNav"
          variant="outline-dark"
          color="black"
          style={{ fontSize: "12px", fontWeight: "700" }}
-         textbtn=" Salir"
+         textbtn=" Regresar"
          textLink=" Inicio"
          textLinkDos=" Salir"
          iconcart={ <IconCart />}
@@ -78,9 +80,12 @@ export default () => {
           <h2 className={styles.title}>{data.nombre}</h2>
           <p className={styles.p}>{data.descripcion}</p>
           <p style={{ marginTop:"10px", fontSize:"20px", textAlign:"center"}} >
-            <strong>$ {data.precio*contador}</strong>
-          </p>
-          <ButtonPlus cantidad={contador} setCantidad={setContador} />
+            <strong>$ {data.precio}</strong>
+        </p>
+        <p style={{  textAlign: "center" }}>
+          <img src={ data.infoNutricional}></img>
+        </p>
+         
           <div style={{ textAlign: "center" }}>
             <Button onClick={()=>{handleAgregarClick(data, contador)}}>Agregar al carrito</Button>
           </div>

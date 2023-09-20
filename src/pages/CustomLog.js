@@ -11,6 +11,7 @@ import { app } from "../firebase/InitConfig";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import SesionUsuario from "./SesionUsuario";
 import { useAuthContextProvider } from "@/Context/AuthContext";
+import Link from "next/link";
 
 const CustomLog = (props) => {
   const { user } = useAuthContextProvider();
@@ -102,8 +103,9 @@ const CustomLog = (props) => {
             >
               Iniciar Sesión
             </button>
-            <button className={styles.botonLogin} href="/NewRegister">
-              Registrarme
+            <button className={styles.botonLogin} >
+              <Link href={"/NewRegister"} className={styles.link}>Registrarme</Link>
+              
             </button>
           </div>
         </div>

@@ -1,7 +1,22 @@
 .carrito{
-height: 50vh;
+height: 80vh;
 justify-content: center;
 display: flex;
+flex-direction: column;
 flex-wrap: wrap;
-padding-top: 12%;
+text-align: center;
+}
+
+.title{
+   margin-bottom: 20px;
+}
+
+.link{
+text-decoration: none; 
+color:black;   
+}
+
+.products{
+   display: flex;
+   flex-direction: column;
 }

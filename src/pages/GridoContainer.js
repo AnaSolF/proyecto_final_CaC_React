@@ -14,12 +14,12 @@ const GridoContainer = () => {
     <>
       <div className={styles.grido}>
         <MyHeader
-          href="/"
+          href="/SesionUsuario"
           className="btnNav"
           variant="outline-dark"
           color="black"
           style={{ fontSize: "12px", fontWeight: "700" }}
-          textbtn="Salir"
+          textbtn="Regresar"
           textLink="Inicio"
           textLinkDos="Salir"
           iconcart={ <IconCart />}

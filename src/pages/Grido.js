@@ -1,34 +1,54 @@
 import { useEffect, useState } from "react";
 import React from "react";
-import { getFirestore, getDocs, collection } from "firebase/firestore";
+import { getFirestore, getDocs, collection, query, where  } from "firebase/firestore";
 import { useParams } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import styles from "../styles/unProducto.module.css";
 import ButtonPlus from "@/Components/ButtonPlus";
+// Importa el componente 'Link' de 'next/link' para navegar entre páginas en una aplicación Next.js
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+
 
 const Grido = () => {
   //Traer servicio de firestore
   //Crear un puntero al dato que queremos traer
   //Traer el dato con una promesa
   const [data, setData] = useState([]);
-  const { productoId } = useParams();
   const [coleccion, setColeccion] = useState()//Cómo hacer variable la colección?
   let [contador, setContador] = useState(0);
+  var categoria = "helados"; // Establece la categoría aquí
   useEffect(
     () => {
-      const queryDb = getFirestore(); //Traer Firestore
-      const queryCollection = collection(queryDb, "Negocios"); //Apuntar a la collection Negocios
-      getDocs(queryCollection) //Traer la colección
-        .then((res) =>
+      const queryDb = getFirestore(); //Traer bd Firestore
+      const queryCollection = collection(queryDb, "McDonalds"); //Apuntar a la collection Negocios
+      if (categoria) {
+        const queryFilter = query(queryCollection, where("categoria", "==", categoria)); // Usa "where" correctamente
+        getDocs(queryFilter)
+          .then((res) =>
+            setData(
+              res.docs.map((negocio) => ({ id: negocio.id, ...negocio.data() }))
+            )
+          );
+      } else {
+        getDocs(queryCollection).then((res) =>
           setData(
             res.docs.map((negocio) => ({ id: negocio.id, ...negocio.data() }))
           )
-      );
+        );
+      }
     },
-    [productoId],
+    [],
 
-  )
+  );
+
+   //Agregar LINK
+   const router = useRouter()
+
+   // Extrae la propiedad 'id' del objeto 'query' del enrutador para acceder al valor de 'id' en la ruta actual
+   const { id } = router.query
+ 
 
 // Función para calcular el precio total
   const calcularPrecioTotal = (precio, cantidad) => {
@@ -41,21 +61,13 @@ const Grido = () => {
     console.log("Precio total:", precioTotal);
     return precioTotal 
   };
-    return data.map((negocio, key) => (
+  return data.map((negocio, key) => (
     <div key={negocio.id} className={styles.products}>
       <Card style={{ width: "18rem" }} >
         <Card.Img variant="top" src={negocio.imagen} />
         <Card.Body className={styles.cardBody}>
           <Card.Title className={styles.Title}>{negocio.nombre}</Card.Title>
-          <Card.Text className={styles.p}>{negocio.descripcion}</Card.Text>
-          <Card.Text>
-              <strong>$ { contador*negocio.precio }</strong>
-            </Card.Text>
-            <ButtonPlus cantidad={contador} setCantidad={setContador} />
-            <Button
-              href="/Carrito"
-              variant="outline"
-            ><strong>+ Agregar</strong></Button>
+          <Link key={negocio.id} href="/notes/[id]" as={`/notes/${negocio.id}`} className={styles.link}><strong>+ Detalle</strong></Link> 
         </Card.Body>
       </Card>
     </div>
