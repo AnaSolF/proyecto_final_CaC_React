@@ -1,12 +1,13 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { getFirestore, getDocs, collection } from "firebase/firestore";
-import { useParams } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import styles from "../styles/unProducto.module.css";
 import { Button } from "react-bootstrap";
 import { useMainContextProvider } from "@/Context/maincontextprovider";
-import ButtonPlus from "@/Components/ButtonPlus";
+import { useRouter } from 'next/router'
+// Importa el componente 'Link' de 'next/link' para navegar entre páginas en una aplicación Next.js
+import Link from 'next/link'
 
 
 const McDonalds = () => {
@@ -14,16 +15,14 @@ const McDonalds = () => {
   //Crear un puntero al dato que queremos traer
   //Traer el dato con una promesa
   const [data, setData] = useState([]);
-  const { prodId } = useParams();
   const { agregar } = useMainContextProvider();
   const { comprar } = useMainContextProvider();
   const [goToCart, setGoToCart] = useState(false);
   const { cart } = useMainContextProvider();
-  const { nombre } = useMainContextProvider(); //Transmite el valor correctamente
+  const { setCart } = useMainContextProvider();
   const { clearCart } = useMainContextProvider();
   var { total } = useMainContextProvider();
   let [contador, setContador] = useState(0);
-  var productoId = "manteca";
 
   useEffect(() => {
     const queryDb = getFirestore(); //Traer Firestore
@@ -34,40 +33,20 @@ const McDonalds = () => {
           res.docs.map((producto) => ({ id: producto.id, ...producto.data() }))
         )
       );
-  }, [prodId]);
+  }, []);
 
-  // Función para calcular el precio total
-  const calcularPrecioTotal = (precio, cantidad) => {
-    return precio * cantidad;
-  };
+  //Agregar LINK
+  const router = useRouter()
 
-  // Manejar el clic en el botón "Agregar"
-  const handleAgregarClick = (producto, cantidad) => {
-    const precioTotal = calcularPrecioTotal(producto.precio, cantidad);
-    console.log("Precio total:", precioTotal);
-    return precioTotal 
-  };
-
+  // Extrae la propiedad 'id' del objeto 'query' del enrutador para acceder al valor de 'id' en la ruta actual
+  const { id } = router.query
   return data.map((producto, key) => (
     <div key={producto.id} className={styles.products}>
       <Card style={{ width: "20rem" }}>
         <Card.Img variant="top" src={producto.imagen} />
         <Card.Body className={styles.cardBody}>
           <Card.Title className={styles.Title}>{producto.nombre}</Card.Title>
-          <Card.Text className={styles.p}>{producto.descripcion}</Card.Text>
-          <Card.Text>
-            <strong>$ {contador*producto.precio}</strong>
-          </Card.Text>
-          <ButtonPlus cantidad={contador} setCantidad={setContador} />
-          <Button
-            //href="/Carrito"
-            variant="outline"
-            onClick={() => {
-              handleAgregarClick(producto, contador);
-            }}
-          >
-            <strong>+ Agregar</strong>
-          </Button>
+          <Link key={producto.id} href="/notes/[id]" as={`/notes/${producto.id}`}><strong>+ Detalle</strong></Link>
         </Card.Body>
       </Card>
     </div>

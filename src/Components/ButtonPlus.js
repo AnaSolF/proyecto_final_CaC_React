@@ -13,7 +13,7 @@ const ButtonPlus = ({ cantidad, setCantidad }) => {
 
   return (
 
-    <div style={{ marginBottom: "15px", textAlign: "center" }}>
+    <div style={{ marginBottom: "10px", textAlign: "center" }}>
       <div style={{ margin: "0 auto" }}>
       <button
         onClick={Decrement}
