@@ -1,6 +1,6 @@
 import ButtonPlus from "@/Components/ButtonPlus";
 import { useState } from "react";
-import HomeNote from "./notes/HomeNote";
+//import HomeNote from "./notes/HomeNote";
 // import WatsonChat from "./WatsonChat";
 
 
@@ -56,7 +56,7 @@ export default function Test() {
       {/* <WatsonChat /> */}
       <div>producto</div>
       <ButtonPlus />
-      <HomeNote />
+     
     </>
   );
 }
