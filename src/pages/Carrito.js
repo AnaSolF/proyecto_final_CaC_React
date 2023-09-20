@@ -34,17 +34,11 @@ const Carrito = (props) => {
     if (typeof window !== "undefined") {
       newCart = JSON.parse(localStorage.getItem("cart"));
       unProd = newCart[0]
-      console.log(unProd)
-      for (const producto in unProd) {
-        console.log(producto)
-        return unProd
-      }
-      
+      return unProd
     }
   };
 
   let nuevoCarrito = mostrar();
-  console.log(nuevoCarrito.nombre)
 
   // Manejar el clic en el botón "Agregar"
   // const handleAgregarClick = (producto, cantidad) => {
