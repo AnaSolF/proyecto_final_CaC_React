@@ -70,6 +70,8 @@ const Carrito = (props) => {
           iconhelp={<IconHelp />}
           iconlogout={<IconLogout />}
         />
+
+        <h2>Su carrito está vacío</h2>
         
         {/* {newCart.map((producto, key) => {
         <div key={producto.id} className={styles.products}>

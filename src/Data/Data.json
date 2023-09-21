@@ -31,35 +31,26 @@
       "imagen": "Burger_King_logo_(1999).svg.png",
       "href":"/BurgerContainer"
     },
+    
     {
-      "id": "6",
-      "imagen": "logoCarrefour.png",
-      "href":""
-    },
-    {
-      "id": 7,
+      "id": 6,
       "imagen": "mcdonalds-logo.webp",
       "href":"/McDonaldsContainer"
     },
     {
-      "id": 8,
+      "id": 7,
       "imagen": "logos-2019-01.jpg",
       "href":"/GridoContainer"
     },
     {
       "id": 9,
-      "imagen": "logoWallmart.png",
-      "href":""
+      "imagen": "MostazaLogo.jpg",
+      "href":"/MostazaContainer"
     },
     {
       "id": 10,
-      "imagen": "barilocheLogo.jpg",
-      "href":""
-    },
-    {
-      "id": 11,
       "imagen": "GlupsLogo.png",
-      "href":""
+      "href":"/GlupsContainer"
     }
   ],
   "imgFlota": [
