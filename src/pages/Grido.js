@@ -22,7 +22,7 @@ const Grido = () => {
   useEffect(
     () => {
       const queryDb = getFirestore(); //Traer bd Firestore
-      const queryCollection = collection(queryDb, "McDonalds"); //Apuntar a la collection Negocios
+      const queryCollection = collection(queryDb, "McDonalds"); //Apuntar a la collection
       if (categoria) {
         const queryFilter = query(queryCollection, where("categoria", "==", categoria)); // Usa "where" correctamente
         getDocs(queryFilter)

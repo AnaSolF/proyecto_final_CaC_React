@@ -32,6 +32,7 @@ export default () => {
   let [contador, setContador] = useState(0);
   const { cart } = useMainContextProvider();
   const { setCart } = useMainContextProvider();
+  
   // Función para calcular el precio total
   const calcularPrecioTotal = (precio, cantidad) => {
     return precio * cantidad;
