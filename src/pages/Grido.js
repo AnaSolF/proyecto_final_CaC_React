@@ -1,11 +1,8 @@
 import { useEffect, useState } from "react";
 import React from "react";
 import { getFirestore, getDocs, collection, query, where  } from "firebase/firestore";
-import { useParams } from "react-router-dom";
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
 import styles from "../styles/unProducto.module.css";
-import ButtonPlus from "@/Components/ButtonPlus";
 // Importa el componente 'Link' de 'next/link' para navegar entre páginas en una aplicación Next.js
 import Link from 'next/link'
 import { useRouter } from 'next/router'
