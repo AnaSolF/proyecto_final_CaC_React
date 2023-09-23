@@ -205,7 +205,6 @@
     }
 
     .loginUno {
-        padding-top: 1%;
         width: 70%;
     }
 
@@ -219,6 +218,28 @@
 
     .No {
         color: white;
+    }
+
+    .formulario{
+        margin-top: 10px;
+        height:100vh;
+        background-color: white;
+    }
+
+    .login{
+        background-color: white;
+    }
+
+    .botonContinuar{
+        margin-top: 0;
+    }
+
+    .titulo{
+        padding-top: 10px;
+    }
+
+    .botonLogin {
+        margin-bottom: 30px;
     }
 }
 
