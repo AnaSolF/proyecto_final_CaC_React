@@ -65,7 +65,7 @@ const AuthContextProvider = ({ children }) => {
       .then((credentials) => {
         const user = credentials.user;
         alert("Será redireccionado a su Sesión");
-        router.push("/SesionUsuario");
+        router.push("/Sesion");
         handleRegister(email, password);
       })
       .catch((error) => {

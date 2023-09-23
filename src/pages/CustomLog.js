@@ -1,15 +1,11 @@
 import React from "react";
-import button from "react-bootstrap";
 import styles from "@/styles/Login.module.css";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
-import { ButtonGroup, Nav } from "react-bootstrap";
+import { Nav } from "react-bootstrap";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 import { useState } from "react";
 import { useRouter } from "next/router";
-import { app } from "../firebase/InitConfig";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import SesionUsuario from "./SesionUsuario";
 import { useAuthContextProvider } from "@/Context/AuthContext";
 import Link from "next/link";
 

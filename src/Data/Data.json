@@ -29,30 +29,31 @@
     {
       "id": 5,
       "imagen": "Burger_King_logo_(1999).svg.png",
-      "href":"/BurgerContainer"
+      "category":"BurgerKing"
     },
     
     {
       "id": 6,
       "imagen": "mcdonalds-logo.webp",
-      "href":"/McDonaldsContainer"
+      "category":"McDonalds"
     },
     {
       "id": 7,
       "imagen": "logos-2019-01.jpg",
-      "href":"/GridoContainer"
+      "category":"Grido"
+    },
+    {
+      "id": 8,
+      "imagen": "MostazaLogo.jpg",
+      "category":"Mostaza"
     },
     {
       "id": 9,
-      "imagen": "MostazaLogo.jpg",
-      "href":"/MostazaContainer"
-    },
-    {
-      "id": 10,
       "imagen": "GlupsLogo.png",
-      "href":"/GlupsContainer"
+      "category":"Glups"
     }
   ],
+
   "imgFlota": [
     {
       "id": 12,

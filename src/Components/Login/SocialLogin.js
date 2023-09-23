@@ -18,7 +18,7 @@ export default function SocialLogin() {
       .then((credentials) => {
         const user = credentials.user;
         if (user) {
-          router.push('/SesionUsuario') 
+          router.push('/Sesion') 
         }
       })
       .catch((error) => {

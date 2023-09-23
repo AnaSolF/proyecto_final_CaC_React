@@ -16,7 +16,7 @@ export default function CardsComercios(props) {
           padding: "10px",
           }}
       >
-        <Card.Img src={props.src} width="20px" height="50px" />
+          <Card.Img src={props.src} width="20px" height="50px"  />
         </Card>
         </Nav.Link>
     </>

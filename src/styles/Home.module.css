@@ -78,6 +78,34 @@ width:100%;
   margin: 5px;
 }
 
+.nav>*{
+  text-decoration: none;
+  color: white;
+}
+
+.nav{
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+padding: 30px;
+align-items: center;
+}
+
+
+.categoriasMap{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.catContainer{
+height: 70vh;
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: azure;
+}
+
 @media only screen and (min-width: 770px) {
 
   .sesion {
@@ -93,4 +121,14 @@ width:100%;
   .tarjeta {
     margin-left: 30px;
   }
+
+  .categoriasMap{
+    justify-content: center;
+    width: 100%;
+  }
+
+  .catContainer{
+    height: 40vh;
+  }
+
 }
