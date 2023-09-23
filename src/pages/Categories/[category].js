@@ -49,7 +49,7 @@ export default () => {
         )
       );
     }
-  }, []);
+  }, [categoria]);
   return (
     <>
       <div className={styles.negocios}>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "@/styles/Home.module.css";
 import Link from "next/link";
 import data from "../Data/Data.json";
@@ -16,7 +16,6 @@ export default (props) => {
   var { cardsImg } = data; 
   cardsImg.category = new Array(1).map((e, i) => ({
     category: i,
-    title: `Categorias: ${i}`,
   }));
   return (
     <div>
