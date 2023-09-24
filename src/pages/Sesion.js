@@ -9,8 +9,6 @@ import IconHelp from "@/Components/Icons/IconHelp";
 import IconLogout from "@/Components/Icons/IconLogout";
 import IconCart from "@/Components/Icons/IconCart";
 import MyBanner from "@/Components/MyBanner";
-//import ComerciosAdheridos from "@/Components/ComerciosAdheridos";
-
 
 export default (props) => {
   var { cardsImg } = data; 
@@ -41,7 +39,6 @@ export default (props) => {
         src="/home-background-ar.png"
       />
       <div className={styles.catContainer}>
-          {/* <ComerciosAdheridos /> */}
       <div className={styles.categoriasMap}>
       {cardsImg.map((categoria) => (
         <div className={styles.nav}>

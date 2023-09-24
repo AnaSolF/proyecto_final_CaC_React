@@ -43,7 +43,6 @@ export default function SocialLogin() {
           style={{ marginRight: "15px" }}
         />
         {"Continuar con Google"}
-        {/* <Nav.Link href="/SesionUsuario"></Nav.Link>  */}
       </Button>
       </div> 
       <div className={styles.nav}>

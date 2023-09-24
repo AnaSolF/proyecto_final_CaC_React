@@ -1,5 +1,4 @@
 import styles from "../notes/id.module.css";
-import { getFirestore, doc, getDoc } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import { useMainContextProvider } from "@/Context/maincontextprovider";
@@ -14,7 +13,17 @@ import IconNegocios from "@/Components/Icons/IconNegocios";
 import IconHelp from "@/Components/Icons/IconHelp";
 import IconCart from "@/Components/Icons/IconCart";
 import IconLogout from "@/Components/Icons/IconLogout";
-
+import {
+  getFirestore,
+  getDocs,
+  doc,
+  getDoc,
+  collection,
+  getData,
+  setDoc,
+  addDoc,
+} from "firebase/firestore";
+//import ButtonPlus from "@/Components/ButtonPlus";
 // Exporta una función anónima como componente predeterminado
 export default () => {
   // Utiliza el hook 'useRouter' para obtener una instancia del enrutador de Next.js
@@ -33,16 +42,6 @@ export default () => {
     return precio * cantidad;
   };
 
-  // Manejar el clic en el botón "Agregar"
-  const handleAgregarClick = (producto, cantidad) => {
-    const precioTotal = calcularPrecioTotal(producto.precio, cantidad);
-    cart.push(producto);
-    setCart(cart);
-    router.push("/Carrito");
-    localStorage.setItem("cart", JSON.stringify(cart));
-    return precioTotal;
-  };
-
   // const sumar = () => {
   //   let [total, setTotal] = useState([]);
   //   total.push(precioTotal)
@@ -52,10 +51,19 @@ export default () => {
     const queryDoc = doc(queryDb, "McDonalds", prodId); //Apuntar al documento
     getDoc(queryDoc).then((res) => setData({ id: res.id, ...res.data() }));
   }, [prodId]);
+
+  const docRef = async (producto, cantidad) => {
+    const queryDb = getFirestore();
+    const precioTotal = producto.precio * cantidad; 
+    var product = await addDoc(collection(queryDb, "carrito"), producto);
+    alert("Producto agregado");
+    router.push("/Carrito");
+  };
+
   return (
     <>
       <MyHeader
-        href="/SesionPrueba"
+        href="/Sesion"
         className="btnNav"
         variant="outline-dark"
         color="black"
@@ -84,9 +92,11 @@ export default () => {
         </p>
 
         <div style={{ textAlign: "center" }}>
+          {/* <ButtonPlus cantidad={contador} setCantidad={setContador} /> */}
           <Button
+            style={{ backgroundColor: "rgb(225, 14, 84)", border: "none" }}
             onClick={() => {
-              handleAgregarClick(data, contador);
+              docRef(data, contador);
             }}
           >
             Agregar al carrito

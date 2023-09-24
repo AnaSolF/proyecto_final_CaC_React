@@ -1,5 +1,7 @@
-
+import React from "react";
+import { useState } from "react";
 const ButtonPlus = ({ cantidad, setCantidad }) => {
+ 
   const incrementarCantidad = () => {
     // Incrementa la cantidad y llama a la función en el componente padre para actualizarla
     setCantidad(cantidad + 1);
@@ -21,14 +23,15 @@ const ButtonPlus = ({ cantidad, setCantidad }) => {
       >
         -
       </button>
-      
+        
+      {cantidad}
+        
       <button
         onClick={incrementarCantidad}
         style={{ margin: "5px", border: "none", background:"none" }}
       >
         +
       </button>
-        <p>Cantidad: {cantidad}</p>
         </div>
     </div>
   );

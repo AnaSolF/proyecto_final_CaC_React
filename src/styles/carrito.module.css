@@ -20,3 +20,17 @@ color:black;
    display: flex;
    flex-direction: column;
 }
+
+.productos{
+padding-top: 50px;
+}
+
+.titles{
+   text-align: center;
+   margin-top: 15%;
+}
+
+.comprar{
+   margin-bottom: 20%;
+   margin-right: 15px;
+}
