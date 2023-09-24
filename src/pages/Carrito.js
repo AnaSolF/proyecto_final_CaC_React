@@ -111,7 +111,7 @@ const Carrito = () => {
                           style={{ width: "50%" }}
                         ></img>
                       </td>
-                      <td>{<strong>{producto.precio}</strong>}</td>
+                      <td>{<strong>{producto.precioTotal}</strong>}</td>
                     </tr>
                   </tbody>
                 </Table>

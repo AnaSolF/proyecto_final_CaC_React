@@ -23,7 +23,7 @@ import {
   setDoc,
   addDoc,
 } from "firebase/firestore";
-//import ButtonPlus from "@/Components/ButtonPlus";
+import ButtonPlus from "@/Components/ButtonPlus";
 // Exporta una función anónima como componente predeterminado
 export default () => {
   // Utiliza el hook 'useRouter' para obtener una instancia del enrutador de Next.js
@@ -54,7 +54,8 @@ export default () => {
 
   const docRef = async (producto, cantidad) => {
     const queryDb = getFirestore();
-    const precioTotal = producto.precio * cantidad; 
+    let precio= data.precio
+    data.precioTotal = calcularPrecioTotal(precio, cantidad)
     var product = await addDoc(collection(queryDb, "carrito"), producto);
     alert("Producto agregado");
     router.push("/Carrito");
@@ -87,12 +88,15 @@ export default () => {
         <p style={{ marginTop: "10px", fontSize: "20px", textAlign: "center" }}>
           <strong>$ {data.precio}</strong>
         </p>
+        <p style={{ marginTop: "10px", fontSize: "20px", textAlign: "center" }}>
+          <strong>$ {data.precioTotal*contador}</strong>
+        </p>
         <p style={{ textAlign: "center" }}>
           <img src={data.infoNutricional}></img>
         </p>
 
         <div style={{ textAlign: "center" }}>
-          {/* <ButtonPlus cantidad={contador} setCantidad={setContador} /> */}
+          <ButtonPlus cantidad={contador} setCantidad={setContador} />
           <Button
             style={{ backgroundColor: "rgb(225, 14, 84)", border: "none" }}
             onClick={() => {
