@@ -34,7 +34,7 @@ export default function MyMain({ props }) {
               textLink="Ingresar/ Registrarme"
               textLinkUno="Ayuda en línea"
               titleText=" Qué bonito tenerte aquí"
-              textcart="Mis compras"
+              textcart="Carrito"
               iconcart={<IconCart />}
               iconlogout={<IconLogout />}
               iconnegocio={<IconNegocios style={{ marginRight: "20px" }} />}

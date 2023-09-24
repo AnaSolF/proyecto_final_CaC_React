@@ -21,7 +21,7 @@ const CustomLog = (props) => {
   };
 
   var [visible, setVisible] = useState("true");
-  var [texto, setTexto] = useState("Mostrar");
+  var [texto, setTexto] = useState("Mostrar contraseña");
 
   const change = () => {
     setVisible(!visible);
@@ -37,7 +37,6 @@ const CustomLog = (props) => {
 
   return (
     <>
-      {" "}
       <div className={styles.fondo}>
         <div className={styles.login}>
           <div className={styles.formulario}>

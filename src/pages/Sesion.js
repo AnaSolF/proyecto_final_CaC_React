@@ -26,7 +26,7 @@ export default (props) => {
         textbtn="Salir"
         textLinkUno="Ayuda en línea"
         textLink="Salir"
-        textcart="  Mis compras"
+        textcart="Carrito"
         textLinkDos="Salir"
         iconcart={<IconCart />}
         iconnegocio={<IconNegocios />}
@@ -49,7 +49,7 @@ export default (props) => {
             href="/Categories/[category]"
             as={`/Categories/${categoria.category}`}
           >
-         <img src={categoria.imagen} width={"80px"}></img> 
+         <img src={categoria.imagen} width={"100px"}></img> 
           </Link>
           
         </div>

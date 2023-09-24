@@ -30,8 +30,10 @@ export default function MyHeader(props) {
                 href="/Carrito"
                 style={{ marginRight: "30px", marginTop: "20px" }}
                 iconcart={props.iconcart}
+                textcart={props.textcart}
               >
-                {props.iconcart}
+                {props.iconcart }  
+                { props.textcart}  
               </Nav.Link>
               <Button
                 href={props.href}

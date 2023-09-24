@@ -22,15 +22,26 @@ color:black;
 }
 
 .productos{
-padding-top: 50px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+
 }
 
 .titles{
    text-align: center;
-   margin-top: 15%;
+   margin-top: 5%;
+   margin-bottom: 5%;
 }
 
 .comprar{
    margin-bottom: 20%;
    margin-right: 15px;
+}
+
+.prodContent{
+   display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 400px;
 }

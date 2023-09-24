@@ -8,8 +8,8 @@ const ButtonPlus = ({ cantidad, setCantidad }) => {
   };
   const Decrement = () => {
    setCantidad(cantidad-1);
-    if (cantidad <= 0) {
-      setCantidad(0)
+    if (cantidad <= 1) {
+      setCantidad(1)
     }
   };
 

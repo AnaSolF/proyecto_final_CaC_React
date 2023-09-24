@@ -33,7 +33,7 @@ export default () => {
   const { id } = router.query;
   const prodId = id;
   const [data, setData] = useState({});
-  let [contador, setContador] = useState(0);
+  let [contador, setContador] = useState(1);
   const { cart } = useMainContextProvider();
   const { setCart } = useMainContextProvider();
 
@@ -49,14 +49,16 @@ export default () => {
   useEffect(() => {
     const queryDb = getFirestore(); //Traer Firestore
     const queryDoc = doc(queryDb, "McDonalds", prodId); //Apuntar al documento
-    getDoc(queryDoc).then((res) => setData({ id: res.id, ...res.data() }));
+    getDoc(queryDoc).then((res) => setData({ ...res.data() }));
   }, [prodId]);
+
+
 
   const docRef = async (producto, cantidad) => {
     const queryDb = getFirestore();
     let precio= data.precio
     data.precioTotal = calcularPrecioTotal(precio, cantidad)
-    var product = await addDoc(collection(queryDb, "carrito"), producto);
+    var product = await addDoc(collection(queryDb, "carrito"), producto)
     alert("Producto agregado");
     router.push("/Carrito");
   };
@@ -86,17 +88,18 @@ export default () => {
         <h2 className={styles.title}>{data.nombre}</h2>
         <p className={styles.p}>{data.descripcion}</p>
         <p style={{ marginTop: "10px", fontSize: "20px", textAlign: "center" }}>
-          <strong>$ {data.precio}</strong>
+          <strong>Precio unitario $ {data.precio}</strong>
         </p>
         <p style={{ marginTop: "10px", fontSize: "20px", textAlign: "center" }}>
-          <strong>$ {data.precioTotal*contador}</strong>
+          <strong>Total: $ {data.precioTotal*contador}</strong>
         </p>
         <p style={{ textAlign: "center" }}>
           <img src={data.infoNutricional}></img>
         </p>
 
         <div style={{ textAlign: "center" }}>
-          <ButtonPlus cantidad={contador} setCantidad={setContador} />
+          cantidad
+        <strong><ButtonPlus cantidad={contador} setCantidad={setContador} /></strong>  
           <Button
             style={{ backgroundColor: "rgb(225, 14, 84)", border: "none" }}
             onClick={() => {

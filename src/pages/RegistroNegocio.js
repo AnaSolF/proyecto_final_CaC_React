@@ -34,7 +34,7 @@ const RegistroNegocio = () => {
           color="black"
           style={{ fontSize: "12px", fontWeight: "700" }}
           textLinkUno="Ayuda en línea"
-          textcart="Mis compras"
+          textcart="Carrito"
           textLinkDos="Salir"
           iconcart={<IconCart />}
           iconhelp={<IconHelp />}
