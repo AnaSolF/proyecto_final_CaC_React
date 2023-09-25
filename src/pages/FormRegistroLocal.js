@@ -46,7 +46,7 @@ const FormRegistroLocal = () => {
      
         <h5>Registro de tu local</h5>
         <FormControl>
-        <MyInput type="text" placeholder="Nombre del local" />
+        <MyInput className={styles.grupo} type="text" placeholder="Nombre del local" />
         <div className={styles.groupOne}>
           <MyInput
             className={styles.input}

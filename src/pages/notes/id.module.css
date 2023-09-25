@@ -28,7 +28,7 @@
 .img img{
     width: 320px;
 }
-@media only screen and (min-width: 770px) {
+@media only screen and (min-width: 700px) {
     .producto {
     display: flex;
     justify-content: center;

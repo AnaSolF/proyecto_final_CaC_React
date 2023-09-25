@@ -23,7 +23,7 @@
     font-size: small;
 }
 
-@media only screen and (min-width: 770px) {
+@media only screen and (min-width: 700px) {
     .preguntas{
        margin-left: 25%;
        margin-right: 25%;

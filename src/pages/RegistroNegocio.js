@@ -34,11 +34,8 @@ const RegistroNegocio = () => {
           color="black"
           style={{ fontSize: "12px", fontWeight: "700" }}
           textLinkUno="Ayuda en línea"
-          textcart="Carrito"
           textLinkDos="Salir"
-          iconcart={<IconCart />}
           iconhelp={<IconHelp />}
-          iconnegocio={<IconNegocios />}
         />
         <section className={styles.section}>
           <section className={styles.sectionOne}>
@@ -74,6 +71,8 @@ const RegistroNegocio = () => {
     </>
   );
 };
+
+
 
 export default RegistroNegocio;
 /*Revisar ERROR botón Darkmode*/

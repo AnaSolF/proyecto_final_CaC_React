@@ -1,9 +1,9 @@
 .vender{
     display: flex;
     flex-direction: column;
-    height: 150vh;
+    min-height: 50vh;
     color: black;
-    padding-top: 40%;
+    
 }
 
 .image{
@@ -27,14 +27,13 @@
 
 .parrafoOne{
   width: 100%;
-  padding-top: 80px;
+  padding-top: 30px;
   text-align: justify;
 }
 
 .titles{
     text-align: center;
-    padding-bottom: 30px;
-    padding-top: 50px;
+    padding-top: 40%;
     margin:20px;
 }
 
@@ -42,7 +41,7 @@
   color: black !important;
 }
 
-@media only screen and (min-width: 770px){
+@media only screen and (min-width: 700px){
   .vender{
     align-items: center;
     height: 100vh;

@@ -5,6 +5,7 @@ background-image: url("/pink-blue-yellow.jpg");
 height: 120vh;
 color: white;
 align-items: center;
+padding-top: 30px;
 }
 
 .title {  

@@ -34,7 +34,7 @@ height: 30vh;
     padding-top: 10%;
 } 
 
-@media only screen and (min-width: 770px) {
+@media only screen and (min-width: 700px) {
     .inicio{
         display: flex;
         min-height: 80vh;
