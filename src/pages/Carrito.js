@@ -28,7 +28,6 @@ const Carrito = () => {
   let [contador, setContador] = useState(0);
   const router = useRouter("");
   var [visible, setVisible] = useState("true");
-  var [texto, setTexto] = useState("Su carrito está vacío");
   var { isLoading } = useMainContextProvider();
   var { setIsLoading } = useMainContextProvider();
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
@@ -48,21 +47,7 @@ const Carrito = () => {
     let productId = producto.id;
     const queryDb = getFirestore();
     await deleteDoc(doc(queryDb, "carrito", productId));
-    setVisible(!visible);
     router.reload();
-  };
-
-  const Texto = () => {
-    setVisible(!visible);
-  };
-
-  const change = (visible) => {
-    var texto = document.getElementById("text");
-    if (!visible) {
-      setTexto("Mostrar contraseña");
-    } else {
-      setTexto("");
-    }
   };
 
   const toggleButton = () => {
@@ -79,9 +64,8 @@ const Carrito = () => {
           variant="outline-dark"
           color="black"
           style={{ fontSize: "12px", fontWeight: "700" }}
-          textbtn=" Regresar"
+          textbtn=" Salir"
           textLinkUno="Ayuda en línea"
-          textcart="Carrito"
           textLinkDos=" Salir"
           textLink=" Salir"
           iconnegocio={<IconNegocios />}
@@ -89,9 +73,8 @@ const Carrito = () => {
           iconlogout={<IconLogout />}
         />
         <div className={styles.prodContent}>
-          <h2>Carrito de compras</h2>
           <div className={styles.titles}>
-            <h2 id="text">{texto}</h2>
+          <h2>Carrito de compras</h2>
           </div>
 
           <div className={styles.productos}>
