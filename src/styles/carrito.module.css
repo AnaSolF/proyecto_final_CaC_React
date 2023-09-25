@@ -35,8 +35,11 @@ justify-content: center;
 }
 
 .comprar{
+   display: flex;
+   flex-direction: row-reverse;
    margin-bottom: 20%;
-   margin-right: 15px;
+   justify-content: center;
+
 }
 
 .prodContent{

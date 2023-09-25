@@ -31,6 +31,7 @@ const Carrito = () => {
   var [texto, setTexto] = useState("Su carrito está vacío");
   var { isLoading } = useMainContextProvider();
   var { setIsLoading } = useMainContextProvider();
+  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   //Traemos datos de carrito
 
   useEffect(() => {
@@ -43,28 +44,31 @@ const Carrito = () => {
     );
   }, []);
 
-  const refresh = () => {
-    router.push("/Carrito");
-  }
-
   const deleteProduct = async (producto) => {
     let productId = producto.id;
-    if (producto.id == producto.id) {
-      const queryDb = getFirestore();
-      await deleteDoc(doc(queryDb, "carrito", productId));
-      setVisible(!visible);
-      router.reload();
-    }
+    const queryDb = getFirestore();
+    await deleteDoc(doc(queryDb, "carrito", productId));
+    setVisible(!visible);
+    router.reload();
+  };
+
+  const Texto = () => {
+    setVisible(!visible);
   };
 
   const change = (visible) => {
-    var pass = document.getElementById("text");
+    var texto = document.getElementById("text");
     if (!visible) {
       setTexto("Mostrar contraseña");
     } else {
       setTexto("");
     }
   };
+
+  const toggleButton = () => {
+    setIsButtonDisabled(!isButtonDisabled);
+  };
+
 
   return (
     <>
@@ -103,7 +107,8 @@ const Carrito = () => {
               </Table>
               {data.map((producto, key) => (
                 <div key={producto.id} className={styles.products}>
-                  <Table style={{ maxWidth: "600px" }}>
+                  <Table style={{
+                    maxWidth: "600px", marginBottom: "30px" }}>
                     <tbody>
                       <tr style={{ textAlign: "center" }}>
                         <td style={{ width: "33%" }}>
@@ -124,7 +129,6 @@ const Carrito = () => {
                             onClick={() => {
                               deleteProduct(producto);
                             }}
-                          
                           >
                             X
                           </Button>
@@ -135,12 +139,16 @@ const Carrito = () => {
                 </div>
               ))}
               <div className={styles.comprar}>
-                <Button
+              <Button
                   style={{
-                    float: "right",
+                    marginLeft:"70px",
                     backgroundColor: "rgb(225, 14, 84)",
                     border: "none",
-                    marginTop: "30px",
+                    width:"30%"
+                    }}
+                  disabled={isButtonDisabled}
+                  onClick={() => {
+                  toggleButton()
                   }}
                 >
                   Comprar
@@ -150,7 +158,7 @@ const Carrito = () => {
                   style={{
                     paddingTop: "30px",
                     fontSize: "1rem",
-                    paddingLeft: "10px",
+              
                   }}
                 >
                   Seguir comprando
