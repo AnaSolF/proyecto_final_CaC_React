@@ -12,7 +12,8 @@ import { NavLink } from "react-router-dom";
 export default function MyHeader(props) {
   return (
     <>
-      <div>
+      <div className={styles.cont}>
+      <div className={styles.navLarge}>
         <Navbar
           expand="lg"
           variant="light"
@@ -20,7 +21,7 @@ export default function MyHeader(props) {
           fixed="top"
           className={styles.bar}
         >
-          <Container>
+          <div className="container">
             <Navbar.Brand>
               <img className="logo" src="/PedidosYa.png"></img>
             </Navbar.Brand>
@@ -67,11 +68,13 @@ export default function MyHeader(props) {
                 </NavDropdown.Item>
               </NavDropdown>
             </Navbar.Brand>
-          </Container>
+          </div>
         </Navbar>
+        </div>
+  
         {[false].map((expand) => (
           <Navbar key={expand} bg="white" expand={expand}>
-            <Container fluid>
+            <div className="container-fluid">
               <Navbar.Toggle
                 aria-controls={`offcanvasNavbar-expand-${expand}`}
               />
@@ -139,7 +142,7 @@ export default function MyHeader(props) {
               <Navbar.Brand href="/">
                 <img className="logo" src="/PedidosYa.png"></img>
               </Navbar.Brand>
-            </Container>
+            </div>
           </Navbar>
         ))}
       </div>
