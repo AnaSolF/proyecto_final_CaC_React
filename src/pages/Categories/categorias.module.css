@@ -9,7 +9,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     padding-bottom: 20px;
-    justify-content:space-evenly;
+    justify-content:center;
 }
 
 .info {
@@ -34,5 +34,6 @@
 }
 
 .cardBody{
-    min-height: 200px;
+    min-height: 250px;
+    margin: 30px;
 }

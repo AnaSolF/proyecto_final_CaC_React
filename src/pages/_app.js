@@ -5,13 +5,12 @@ import React from "react";
 import MainContextProvider from "@/Context/maincontextprovider";
 import AuthContextProvider from "../Context/AuthContext"
 
-
-
 export default function App({ Component, pageProps }) {
+ 
   return (
     <AuthContextProvider>
       <MainContextProvider>
-        <SSRProvider>
+        <SSRProvider> 
           <Component {...pageProps} />
         </SSRProvider>
       </MainContextProvider>

@@ -29,7 +29,10 @@ const Carrito = () => {
   const router = useRouter("");
   var [visible, setVisible] = useState("true");
   var [texto, setTexto] = useState("Su carrito está vacío");
+  var { isLoading } = useMainContextProvider();
+  var { setIsLoading }= useMainContextProvider();
   //Traemos datos de carrito
+  
   useEffect(() => {
     const queryDb = getFirestore();
     const queryCollection = collection(queryDb, "carrito");

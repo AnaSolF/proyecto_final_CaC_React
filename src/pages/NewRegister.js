@@ -20,7 +20,7 @@ const NewRegister = (props) => {
     await signup(user.email, user.password);
   };
   var [visible, setVisible] = useState("true");
-  var [texto, setTexto] = useState("Mostrar");
+  var [texto, setTexto] = useState("Mostrar contraseña");
 
   const change = () => {
     setVisible(!visible);

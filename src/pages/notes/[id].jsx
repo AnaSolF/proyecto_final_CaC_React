@@ -58,9 +58,13 @@ export default () => {
     const queryDb = getFirestore();
     let precio= data.precio
     data.precioTotal = calcularPrecioTotal(precio, cantidad)
-    var product = await addDoc(collection(queryDb, "carrito"), producto)
+    if(producto.id===producto.id)
+   { var product = await addDoc(collection(queryDb, "carrito"), producto)
     alert("Producto agregado");
-    router.push("/Carrito");
+      router.push("/Carrito");
+    } else {
+      alert("Repetido")
+    }
   };
 
   return (

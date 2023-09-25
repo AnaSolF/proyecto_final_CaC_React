@@ -84,7 +84,7 @@ width:100%;
 }
 
 .nav{
-margin: 10px;
+margin: 30px;
 padding-bottom: 20px;
 padding-top: 30;
 }
@@ -92,7 +92,7 @@ padding-top: 30;
 .categoriasMap{
   display: flex;
   flex-wrap: wrap;
-  justify-content:space-evenly;
+  justify-content:center;
 }
 
 /* .catContainer{
@@ -127,7 +127,7 @@ align-items: center;
   }
 
   .categoriasMap{
-    justify-content: space-evenly;
+    justify-content:center;
     width: 100%;
   }
 
