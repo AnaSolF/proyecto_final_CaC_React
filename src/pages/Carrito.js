@@ -30,9 +30,9 @@ const Carrito = () => {
   var [visible, setVisible] = useState("true");
   var [texto, setTexto] = useState("Su carrito está vacío");
   var { isLoading } = useMainContextProvider();
-  var { setIsLoading }= useMainContextProvider();
+  var { setIsLoading } = useMainContextProvider();
   //Traemos datos de carrito
-  
+
   useEffect(() => {
     const queryDb = getFirestore();
     const queryCollection = collection(queryDb, "carrito");
@@ -43,13 +43,18 @@ const Carrito = () => {
     );
   }, []);
 
+  const refresh = () => {
+    router.push("/Carrito");
+  }
+
   const deleteProduct = async (producto) => {
-    producto.id == producto.id;
     let productId = producto.id;
-    const queryDb = getFirestore();
-    await deleteDoc(doc(queryDb, "carrito", productId));
-    setVisible(!visible)
-    router.push("/Sesion");
+    if (producto.id == producto.id) {
+      const queryDb = getFirestore();
+      await deleteDoc(doc(queryDb, "carrito", productId));
+      setVisible(!visible);
+      router.reload();
+    }
   };
 
   const change = (visible) => {
@@ -57,7 +62,7 @@ const Carrito = () => {
     if (!visible) {
       setTexto("Mostrar contraseña");
     } else {
-        setTexto("");
+      setTexto("");
     }
   };
 
@@ -80,70 +85,81 @@ const Carrito = () => {
           iconlogout={<IconLogout />}
         />
         <div className={styles.prodContent}>
-        <h2>Carrito de compras</h2>
+          <h2>Carrito de compras</h2>
           <div className={styles.titles}>
             <h2 id="text">{texto}</h2>
           </div>
 
           <div className={styles.productos}>
             <div>
-            <Table style={{ maxWidth:"600px" }}>
-              <thead style={{ textAlign: "center" }}>
-                <tr>
-                  <th>Producto</th>
-                  <th>Total</th>
-                  <th>Quitar</th>
-                </tr>
-              </thead>
-            </Table>
-            {data.map((producto, key) => (
-              <div key={producto.id} className={styles.products}>
-                <Table style={{ maxWidth:"600px" }}>
-                  <tbody >
-                    <tr style={{ textAlign: "center" }}>
-                      <td style={{ width: "33%" }}>
-                        <img
-                          src={producto.imagen}
-                          style={{ width: "30%", height:"30%" }}
-                        ></img>
-                      </td>
-                      <td style={{ paddingTop: "5%" }}>
-                        {<strong>$ {producto.precioTotal}</strong>}
-                      </td>
-                      <td style={{ width: "20%", paddingTop: "5%" }}>
-                        <Button
-                          style={{ backgroundColor: "rgb(225, 14, 84)", border: "none" }}
-                          onClick={() => {
-                            deleteProduct(producto);
-                          }}
-                        >
-                         X
-                        </Button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </Table>
-              </div>
-             
-            ))}
+              <Table style={{ maxWidth: "600px" }}>
+                <thead style={{ textAlign: "center" }}>
+                  <tr>
+                    <th>Producto</th>
+                    <th>Total</th>
+                    <th>Quitar</th>
+                  </tr>
+                </thead>
+              </Table>
+              {data.map((producto, key) => (
+                <div key={producto.id} className={styles.products}>
+                  <Table style={{ maxWidth: "600px" }}>
+                    <tbody>
+                      <tr style={{ textAlign: "center" }}>
+                        <td style={{ width: "33%" }}>
+                          <img
+                            src={producto.imagen}
+                            style={{ width: "30%", height: "30%" }}
+                          ></img>
+                        </td>
+                        <td style={{ paddingTop: "5%" }}>
+                          {<strong>$ {producto.precioTotal}</strong>}
+                        </td>
+                        <td style={{ width: "20%", paddingTop: "5%" }}>
+                          <Button
+                            style={{
+                              backgroundColor: "rgb(225, 14, 84)",
+                              border: "none",
+                            }}
+                            onClick={() => {
+                              deleteProduct(producto);
+                            }}
+                          
+                          >
+                            X
+                          </Button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </Table>
+                </div>
+              ))}
               <div className={styles.comprar}>
-               
-              <Button
-                style={{
-                  float: "right",
-                  backgroundColor: "rgb(225, 14, 84)",
+                <Button
+                  style={{
+                    float: "right",
+                    backgroundColor: "rgb(225, 14, 84)",
                     border: "none",
-                  marginTop:"30px"
-                }}
-              >
-                Comprar
+                    marginTop: "30px",
+                  }}
+                >
+                  Comprar
                 </Button>
-                <NavLink href="/Sesion" style={{paddingTop:"30px", fontSize:"1rem", paddingLeft:"10px"}}>Seguir comprando</NavLink>
+                <NavLink
+                  href="/Sesion"
+                  style={{
+                    paddingTop: "30px",
+                    fontSize: "1rem",
+                    paddingLeft: "10px",
+                  }}
+                >
+                  Seguir comprando
+                </NavLink>
+              </div>
             </div>
           </div>
         </div>
-        </div>
-        </div>
+      </div>
       <MyFooter />
     </>
   );
