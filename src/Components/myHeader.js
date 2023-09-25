@@ -29,12 +29,11 @@ export default function MyHeader(props) {
             <Navbar.Brand className={styles.barra}>
               <Nav.Link
                 href="/Carrito"
-                style={{ marginRight: "30px", marginTop: "20px" }}
-                iconcart={props.iconcart}
-                textcart={props.textcart}
-              >
-                {props.iconcart }  
-                { props.textcart}  
+                style={{ marginRight: "20px", marginTop: "21px" }}
+                iconcart= {props.iconcart}
+                >
+                {props.iconcart } 
+                <span style={{ marginLeft: "10px"}}>{ props.textcart}  </span>
               </Nav.Link>
               <Button
                 href={props.href}

@@ -26,7 +26,6 @@ export default (props) => {
         textbtn="Salir"
         textLinkUno="Ayuda en línea"
         textLink="Salir"
-        textcart="Carrito"
         textLinkDos="Salir"
         iconcart={<IconCart />}
         iconnegocio={<IconNegocios />}
