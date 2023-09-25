@@ -131,3 +131,10 @@ overflow:hidden;
     
 
 }
+
+@media only screen and (orientation: landscape) {
+    .flota{
+        margin-top: 50%;
+        height: 230vh;
+    }
+}

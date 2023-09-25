@@ -68,3 +68,14 @@ z-index: 999;
         padding-top: 80px;
     }
   }
+
+  @media only screen and (orientation: landscape){
+    .slider{
+        overflow-x: auto;
+        height: 50vh;
+    }
+
+    .marcas{
+        height: 100vh;
+    }
+  }

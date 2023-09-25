@@ -84,3 +84,9 @@ margin-right: 10%;
     }
 
     }
+
+    @media only screen and (orientation: landscape) {
+     .gestion{
+        height: 180vh;
+     }
+    }

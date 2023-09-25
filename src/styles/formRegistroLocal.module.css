@@ -1,7 +1,7 @@
 .inputGroup {
     width: 100%;
     height: 100vh;
-    padding-top:50px;
+    padding-top: 50px;
     box-shadow: -2px 6px 15px -1px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: -2px 6px 15px -1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: -2px 6px 15px -1px rgba(0, 0, 0, 0.75);
@@ -9,7 +9,7 @@
     background-color: white;
 }
 
-.btn{
+.btn {
     width: 80%;
     background-color: rgb(255, 0, 76);
     padding: 10px;
@@ -20,22 +20,22 @@
     margin: 0 auto;
 }
 
-.groupOne{
-display: flex;
-justify-content: center;
-height: 10vh;
+.groupOne {
+    display: flex;
+    justify-content: center;
+    height: 10vh;
 }
 
-.groupOne>*{
-margin: 5px;
+.groupOne>* {
+    margin: 5px;
 }
 
-.dark{
+.dark {
     background-color: black;
     color: white;
     width: 100%;
     height: 100vh;
-    padding:30px;
+    padding: 30px;
     margin: 0 auto;
     box-shadow: -2px 6px 15px -1px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: -2px 6px 15px -1px rgba(0, 0, 0, 0.75);
@@ -43,18 +43,28 @@ margin: 5px;
 }
 
 @media only screen and (min-width: 700px) {
-    .inputGroup{
+    .inputGroup {
         margin-top: 50px;
         height: 80vh;
         padding: 100px;
     }
 
-    .dark{
+    .dark {
         margin-top: 50px;
         height: 80vh;
-        padding: 100px; 
+        padding: 100px;
         background-color: black;
         color: white;
     }
 
+}
+
+@media only screen and (orientation: landscape) {
+    .inputGroup {
+        min-height: 150vh;
+    }
+
+    .groupOne {
+        min-height: 20vh;
+    }
 }

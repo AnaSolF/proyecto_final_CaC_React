@@ -62,3 +62,10 @@
     }
   
 }
+
+@media only screen and (orientation: landscape) {
+    .funcional{
+        height: 200vh;
+      margin-bottom: 60%;
+    }
+}

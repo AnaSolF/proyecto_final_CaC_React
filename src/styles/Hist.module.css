@@ -50,7 +50,7 @@ border: none;
 border-radius: 5px;
 }
 
-@media only screen and (min-width: 770px) {
+@media only screen and (min-width: 700px) {
 .videoLarge{
     display: flex;
 }
@@ -66,4 +66,12 @@ border-radius: 5px;
 .parrafo{
     width: 50%;
 }
+}
+
+@media only screen and (orientation: landscape) {
+    .historia{
+        height: 250vh;
+        padding-top: 10%;
+        margin-top: 70%;
+    }
 }
