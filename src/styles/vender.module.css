@@ -1,86 +1,500 @@
-/* .vender{
-    display: flex;
-    flex-direction: column;
-    height: 50vh;
-    color: black;
-    
+.vender,
+.historia,
+.gestion,
+.funcional,
+.flota {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .vender {
+  color: black;
+  padding-top: 2%;
+  padding-bottom: 15%;
+  justify-content: space-evenly;
 } */
 
-.image{
-    padding: 10px;
-    display: flex;
-}
-
-.parrafo
-.parrafoOne{
-    padding: 20px;
-    margin: 5px;
-    text-align:center;
-    font-weight: 500;
-}
-
-.parrafo{
-  font-size: 12px;
-  margin-top: 10px;
-  margin-left: 5px;
-}
-
-.parrafoOne{
-  width: 100%;
+.historia {
+  background-image: url("/pink-blue-yellow.jpg");
+  min-height: 100vh;
+  color: white;
+  padding-bottom: 7%;
   padding-top: 30px;
-  text-align: justify;
 }
 
-.titles{
-    text-align: center;
-    padding-top: 60%;
-    margin:20px;
+.gestion {
+  background-image: url("/blue-pink.jpg");
+  min-height: 80vh;
+  padding-bottom: 30px;
+}
+
+.flota {
+  background-image: url("/blue-yellow.jpg");
+  min-height: 120vh;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.cardsImage {
+  width: 150px;
+  height: 150px;
+}
+
+.titles {
+  text-align: center;
+  padding-top: 10%;
+  margin: 20px;
 }
 
 .dark {
   color: black !important;
 }
 
-@media only screen and (min-width: 700px){
-  .vender{
-    align-items: center;
-    height: 100vh;
-    padding-top: 0;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-  }
+.parrafoOne {
+  width: 80%;
+  align-items: center;
+}
 
-  .images{
-    display: flex;
-    margin-left: 20%;
-    margin-right: 20%;
-    padding-right: 10px;
-    justify-content: center;
-  }
+.titleHist {
+  text-align: center;
+  padding-bottom: 10px;
+}
 
-  .titles{
+.titleHist h2 {
+  font-size: 45px;
+  font-weight: bolder;
+}
+
+.titleHist p {
+  font-size: 35px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.parrafo {
+  padding: 20px;
+  text-align: center;
+  font-weight: 500;
+  text-align: center;
+}
+
+.videoLarge {
+  display: none;
+}
+
+.video {
+  display: flex;
+}
+
+.button {
+  width: 60%;
+  background-color: yellow;
+  padding: 10px;
+  font-size: small;
+  margin-bottom: 40px;
+  border: none;
+  border-radius: 5px;
+}
+
+.titleGest {
+  text-align: center;
+  padding-bottom: 10px;
+  margin-top: 50px;
+  color: white;
+}
+
+.titleGest h2 {
+  font-size: 48px;
+  font-weight: bolder;
+  line-height: 1.2;
+  margin-bottom: 12%;
+  padding-top: 5%;
+}
+
+.titleGest p {
+  font-size: 35px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.parrafoGest {
+  padding-top: 50px;
+  text-align: center;
+  font-weight: 500;
+  text-align: center;
+  color: white;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.imagenGest img {
+  width: 280px;
+}
+
+.imagenGest {
+  margin: 0 auto;
+}
+
+.buttonGest {
+  width: 60%;
+  background-color: yellow;
+  padding: 10px;
+  font-size: small;
+  margin: 0 auto;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Funcionamos */
+
+.funcional {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-bottom: 8%;
+}
+
+.titlesFunc {
+  text-align: center;
+}
+
+.titlesFunc h2 {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 800;
+  margin-top: 15%;
+}
+
+.cardsFunc {
+  margin: 0 auto;
+}
+
+
+.cardBody>* {
+  margin: 0px auto;
+  text-align: center;
+  align-items: center;
+
+}
+
+.cardsImageFunc {
+  width: 100%;
+  height: 200px;
+}
+
+.textFunc {
+  width: 260px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  margin-bottom: 50px;
+}
+
+
+/* Flota */
+.tituloFlot h2 {
+  text-align: center;
+  font-size: 45px;
+  font-weight: 800;
+  padding-bottom: 20px;
+  padding-top: 30px;
+}
+
+.tituloFlot h6 {
+  text-align: center;
+  padding-bottom: 50px;
+  font-size: 35px;
+}
+
+.buttonFlot {
+  width: 60%;
+  background-color: rgb(255, 0, 76);
+  padding: 10px;
+  font-size: small;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.botonFlot {
+  align-items: center;
+  margin-top: 30px;
+}
+
+.imageFlot {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  margin-right: 2px;
+}
+
+.imageFlot img {
+  border: 1px solid white;
+}
+
+.image:first-child,
+.image:last-child {
+  width: 110px;
+  height: 110px;
+  padding-top: 10px;
+}
+
+.imagenesFlot {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.imageFlot:hover {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+  transition-duration: 500ms;
+}
+
+.imagenes {
+  overflow: hidden;
+}
+
+.parrafoFlot {
+  margin: 0 auto;
+  padding-bottom: 30px;
+  width: 70%;
+}
+
+.parrafoUnoFlot {
+  margin-bottom: 30px;
+  width: 90%;
+}
+
+.imageFlot:last-child {
+  padding-left: 10px;
+}
+
+/* Marcas */
+.marcas {
+  height: 60vh;
+  width: 100%;
+  background-color: aliceblue;
+}
+
+.tituloMarc {
+  text-align: center;
+  padding-top: 80px;
+}
+
+.h2 {
+  font-size: 45px;
+  font-weight: bold;
+}
+
+.sliderMarc {
+  margin: 0 auto;
+  overflow-y: auto;
+  height: 20vh;
+  display: flex;
+  padding-top: 30px;
+}
+
+.sliderMarc::-webkit-scrollbar {
+  display: none;
+}
+
+.imagenMarc {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+
+.marcasI {
+  width: 100%;
+  margin-top: 25px;
+}
+
+.contenedorMarc {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+}
+
+.btnMarc {
+  /* padding-top: 10%;
+border: none;
+background-color: transparent;
+z-index: 999; */
+  display: none;
+}
+
+@media only screen and (min-width: 700px) {
+  .titles {
     padding-top: 8%;
   }
 
-  .parrafoOne{
+  .parrafoOne {
     font-size: 18px;
-    text-align: center;
     width: 50%;
-    padding-top: 100px;
+    margin-top: 5%;
+  }
+
+  .cardsImage {
+    width: 200px;
+    height: 200px;
+    margin: 30px;
+  }
+
+  .videoLarge {
+    display: flex;
+    margin-top: 5%;
+  }
+
+  .video {
+    display: none;
+  }
+
+  .button {
+    width: 15%;
+  }
+
+  .parrafo {
+    width: 50%;
+  }
+
+  /* Historia */
+  .historia {
+    min-height: 110vh;
+  }
+
+  .titleHist {
+    padding-top: 8%;
+  }
+
+
+  /* Gestion */
+  .gestion {
+    min-height: 100vh;
+  }
+
+  .buttonGest {
+    width: 15%;
+    font-size: small;
+  }
+
+  .parrafoGest {
+    width: 50%;
+    text-align: center;
+  }
+
+  .imagenGest img {
+    width: 580px;
+  }
+
+  .titleGest h2 {
+    margin-bottom: 3%;
+  }
+
+  .titleGest {
+    margin-top: 10px;
+  }
+
+  /*Funcionamos*/
+  .funcional {
+    flex-direction: row;
+  }
+
+  /* Flota */
+  .imageFlot {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    margin-right: 5px;
+  }
+
+  .imageFlot:first-child,
+  .imageFlot:last-child {
+    width: 150px;
+    height: 150px;
+    margin-top: 10px;
+  }
+
+  .imageFlot:last-child {
+    margin-left: 13px;
+  }
+
+  .buttonFlot {
+    width: 16%;
+    padding: 10px;
+    font-size: small;
+    margin-bottom: 5px;
+  }
+
+  .parrafoFlot {
+    width: 30%;
+    font-size: medium;
+  }
+
+  .parrafoUnoFlot {
+    width: 40%;
+    margin: 0 auto;
+    padding-top: 30px;
+    font-size: medium;
+  }
+
+  .tituloFlot h2 {
+    margin-top: 30px
+  }
+
+  /*Marcas*/
+  .sliderMarc {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .contenedorMarc {
+    width: 80%;
+  }
+
+  .btnMarc {
+    padding-top: 40px;
+
+  }
+
+  .tituloMarc {
+    padding-top: 80px;
   }
 }
 
-@media only screen and (max-width: 800px) and (orientation: landscape)   {
-  .vender{
-  height: 200vh;
-  padding-bottom: 30%;
-  margin-bottom: 20%;
-  padding-top: 10px;
-  text-align: center;
+
+@media only screen and (max-width: 800px) and (orientation: landscape) {
+  .sliderMarc {
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    height: 50vh;
   }
 
-  
-  .titles{
-    padding-top: 30%;
+  .contenedorMarc {
+    margin-top: 10%;
+    height: 50vh;
+    margin-bottom: 10%;
   }
+
+  .buttonFlot{
+    margin-bottom: 30px;
+  }
+
+  .parrafoOne{
+    margin-top: 30px;
+  }
+
 }

@@ -1,8 +1,7 @@
 .text {
-    height: 150vh;
-    padding: 20px;
+    min-height: 60vh;
     color: white;
-    padding-top: 40px;
+    padding-top: 40px, 20px;
 }
 
 .promo {

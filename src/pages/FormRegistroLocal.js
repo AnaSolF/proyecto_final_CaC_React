@@ -44,7 +44,7 @@ const FormRegistroLocal = () => {
     <>
       <div className={darkMode ? styles.dark : styles.inputGroup}>
      
-        <h5>Registro de tu local</h5>
+        <h5 style={{paddingTop:"50px"}}>Registro de tu local</h5>
         <FormControl>
         <MyInput className={styles.grupo} type="text" placeholder="Nombre del local" />
         <div className={styles.groupOne}>

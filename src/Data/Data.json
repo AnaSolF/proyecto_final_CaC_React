@@ -120,5 +120,29 @@
       "id": 26,
       "img": "el-club-de-la-milanesa.jpeg"
     }
+  ],
+  "vender": [
+    {
+      "id": 27,
+      "imagen": "icon-step-a.svg",
+      "texto":"Registra tus datos y la información bancaria de tu local."
+    },
+    
+    {
+      "id":28,
+      "imagen": "icon-step-b.svg",
+      "texto":"Carga tu menú, horarios y logo en nuestro portal de autogestión."
+    },
+    {
+      "id": 29,
+      "imagen": "icon-step-c.svg",
+      "texto":"Prueba tu sistema de recepción de pedidos."
+    },
+    {
+      "id": 30,
+      "imagen": "icon-step-d.svg",
+      "texto":"¡Y listo! ¡Recibe tus primeros pedidos en nuestra plataforma!"
+    }
+  
   ]
 }

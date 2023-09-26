@@ -5,7 +5,7 @@ const RegistroLocalText = () => {
   return (
     <>
       <div className={styles.text}>
-        <h2 style={{ fontSize: "40px", marginBottom: "20px" }}>Empezá a vender en la app <strong>líder en delivery online de Latinoamérica</strong></h2>
+        <h2 style={{ fontSize: "40px", marginBottom: "20px", paddingTop:"50px" }}>Empezá a vender en la app <strong>líder en delivery online de Latinoamérica</strong></h2>
 
         <div className={styles.parrafo}>
           <p className={styles.items}><img className={styles.items} src='\icons8-flecha-derecha-larga-24.png'></img>El mejor canal de ventas para tu local</p>
