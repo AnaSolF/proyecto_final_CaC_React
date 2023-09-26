@@ -130,7 +130,7 @@ export default function MyHeader(props) {
                     </Nav.Link> */}
 
                     <Nav.Link
-                      href="/"
+                      href="/RegistroNegocio"
                       className={styles.registro}
                       texto={props.textbtn}
                       icon={props.iconnegocio}
