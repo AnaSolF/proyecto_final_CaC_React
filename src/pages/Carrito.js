@@ -22,27 +22,36 @@ import {
   setDoc,
   addDoc,
 } from "firebase/firestore";
+import LoadingScreen from "./LoadingScreen";
 
 const Carrito = () => {
   const [data, setData] = useState([]);
   let [contador, setContador] = useState(0);
   const router = useRouter("");
-  var [visible, setVisible] = useState("true");
   var { isLoading } = useMainContextProvider();
   var { setIsLoading } = useMainContextProvider();
+  const { waitFor } = useMainContextProvider();
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
-  //Traemos datos de carrito
 
-  useEffect(() => {
+  //Traemos datos de carrito
+  useEffect(async () => {
+    setIsLoading(true);
+    await waitFor(2000);
     const queryDb = getFirestore();
     const queryCollection = collection(queryDb, "carrito");
     getDocs(queryCollection).then((res) =>
       setData(
         res.docs.map((producto) => ({ id: producto.id, ...producto.data() }))
-      )
+      ),
+      setIsLoading(false)
     );
-  }, []);
+  }, [],
+);
 
+if (isLoading || !doc) {
+  return <LoadingScreen />;
+  }
+  
   const deleteProduct = async (producto) => {
     let productId = producto.id;
     const queryDb = getFirestore();

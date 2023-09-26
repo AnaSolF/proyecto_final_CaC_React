@@ -13,64 +13,68 @@ export default function MyHeader(props) {
   return (
     <>
       <div className={styles.cont}>
-      <div className={styles.navLarge}>
-        <Navbar
-          expand="lg"
-          variant="light"
-          bg="white"
-          fixed="top"
-          className={styles.bar}
-        >
-          <div className="container">
-            <Navbar.Brand>
-              <img className="logo" src="/PedidosYa.png"></img>
-            </Navbar.Brand>
-            <Darkmode />
-            <Navbar.Brand className={styles.barra}>
-              <Nav.Link
-                href="/Carrito"
-                style={{ marginRight: "20px", marginTop: "21px" }}
-                iconcart= {props.iconcart}
+        <div className={styles.navLarge}>
+          <Navbar
+            expand="lg"
+            variant="light"
+            bg="white"
+            fixed="top"
+            className={styles.bar}
+          >
+            <div className="container">
+              <Navbar.Brand>
+                <img className="logo" src="/PedidosYa.png"></img>
+              </Navbar.Brand>
+              <Darkmode />
+              <Navbar.Brand className={styles.barra}>
+                <Nav.Link
+                  href="/Carrito"
+                  style={{ marginRight: "20px", marginTop: "21px" }}
+                  iconcart={props.iconcart}
                 >
-                {props.iconcart } 
-                <span style={{ marginLeft: "10px"}}>{ props.textcart}  </span>
-              </Nav.Link>
-              <Button
-                href={props.href}
-                className={styles.btnNav}
-                variant="outline-dark"
-                color="black"
-                style={{ fontSize: "12px", fontWeight: "700" }}
-                textbtn={props.textbtn}
-                iconnegocio={props.iconnegocio}
-              >
-                {props.iconnegocio}
-                {props.textbtn}
-              </Button>
-              <img className={styles.logoP} src="/LogoP.png"></img>
-              <NavDropdown title="" id="basic-nav-dropdown" className={styles.btn}>
-                <NavDropdown.Item
-                  style={{ fontSize: "12px" }}
-                  iconhelp={props.iconhelp}
+                  {props.iconcart}
+                  <span style={{ marginLeft: "10px" }}>{props.textcart} </span>
+                </Nav.Link>
+                <Button
+                  href={props.href}
+                  className={styles.btnNav}
+                  variant="outline-dark"
+                  color="black"
+                  style={{ fontSize: "12px", fontWeight: "700" }}
+                  textbtn={props.textbtn}
+                  iconnegocio={props.iconnegocio}
                 >
-                  {props.iconhelp}
-                  {props.textLinkUno}
-                </NavDropdown.Item>
-                <NavDropdown.Item
-                  href="/LoginBack"
-                  style={{ fontSize: "12px"}}
-                  iconlogout={props.iconlogout}
-                  texto={props.textLink}
+                  {props.iconnegocio}
+                  {props.textbtn}
+                </Button>
+                <img className={styles.logoP} src="/LogoP.png"></img>
+                <NavDropdown
+                  title=""
+                  id="basic-nav-dropdown"
+                  className={styles.btn}
                 >
-                  {props.iconlogout}
-                  {props.textLink}
-                </NavDropdown.Item>
-              </NavDropdown>
-            </Navbar.Brand>
-          </div>
-        </Navbar>
+                  <NavDropdown.Item
+                    style={{ fontSize: "12px" }}
+                    iconhelp={props.iconhelp}
+                  >
+                    {props.iconhelp}
+                    {props.textLinkUno}
+                  </NavDropdown.Item>
+                  <NavDropdown.Item
+                    href="/LoginBack"
+                    style={{ fontSize: "12px" }}
+                    iconlogout={props.iconlogout}
+                    texto={props.textLink}
+                  >
+                    {props.iconlogout}
+                    {props.textLink}
+                  </NavDropdown.Item>
+                </NavDropdown>
+              </Navbar.Brand>
+            </div>
+          </Navbar>
         </div>
-  
+
         {[false].map((expand) => (
           <Navbar key={expand} bg="white" expand={expand}>
             <div className="container-fluid">
@@ -117,7 +121,6 @@ export default function MyHeader(props) {
                       {props.textLinkUno}
                     </Nav.Link>
 
-
                     {/* <Nav.Link href="/ItemView"
                       texto={props.textLink}
                       iconhome={props.iconhome}
@@ -125,6 +128,16 @@ export default function MyHeader(props) {
                       {props.iconhome}
                       {props.textLink}
                     </Nav.Link> */}
+
+                    <Nav.Link
+                      href="/"
+                      className={styles.registro}
+                      texto={props.textbtn}
+                      icon={props.iconnegocio}
+                    >
+                      {props.iconnegocio}
+                      {props.textbtn}
+                    </Nav.Link>
 
                     <Nav.Link
                       href="/LoginBack"

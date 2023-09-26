@@ -1,8 +1,9 @@
 .loadingScreen{
     height: 100vh;
-    display: grid;
-    place-items: center;
-    background: var(--bg-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
 }
 
 .loadingScreenIcon{

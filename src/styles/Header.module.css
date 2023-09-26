@@ -103,7 +103,7 @@ padding-top: 30px;
     display: flex;
 }
 
-#basic-nav-dropdown {
+#basic-nav-dropdown, .Nav.Link{
     margin-left: 10px;
 }
 

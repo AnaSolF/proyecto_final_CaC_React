@@ -132,7 +132,7 @@ overflow:hidden;
 
 }
 
-@media only screen and (orientation: landscape) {
+@media only screen and (max-width: 800px) and (orientation: landscape)  {
     .flota{
         margin-top: 50%;
         height: 230vh;

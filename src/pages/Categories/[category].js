@@ -10,7 +10,7 @@ import {
   getDocs,
   collection,
   query,
-  where,
+  where
 } from "firebase/firestore";
 import styles from "./categorias.module.css";
 import MyHeader from "@/Components/myHeader";
@@ -22,6 +22,7 @@ import IconLogout from "@/Components/Icons/IconLogout";
 import Card from "react-bootstrap/Card";
 import MyFooter from "@/Components/MyFooter";
 
+
 export default () => {
   const router = useRouter();
   const { category } = router.query;
@@ -29,6 +30,7 @@ export default () => {
   const [coleccion, setColeccion] = useState();
   let [contador, setContador] = useState(0);
   var categoria = category;
+
   useEffect(() => {
     const queryDb = getFirestore();
     const queryCollection = collection(queryDb, "McDonalds");
@@ -45,11 +47,12 @@ export default () => {
     } else {
       getDocs(queryCollection).then((res) =>
         setData(
-            res.docs.map((negocio) => ({ id: negocio.id, ...negocio.data() })),
+          res.docs.map((negocio) => ({ id: negocio.id, ...negocio.data() }))
         )
       );
     }
   }, [categoria]);
+
   return (
     <>
       <div className={styles.negocios}>
@@ -67,17 +70,28 @@ export default () => {
           iconhelp={<IconHelp />}
           textLinkUno="Ayuda en línea"
           iconlogout={<IconLogout />}
-              />
-        {data.map((negocio, key)=>{ if(negocio.banner)return<div key={negocio.categoria} ><MyBanner src={negocio.banner}></MyBanner></div> })}
-       
+        />
+        {data.map((negocio, key) => {
+          if (negocio.banner)
+            return (
+              <div key={negocio.categoria}>
+                <MyBanner src={negocio.banner}></MyBanner>
+              </div>
+            );
+        })}
+
         <h2 style={{ margin: "50px", textAlign: "center" }}>
           Nuestros productos
         </h2>
         <div className={styles.productos}>
           {data.map((negocio, key) => (
             <div key={negocio.id} className={styles.products}>
-                  <Card style={{
-                      width: "18rem", margin: "10px"}}>
+              <Card
+                style={{
+                  width: "18rem",
+                  margin: "10px",
+                }}
+              >
                 <Card.Img variant="top" src={negocio.imagen} />
                 <Card.Body className={styles.cardBody}>
                   <Card.Title className={styles.Title}>

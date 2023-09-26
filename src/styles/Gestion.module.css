@@ -85,7 +85,7 @@ margin-right: 10%;
 
     }
 
-    @media only screen and (orientation: landscape) {
+    @media only screen and (max-width: 800px) and (orientation: landscape)  {
      .gestion{
         height: 180vh;
      }

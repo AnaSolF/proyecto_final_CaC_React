@@ -13,7 +13,10 @@ export default function MainContextProvider({ children }) {
   };
 
   const [isLoading, setIsLoading] = useState(false)
-  
+
+  const waitFor= (time)=> {
+    return new Promise((resolve) =>setTimeout(resolve, time))
+}
   return (
     <>
       <maincontextState.Provider
@@ -21,7 +24,8 @@ export default function MainContextProvider({ children }) {
           darkMode: context.darkMode,
           setDarkmode: setDarkMode,
           isLoading,
-          setIsLoading
+          setIsLoading,
+          waitFor
         }}
       >
         {children}

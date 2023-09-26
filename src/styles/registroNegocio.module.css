@@ -49,10 +49,10 @@
 }
 
 .vender {
-    height: 200vh;
+    height: 120vh;
 }
 
-@media only screen and (min-width: 770px) {
+@media only screen and (min-width: 700px) {
 
     .section {
         display: flex;
@@ -62,6 +62,7 @@
 
     .sectionOne {
         width: 50%;
+        height: 100vh;
     }
 
     .sectionTwo {
@@ -69,17 +70,27 @@
         margin: 0 auto;
     }
 
-    .sectionThree {
-        height: 100vh;
-    }
 
     .funcional {
         height: 90vh;
     }
 
+    .vender{
+        height: 100vh;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+    }
+
+    .historia{
+        margin-bottom: 5%;
+    }
+    .sectionThree{
+        height: 120vh;
+    }
+
 }
 
-@media only screen and (orientation: landscape) {
+@media only screen and (max-width: 800px) and (orientation: landscape)  {
     .section{
         min-height: 300vh;
     }
@@ -94,10 +105,15 @@
         background-color: white;
     }
 
-    .vender, .historia, .funciona{
+    .vender{
+        margin-bottom: 10px;
+    }
+
+     .historia, .funciona{
         height: 200vh;
         margin-bottom: 30%;
     }
+
     .flota{
         height: 200vh;
         margin-bottom: 10%;
