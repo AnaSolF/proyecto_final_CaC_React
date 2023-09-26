@@ -34,7 +34,6 @@
     .section {
         display: flex;
         flex-direction: row;
-        height: 100vh;
     }
 
      .sectionOne {
@@ -48,5 +47,10 @@
     }
 }
 
-   
+@media only screen and (min-width: 800px) and (orientation: landscape) {
+    .sectionOne{
+        height: 200vh;
+    }
+
+}
     

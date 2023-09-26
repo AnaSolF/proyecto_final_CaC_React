@@ -17,34 +17,25 @@ const FormRegistroLocal = () => {
     "Bebidas",
     "Café",
     "Carnicería",
-    "Congelados",
     "Farmacia",
-    "Ferretería- Tienda de materiales",
     "Flores y plantas",
     "Frutas y verduras",
-    "Gourmet/Fiambrería",
-    "Kioscos",
-    "Lácteos",
     "Librería/Papelería",
-    "Mamás & bebés/Pañales",
     "Mascotas",
-    "Minimercados",
     "Panaderías/Pastelerías",
-    "Pasta Fresca",
     "Pastelería",
     "Regalos & accesorios",
     "Restaurantes",
     "Salud & belleza",
     "Suplementos",
     "Tienda natural y productos saludables/ Dietética",
-    "Vapes y tabaco",
   ];
 
   return (
     <>
       <div className={darkMode ? styles.dark : styles.inputGroup}>
      
-        <h5 style={{paddingTop:"50px"}}>Registro de tu local</h5>
+        <h5>Registro de tu local</h5>
         <FormControl>
         <MyInput className={styles.grupo} type="text" placeholder="Nombre del local" />
         <div className={styles.groupOne}>

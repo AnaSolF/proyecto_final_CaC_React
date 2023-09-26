@@ -284,9 +284,11 @@
 
 /* Marcas */
 .marcas {
-  height: 60vh;
+  height: 50vh;
   width: 100%;
-  background-color: aliceblue;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .tituloMarc {
@@ -300,34 +302,29 @@
 }
 
 .sliderMarc {
-  margin: 0 auto;
-  overflow-y: auto;
-  height: 20vh;
   display: flex;
-  padding-top: 30px;
-}
-
-.sliderMarc::-webkit-scrollbar {
-  display: none;
+  padding-top: 20px;
 }
 
 .imagenMarc {
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10%;
   margin: 10px;
 }
 
 .marcasI {
   width: 100%;
   margin-top: 25px;
+  margin-bottom: 10%;
 }
 
-.contenedorMarc {
+/* .contenedorMarc {
   width: 90%;
   display: flex;
   flex-direction: row;
   margin: 0 auto;
-}
+} */
 
 .btnMarc {
   /* padding-top: 10%;
@@ -457,12 +454,8 @@ z-index: 999; */
 
   /*Marcas*/
   .sliderMarc {
-    width: 100%;
+    width: 60%;
     margin: 0 auto;
-  }
-
-  .contenedorMarc {
-    width: 80%;
   }
 
   .btnMarc {
@@ -471,30 +464,29 @@ z-index: 999; */
   }
 
   .tituloMarc {
-    padding-top: 80px;
+
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .marcas{
+    height: 50vh;
+  }
+
+  .imagenMarc{
+    width: 100px;
+    height: 100px;
   }
 }
 
 
-@media only screen and (max-width: 800px) and (orientation: landscape) {
-  .sliderMarc {
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    height: 50vh;
-  }
-
-  .contenedorMarc {
-    margin-top: 10%;
-    height: 50vh;
-    margin-bottom: 10%;
-  }
-
-  .buttonFlot{
+@media only screen and (orientation: landscape) {
+  .buttonFlot {
     margin-bottom: 30px;
   }
-
-  .parrafoOne{
-    margin-top: 30px;
+  
+  .marcas{
+    height: 60vh;
+    margin-bottom: 12%;
   }
-
 }

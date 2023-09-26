@@ -157,7 +157,7 @@ const Vender = () => {
           <h3>Marcas que</h3>
           <h2 className={styles.h2}>nos eligen</h2>
         </div>
-        <div className={styles.contenedorMarc}>
+        {/* <div className={styles.contenedorMarc}> */}
         <button className={styles.btnMarc}><img src="icons8-chevron-izquierda-en-círculo-50.png"></img></button>
           <div className={styles.sliderMarc}>
           
@@ -171,7 +171,7 @@ const Vender = () => {
             )}
           </div>
           <button className={styles.btnMarc}><img src="icons8-chevron-derecha-en-círculo-50.png"></img></button>
-        </div>
+        {/* </div> */}
       </div>
     </>
   );

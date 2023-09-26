@@ -77,14 +77,6 @@
       "img": "grido.jpeg"
     },
     {
-      "id": 16,
-      "img": "kfc.webp"
-    },
-    {
-      "id": 17,
-      "img": "luccianos.jpeg"
-    },
-    {
       "id": 18,
       "img": "mcdonalds.jpeg"
     },
@@ -93,32 +85,8 @@
       "img": "ypf-erezcano.jpeg"
     },
     {
-      "id": 20,
-      "img": "shell-basavilbaso.webp"
-    },
-    {
-      "id": 21,
-      "img": "Dia.webp"
-    },
-    {
-      "id": 22,
-      "img": "fabric-sushi.jpeg"
-    },
-    {
       "id": 23,
       "img": "burgerking.jpg"
-    },
-    {
-      "id": 24,
-      "img": "daniel.jpeg"
-    },
-    {
-      "id": 25,
-      "img": "365-kiosco-argentina.jpeg"
-    },
-    {
-      "id": 26,
-      "img": "el-club-de-la-milanesa.jpeg"
     }
   ],
   "vender": [

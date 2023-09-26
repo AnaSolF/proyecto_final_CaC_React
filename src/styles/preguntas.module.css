@@ -3,8 +3,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 80vh;
-    max-height: 110vh;
     font-size: small;
 }
 
@@ -27,6 +25,7 @@
     .preguntas{
        margin-left: 25%;
        margin-right: 25%;
+       margin-bottom: 30px;
     }
 
  .titulo{
@@ -38,9 +37,13 @@
 
 }
 
-@media only screen and (max-width: 800px) and (orientation: landscape)  {
-    .titulo{
-        padding-top: 50%;
-        padding-bottom: 10%;
-    }
+@media only screen and (max-width: 913px) and (orientation: landscape)  {
+  .preguntas{
+    margin-top: 50px;
+    padding-bottom: 70px;
+  }
+
+  .titulo{
+    padding-top: 40%;
+  }
 }

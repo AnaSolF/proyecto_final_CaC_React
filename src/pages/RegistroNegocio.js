@@ -37,7 +37,6 @@ const RegistroNegocio = () => {
           </section>
         </section>
           <Vender />
-       
           <Preguntas />
         <MyFooter />
         </section>

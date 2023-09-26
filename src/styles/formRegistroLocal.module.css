@@ -1,6 +1,5 @@
 .inputGroup {
     width: 100%;
-    min-height: 70vh;
     padding-top: 50px, ;
     padding-bottom: 50px;
     padding-right: 10px;
@@ -67,15 +66,14 @@
 
 }
 
-@media only screen and (max-width: 800px) and (orientation: landscape) {
-    .inputGroup{
-        padding-bottom: 10%;
-        padding-top: 30px;
-    }
-
-    .groupOne{
-        height: 20vh;
-    }
-
+@media only screen and (min-width: 800px) and (orientation: landscape) {
+  .inputGroup{
+    padding-top: 20px;
+    height: 130vh;
+  }
+  .groupOne {
+    height: 20vh; 
+  }
+ 
 
 }
