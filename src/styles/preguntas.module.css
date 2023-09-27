@@ -31,8 +31,8 @@
  .titulo{
     text-align: center;
     font-size: larger;
-    padding-top: 50px;
-    padding-bottom: 0px;
+    padding-top: 0;
+    padding-bottom: 50px;
 }
 
 }

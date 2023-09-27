@@ -8,12 +8,13 @@ import MainContextProvider from "@/Context/maincontextprovider";
 import Darkmode from "@/Components/Darkmode";
 import { useContext } from "react";
 import { maincontextState } from "@/Context/maincontextprovider";
+import { useState } from "react";
 
 const FormRegistroLocal = () => {
   let context = useContext(maincontextState);
   let darkMode = context.darkMode;
   let newcontextState = darkMode;
-  const categoria = [
+  const [categoria, setCategoria ]= useState ([
     "Bebidas",
     "Café",
     "Carnicería",
@@ -29,12 +30,13 @@ const FormRegistroLocal = () => {
     "Salud & belleza",
     "Suplementos",
     "Tienda natural y productos saludables/ Dietética",
-  ];
+  ])
 
+  const [nombre, setNombre] = useState("");
   return (
     <>
       <div className={darkMode ? styles.dark : styles.inputGroup}>
-        <h5>Registro de tu local</h5>
+        <h5 style={{paddingTop:"30px"}}>Registro de tu local</h5>
         <FormControl>
           <MyInput
             className={styles.grupo}
@@ -42,7 +44,17 @@ const FormRegistroLocal = () => {
             placeholder="Nombre del local"
           />
           <div className={styles.groupOne}>
-            <select name="pets" id="pet-select" style={{width:"50%", height:"38px", marginTop:"29px", borderRadius:"5px", border:"1px, solid, lightgray"}}>
+            <select
+              name="pets"
+              id="pet-select"
+              style={{
+                width: "50%",
+                height: "38px",
+                marginTop: "29px",
+                borderRadius: "5px",
+                border: "1px, solid, lightgray",
+              }}
+            >
               <option value="">Categoría</option>
               <option value="Bebidas">Bebidas</option>
               <option value="Farmacia">Farmacia</option>
@@ -59,7 +71,13 @@ const FormRegistroLocal = () => {
             />
           </div>
           <div className={styles.groupOne}>
-            <MyInput type="text" placeholder="Nombre " />
+            <MyInput
+              type="text"
+              placeholder="Nombre "
+              onChange={(event) => {
+                setNombre(event.target.value);
+              }}
+            />
 
             <MyInput type="text" placeholder="Apellido" />
           </div>
