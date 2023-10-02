@@ -1,98 +1,111 @@
 import React from "react";
-// import InputGroup from 'react-bootstrap/InputGroup';
 import styles from "../styles/formRegistroLocal.module.css";
-// import Form from 'react-bootstrap/Form';
-import FormControl from "@mui/material/FormControl";
-import MyInput from "@/Components/MyInput";
-import MainContextProvider from "@/Context/maincontextprovider";
-import Darkmode from "@/Components/Darkmode";
 import { useContext } from "react";
 import { maincontextState } from "@/Context/maincontextprovider";
 import { useState } from "react";
+import FloatingLabel from "react-bootstrap/FloatingLabel";
+import { Form } from "react-bootstrap";
+import { Nav, Link } from "react-bootstrap";
+import {
+  getFirestore,
+  getDocs,
+  doc,
+  getDoc,
+  collection,
+  getData,
+  setDoc,
+  addDoc,
+} from "firebase/firestore"; 
+import { useRouter } from "next/router";
 
 const FormRegistroLocal = () => {
   let context = useContext(maincontextState);
   let darkMode = context.darkMode;
   let newcontextState = darkMode;
-  const [categoria, setCategoria ]= useState ([
-    "Bebidas",
-    "Café",
-    "Carnicería",
-    "Farmacia",
-    "Flores y plantas",
-    "Frutas y verduras",
-    "Librería/Papelería",
-    "Mascotas",
-    "Panaderías/Pastelerías",
-    "Pastelería",
-    "Regalos & accesorios",
-    "Restaurantes",
-    "Salud & belleza",
-    "Suplementos",
-    "Tienda natural y productos saludables/ Dietética",
-  ])
+  const [negocio, setNegocio] = useState({
+    nombre: "",
+    apellido: "",
+    categoria: "",
+    telefono: 0,
+  });
+  const router = useRouter("");
+
+//posteamos datos usuario negocio
+  const agregar = async (negocio) => {
+    const queryDb = getFirestore();
+    var product = await addDoc(collection(queryDb, "Comercios"), negocio)
+    router.push("/NewRegister")
+    alert("Bienvenido/a: "+ negocio.nombre);
+  }
 
   const [nombre, setNombre] = useState("");
   return (
     <>
       <div className={darkMode ? styles.dark : styles.inputGroup}>
-        <h5 style={{paddingTop:"30px"}}>Registro de tu local</h5>
-        <FormControl>
-          <MyInput
-            className={styles.grupo}
-            type="text"
-            placeholder="Nombre del local"
-          />
-          <div className={styles.groupOne}>
-            <select
-              name="pets"
-              id="pet-select"
-              style={{
-                width: "50%",
-                height: "38px",
-                marginTop: "29px",
-                borderRadius: "5px",
-                border: "1px, solid, lightgray",
-              }}
-            >
-              <option value="">Categoría</option>
-              <option value="Bebidas">Bebidas</option>
-              <option value="Farmacia">Farmacia</option>
-              <option value="Salud">Salud & belleza</option>
-              <option value="Panaderías">Panaderías/Pastelerías</option>
-              <option value="Restaurantes">Restaurantes</option>
-              <option value="Regalos">Regalos & accesorios</option>
-            </select>
-
-            <MyInput
-              className={styles.input}
-              type="number"
-              placeholder="Sucursales"
-            />
-          </div>
-          <div className={styles.groupOne}>
-            <MyInput
+        <h5 style={{ paddingTop: "30px" }}>Registro de tu local</h5>
+        
+        <Nav.Link className={styles.texto} href="/Local_Login"> Ya tengo cuenta</Nav.Link>
+       
+        <Form>
+          <FloatingLabel label="Nombre del negocio" className={styles.input}>
+            <Form.Control
               type="text"
-              placeholder="Nombre "
-              onChange={(event) => {
-                setNombre(event.target.value);
+              placeholder="Nombre del negocio"
+              id="categoria"
+              name="categoria"
+              required
+              onChange={(e) => {
+                const { value } = e.target;
+                e.preventDefault;
+                setNegocio({ ...negocio, categoria: value });
               }}
             />
-
-            <MyInput type="text" placeholder="Apellido" />
-          </div>
-          <div className={styles.groupOne}>
-            <MyInput type="number" placeholder="Teléfono" />
-
-            <MyInput type="email" placeholder="e-mail" />
-          </div>
-
-          <MyInput type="password" placeholder="Password" />
-
-          <button className={styles.btn} onClick={() => console.log("Primary")}>
-            Comenzar
-          </button>
-        </FormControl>
+          </FloatingLabel>
+          <FloatingLabel label="Nombre" className={styles.input}>
+            <Form.Control
+              type="text"
+              required
+              id="nombre"
+              name="nombre"
+              placeholder="Nombre"
+              onChange={(e) => {
+                const { value } = e.target;
+                e.preventDefault;
+                setNegocio({ ...negocio, nombre: value });
+              }}
+            />
+          </FloatingLabel>
+          <FloatingLabel label="Apellido" className={styles.input}>
+            <Form.Control
+              type="text"
+              required
+              id="apellido"
+              name="apellido"
+              placeholder="Apellido"
+              onChange={(e) => {
+                const { value } = e.target;
+                e.preventDefault;
+                setNegocio({ ...negocio, apellido: value });
+              }}
+            />
+          </FloatingLabel>
+          <FloatingLabel label="Teléfono" className={styles.input}>
+            <Form.Control
+              type="number"
+              required
+              id="telefono"
+              name="telefono"
+              placeholder="Teléfono"
+              onChange={(e) => {
+                const { value } = e.target;
+                e.preventDefault;
+                setNegocio({ ...negocio, telefono: value });
+              }}
+            />
+          </FloatingLabel>
+        </Form>
+        <button className={styles.btn}
+        onClick={()=>agregar(negocio)}>Comenzar</button>
       </div>
     </>
   );
